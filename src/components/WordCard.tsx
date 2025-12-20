@@ -2,23 +2,33 @@ interface WordCardProps {
   word: string;
   isSelected: boolean;
   isError: boolean;
+  isCorrect?: boolean;
   isFading: boolean;
   onClick: () => void;
 }
 
-export function WordCard({ word, isSelected, isError, isFading, onClick }: WordCardProps) {
+export function WordCard({ word, isSelected, isError, isCorrect, isFading, onClick }: WordCardProps) {
+  let stateClass = 'bg-secondary border-2 border-primary';
+
+  if (isFading) {
+    stateClass = isCorrect
+      ? 'opacity-0 bg-done/30 border-2 border-done'
+      : 'opacity-0';
+  } else if (isError) {
+    stateClass = 'bg-error/25 border-2 border-error text-error animate-shake';
+  } else if (isSelected) {
+    stateClass = 'bg-accent/25 border-2 border-accent';
+  }
+
   return (
     <button
       onClick={onClick}
-      className={`flex-1 p-3 rounded-lg font-medium transition-all duration-300 text-sm ${
-        isFading
-          ? 'opacity-0 scale-95'
-          : isError
-          ? 'bg-error/30 border-2 border-error'
-          : isSelected
-          ? 'bg-accent/30 border-2 border-accent'
-          : 'bg-primary hover:bg-hover border-2 border-transparent'
-      }`}
+      className={`
+        h-18 px-4 rounded-xl font-medium text-xl
+        flex items-center justify-center text-center
+        transition-all duration-150 select-none
+        ${stateClass}
+      `}
     >
       {word}
     </button>

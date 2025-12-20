@@ -15,8 +15,8 @@ export function Dictionary() {
 
   // Получаем слова в зависимости от направления
   const words = useMemo(() => {
-    return allWords.map(([serbian, russian]) => 
-      direction === 'serbian-russian' 
+    return allWords.map(([serbian, russian]) =>
+      direction === 'serbian-russian'
         ? { word: serbian, translation: russian }
         : { word: russian, translation: serbian }
     );
@@ -36,7 +36,7 @@ export function Dictionary() {
   // Группировка по первой букве
   const groupedWords = useMemo(() => {
     const groups: Record<string, typeof filteredWords> = {};
-    
+
     filteredWords.forEach(item => {
       const firstLetter = item.word.charAt(0).toUpperCase();
       if (!groups[firstLetter]) {
@@ -68,7 +68,7 @@ export function Dictionary() {
   };
 
   const toggleDirection = () => {
-    setDirection(prev => 
+    setDirection(prev =>
       prev === 'serbian-russian' ? 'russian-serbian' : 'serbian-russian'
     );
   };
@@ -76,10 +76,11 @@ export function Dictionary() {
   return (
     <div className="h-screen bg-background text-text flex flex-col overflow-hidden">
       <Header />
-      
+
       {/* Навигация и заголовок */}
       <div className="flex px-4 py-4 justify-between items-center flex-row w-full">
         <button
+          // eslint-disable-next-line @typescript-eslint/no-misused-promises
           onClick={() => navigate('/')}
           className="text-accent bg-secondary hover:bg-hover rounded-lg
                     transition-colors flex items-center justify-center"
@@ -89,7 +90,7 @@ export function Dictionary() {
         <h1 className="text-3xl font-bold text-center flex-1">Словарь</h1>
         <div className="h-12 w-12"></div>
       </div>
-      
+
       {/* Поиск и переключатель направления */}
       <div className="px-4 pb-4 flex gap-2">
         <input

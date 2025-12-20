@@ -34,16 +34,29 @@
 
 @theme {
   --color-background: #181617;
-  
+
   --color-text: #F9F8FF;
   --color-text-secondary: #E0E0E0;
 
   --color-primary: #1C1A1B;
   --color-hover: #242424;
-  
+
   --color-secondary: #242424;
 
   --color-accent: #5551FE;
   --color-error: #FF6666;
   --color-done: #66FF00;
+}
+
+/* Shake animation for wrong answers */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+.animate-shake {
+  animation: shake 0.4s ease-in-out;
 }

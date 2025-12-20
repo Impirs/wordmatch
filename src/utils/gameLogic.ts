@@ -16,12 +16,6 @@ export interface SlotData {
   fading: boolean;
 }
 
-// Очередь карточек для добавления попарно
-export interface CardQueueItem {
-  card: CardData;
-  partnerCard: CardData; // Карточка-партнёр (добавляется в другой столбец на другую позицию)
-}
-
 /**
  * Перемешивание массива (Fisher-Yates shuffle)
  */
@@ -46,7 +40,7 @@ export function getEnabledSets(): string[] {
 }
 
 /**
- * Подготовить слова для игры
+ * Подготовить слова для игры:
  * 1. Берём все слова из включённых наборов
  * 2. Если слов меньше требуемого - добавляем наборы повторно
  * 3. Перемешиваем и берём нужное количество
@@ -54,7 +48,7 @@ export function getEnabledSets(): string[] {
 export function prepareGameWords(cardCount: number): [string, string][] | null {
   const enabledSets = getEnabledSets();
   let words = getUniqueWords(enabledSets);
-  
+
   if (words.length === 0) {
     return null;
   }
@@ -84,81 +78,80 @@ export function createCards(words: [string, string][]): CardData[] {
 
 /**
  * Подготовить начальные слоты и очередь для игры
- * 
+ *
  * Алгоритм:
  * 1. Первые 5 карточек отображаются сразу (с перемешанными позициями в каждом столбце)
  * 2. Остальные карточки группируются попарно
- * 3. При замене угаданной пары - сербская карточка встаёт на место сербской,
- *    а русская карточка партнёра встаёт на место русской (и наоборот)
+ * 3. При замене угаданной пары - берём 2 карточки из очереди,
+ *    одна встаёт на место сербского, другая - на место русского
  */
 export function prepareInitialSlots(cards: CardData[]): {
   serbianSlots: (CardData | null)[];
   russianSlots: (CardData | null)[];
-  cardQueue: CardQueueItem[];
+  cardQueue: CardData[];
 } {
   // Первые 5 карточек
   const first5 = cards.slice(0, 5);
-  
+
   // Перемешиваем позиции отдельно для каждого столбца
   const serbianSlots = shuffleArray([...first5]);
   const russianSlots = shuffleArray([...first5]);
-  
-  // Остальные карточки группируем попарно
-  const remaining = cards.slice(5);
-  const cardQueue: CardQueueItem[] = [];
-  
-  // Группируем по 2 карточки (они будут добавляться с перемешанными позициями)
-  for (let i = 0; i < remaining.length; i += 2) {
-    const card1 = remaining[i];
-    const card2 = remaining[i + 1];
-    
-    if (card2) {
-      // Две карточки - они партнёры (позиции перемешиваются)
-      cardQueue.push({ card: card1, partnerCard: card2 });
-      cardQueue.push({ card: card2, partnerCard: card1 });
-    } else {
-      // Последняя одиночная карточка (если количество нечётное)
-      // Добавляем как обычную пару с самой собой
-      cardQueue.push({ card: card1, partnerCard: card1 });
-    }
-  }
-  
+
+  // Остальные карточки - просто очередь
+  const cardQueue = cards.slice(5);
+
   return { serbianSlots, russianSlots, cardQueue };
 }
 
 /**
  * Заменить угаданную карточку
- * 
- * Новый алгоритм:
- * - При замене берём карточку из очереди
- * - Сербское слово текущей карточки встаёт на место угаданного сербского
- * - Русское слово партнёра встаёт на место угаданного русского
+ *
+ * Алгоритм:
+ * - Берём 2 карточки из очереди (card1 и card2)
+ * - card1 встаёт на место угаданного сербского слова
+ * - card2 встаёт на место угаданного русского слова
+ * - Возвращаем обновлённые слоты и остаток очереди
  */
 export function replaceCardInSlots(
   cardId: number,
-  queueItem: CardQueueItem | undefined,
+  cardQueue: CardData[],
   serbianSlots: (CardData | null)[],
   russianSlots: (CardData | null)[]
 ): {
   newSerbianSlots: (CardData | null)[];
   newRussianSlots: (CardData | null)[];
+  newCardQueue: CardData[];
 } {
   const newSerbianSlots = [...serbianSlots];
   const newRussianSlots = [...russianSlots];
-  
+  let newCardQueue = [...cardQueue];
+
   // Находим индексы угаданной карточки
   const serbianIdx = serbianSlots.findIndex(c => c?.id === cardId);
   const russianIdx = russianSlots.findIndex(c => c?.id === cardId);
-  
-  if (queueItem) {
-    // На место сербского слова ставим сербское слово текущей карточки
+
+  // Берём 2 карточки из очереди
+  const card1 = newCardQueue[0];
+  const card2 = newCardQueue[1];
+
+  if (card1 && card2) {
+    // Есть 2 карточки - ставим их на места угаданных
     if (serbianIdx !== -1) {
-      newSerbianSlots[serbianIdx] = queueItem.card;
+      newSerbianSlots[serbianIdx] = card1;
     }
-    // На место русского слова ставим русское слово партнёра
     if (russianIdx !== -1) {
-      newRussianSlots[russianIdx] = queueItem.partnerCard;
+      newRussianSlots[russianIdx] = card2;
     }
+    newCardQueue = newCardQueue.slice(2);
+  } else if (card1) {
+    // Осталась 1 карточка - ставим её в один из слотов, другой очищаем
+    if (serbianIdx !== -1) {
+      newSerbianSlots[serbianIdx] = card1;
+    }
+    if (russianIdx !== -1) {
+      newRussianSlots[russianIdx] = null;
+    }
+    newCardQueue = [];
   } else {
     // Очередь пуста - просто убираем карточки
     if (serbianIdx !== -1) {
@@ -168,8 +161,8 @@ export function replaceCardInSlots(
       newRussianSlots[russianIdx] = null;
     }
   }
-  
-  return { newSerbianSlots, newRussianSlots };
+
+  return { newSerbianSlots, newRussianSlots, newCardQueue };
 }
 
 /**
