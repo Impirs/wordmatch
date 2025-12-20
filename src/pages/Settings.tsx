@@ -45,15 +45,15 @@ export function Settings() {
         <div className="h-12 w-12"></div>
       </div>
 
-      <div className="max-w-md px-4">
-        <h2 className="text-lg font-semibold mb-4 text-text-secondary">Наборы слов</h2>
+      <div className="max-w-md md:max-w-xl mx-auto px-4 md:px-6">
+        <h2 className="text-lg md:text-xl font-semibold mb-4 md:mb-6 text-text-secondary">Наборы слов</h2>
         
-        <div className="space-y-3">
+        <div className="space-y-3 md:space-y-4">
           {allWordSets.map(set => (
             <div
               key={set.id}
               onClick={() => toggleSet(set.id)}
-              className={`p-4 rounded-lg cursor-pointer transition-all ${
+              className={`p-4 md:p-5 rounded-lg md:rounded-xl cursor-pointer transition-all ${
                 enabledSets.includes(set.id)
                   ? 'bg-accent/20 border-2 border-accent'
                   : 'bg-primary border-2 border-transparent hover:border-accent/50'
@@ -61,9 +61,9 @@ export function Settings() {
             >
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="font-medium">{set.name}</h3>
-                  <p className="text-sm text-text-secondary">{set.description}</p>
-                  <p className="text-xs text-text-secondary mt-1">{set.words.length} слов</p>
+                  <h3 className="font-medium md:text-lg">{set.name}</h3>
+                  <p className="text-sm md:text-base text-text-secondary">{set.description}</p>
+                  <p className="text-xs md:text-sm text-text-secondary mt-1">{set.words.length} слов</p>
                 </div>
                 <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${
                   enabledSets.includes(set.id)

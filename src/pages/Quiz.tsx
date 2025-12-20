@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Header, WordCard } from '../components';
-import type { CardData } from '../utils';
+import type { CardData, QueuePair, PendingHalf } from '../utils';
 import {
   prepareGameWords,
   createCards,
@@ -34,8 +34,11 @@ export function Quiz() {
   // Для отзывчивости: отслеживаем карточки в процессе исчезновения
   const [fadingCards, setFadingCards] = useState<Set<number>>(new Set());
 
-  // Очередь карточек (простой массив CardData)
-  const [cardQueue, setCardQueue] = useState<CardData[]>([]);
+  // Очередь пар карточек для перекрёстного добавления
+  const [cardQueue, setCardQueue] = useState<QueuePair[]>([]);
+  
+  // Ожидающие "половинки" карточек
+  const [pendingHalves, setPendingHalves] = useState<PendingHalf[]>([]);
 
   // Текущие 5 отображаемых слотов (сербские)
   const [serbianSlots, setSerbianSlots] = useState<(CardData | null)[]>([]);
@@ -73,12 +76,13 @@ export function Quiz() {
     }
 
     const gameCards = createCards(words);
-    const { serbianSlots: initialSerbian, russianSlots: initialRussian, cardQueue: queue } =
+    const { serbianSlots: initialSerbian, russianSlots: initialRussian, cardQueue: queue, pendingHalves: pending } =
       prepareInitialSlots(gameCards);
 
     setSerbianSlots(initialSerbian);
     setRussianSlots(initialRussian);
     setCardQueue(queue);
+    setPendingHalves(pending);
 
     setSelectedCard(null);
     setErrorCards(new Set());
@@ -94,9 +98,10 @@ export function Quiz() {
 
   // Заменить угаданную карточку на новую из очереди
   const replaceCard = useCallback((cardId: number) => {
-    const { newSerbianSlots, newRussianSlots, newCardQueue } = replaceCardInSlots(
+    const { newSerbianSlots, newRussianSlots, newCardQueue, newPendingHalves } = replaceCardInSlots(
       cardId,
       cardQueue,
+      pendingHalves,
       serbianSlots,
       russianSlots
     );
@@ -104,7 +109,8 @@ export function Quiz() {
     setSerbianSlots(newSerbianSlots);
     setRussianSlots(newRussianSlots);
     setCardQueue(newCardQueue);
-  }, [cardQueue, serbianSlots, russianSlots]);
+    setPendingHalves(newPendingHalves);
+  }, [cardQueue, pendingHalves, serbianSlots, russianSlots]);
 
   // Обработка клика по карточке
   const handleCardClick = useCallback((card: CardData, type: 'serbian' | 'russian') => {
@@ -209,33 +215,33 @@ export function Quiz() {
             <div className="h-8 w-8"></div>
         </div>
 
-        <div className="max-w-md mx-auto space-y-4 px-4 mt-8 ">
+        <div className="max-w-md md:max-w-xl mx-auto space-y-4 md:space-y-5 px-4 md:px-6 mt-8">
           {/* Настройка таймера */}
-          <div className="bg-secondary p-5 rounded-2xl">
+          <div className="bg-secondary p-5 md:p-6 rounded-2xl">
             <div className="flex items-center justify-between">
-              <span className="font-semibold text-lg">Таймер</span>
+              <span className="font-semibold text-lg md:text-xl">Таймер</span>
               <button
                 onClick={() => setTimerEnabled(!timerEnabled)}
-                className="w-14 h-8 rounded-full transition-colors relative bg-primary"
+                className="w-14 md:w-16 h-8 md:h-9 rounded-full transition-colors relative bg-primary"
               >
-                <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform shadow-md ${
-                  timerEnabled ? 'left-7' : 'left-1'
+                <div className={`absolute top-1 w-6 h-6 md:w-7 md:h-7 bg-white rounded-full transition-transform shadow-md ${
+                  timerEnabled ? 'left-7 md:left-8' : 'left-1'
                 }`} />
               </button>
             </div>
 
             {timerEnabled && (
-              <div className="flex items-center justify-between bg-secondary rounded-xl p-3 mt-3">
+              <div className="flex items-center justify-between bg-secondary rounded-xl p-3 md:p-4 mt-3 md:mt-4">
                 <button
                   onClick={() => setTimeLimit(prev => Math.max(5, prev - 5))}
-                  className="w-12 h-12 bg-white/15 rounded-xl hover:bg-accent transition-colors text-2xl font-bold"
+                  className="w-12 h-12 md:w-14 md:h-14 bg-white/15 rounded-xl hover:bg-accent transition-colors text-2xl md:text-3xl font-bold"
                 >
                   −
                 </button>
-                <span className="text-2xl font-bold text-cyan">{formatTime(timeLimit)}</span>
+                <span className="text-2xl md:text-3xl font-bold text-cyan">{formatTime(timeLimit)}</span>
                 <button
                   onClick={() => setTimeLimit(prev => prev + 5)}
-                  className="w-12 h-12 bg-white/15 rounded-xl hover:bg-accent transition-colors text-2xl font-bold"
+                  className="w-12 h-12 md:w-14 md:h-14 bg-white/15 rounded-xl hover:bg-accent transition-colors text-2xl md:text-3xl font-bold"
                 >
                   +
                 </button>
@@ -244,21 +250,21 @@ export function Quiz() {
           </div>
 
           {/* Настройка количества карточек */}
-          <div className="bg-secondary p-5 rounded-2xl">
+          <div className="bg-secondary p-5 md:p-6 rounded-2xl">
             <div className="justify-between mb-4">
-              <span className="font-semibold text-lg">Количество карточек</span>
+              <span className="font-semibold text-lg md:text-xl">Количество карточек</span>
             </div>
             <div className="flex items-center justify-between">
               <button
                 onClick={() => setCardCount(prev => Math.max(10, prev - 10))}
-                className="w-12 h-12 bg-white/15 rounded-xl hover:bg-accent transition-colors text-2xl font-bold"
+                className="w-12 h-12 md:w-14 md:h-14 bg-white/15 rounded-xl hover:bg-accent transition-colors text-2xl md:text-3xl font-bold"
               >
                 −
               </button>
-              <span className="text-2xl font-bold text-cyan">{cardCount}</span>
+              <span className="text-2xl md:text-3xl font-bold text-cyan">{cardCount}</span>
               <button
                 onClick={() => setCardCount(prev => prev + 10)}
-                className="w-12 h-12 bg-white/15 rounded-xl hover:bg-accent transition-colors text-2xl font-bold"
+                className="w-12 h-12 md:w-14 md:h-14 bg-white/15 rounded-xl hover:bg-accent transition-colors text-2xl md:text-3xl font-bold"
               >
                 +
               </button>
@@ -267,7 +273,7 @@ export function Quiz() {
 
           <button
             onClick={startGame}
-            className="w-full py-4 bg-secondary text-text rounded-2xl font-bold text-xl hover:bg-accent transition-colors shadow-lg"
+            className="w-full py-4 md:py-5 bg-secondary text-text rounded-2xl font-bold text-xl md:text-2xl hover:bg-accent transition-colors shadow-lg"
           >
             Играть
           </button>
@@ -281,13 +287,13 @@ export function Quiz() {
     return (
       <div className="min-h-screen bg-background text-text flex flex-col">
         {/* Верхняя панель */}
-        <div className="px-4 py-3 flex items-center gap-4">
+        <div className="px-4 md:px-6 py-3 md:py-4 flex items-center gap-4 md:gap-6 max-w-2xl mx-auto w-full">
           {/* Кнопка закрытия */}
           <button
             onClick={() => setGameState('setup')}
             className="text-text-secondary hover:text-text transition-colors"
           >
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="28" height="28" className="md:w-8 md:h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <line x1="18" y1="6" x2="6" y2="18"></line>
               <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
@@ -295,27 +301,27 @@ export function Quiz() {
 
           {/* Прогресс */}
           <div className="flex-1 text-center">
-            <span className="font-bold text-xl">{completedCards}/{cardCount}</span>
+            <span className="font-bold text-xl md:text-2xl">{completedCards}/{cardCount}</span>
           </div>
 
           {/* Таймер */}
           {timerEnabled && (
-            <span className={`font-bold text-xl ${timeRemaining <= 10 ? 'text-error' : ''}`}>
+            <span className={`font-bold text-xl md:text-2xl ${timeRemaining <= 10 ? 'text-error' : ''}`}>
               {formatTime(timeRemaining)}
             </span>
           )}
         </div>
 
         {/* Комбо */}
-        <div className="px-4 pb-2">
-          <span className="text-text-secondary text-lg">Комбо: <span className="text-accent font-bold">{combo}</span></span>
+        <div className="px-4 md:px-6 pb-2 max-w-2xl mx-auto w-full">
+          <span className="text-text-secondary text-lg md:text-xl">Комбо: <span className="text-accent font-bold">{combo}</span></span>
         </div>
 
         {/* Карточки - по центру */}
-        <div className="flex-1 flex items-center justify-center px-4 pb-8">
-          <div className="flex gap-3 w-full max-w-md">
+        <div className="flex-1 flex items-center justify-center px-4 md:px-6 pb-8">
+          <div className="flex gap-3 md:gap-4 w-full max-w-md md:max-w-lg">
             {/* Левый столбец */}
-            <div className="flex-1 flex flex-col gap-2">
+            <div className="flex-1 flex flex-col gap-2 md:gap-3">
               {serbianSlots.map((card, idx) => (
                 card ? (
                   <WordCard
@@ -328,13 +334,13 @@ export function Quiz() {
                     onClick={() => handleCardClick(card, 'serbian')}
                   />
                 ) : (
-                  <div key={`empty-serbian-${idx}`} className="h-14" />
+                  <div key={`empty-serbian-${idx}`} className="h-14 md:h-20" />
                 )
               ))}
             </div>
 
             {/* Правый столбец */}
-            <div className="flex-1 flex flex-col gap-2">
+            <div className="flex-1 flex flex-col gap-2 md:gap-3">
               {russianSlots.map((card, idx) => (
                 card ? (
                   <WordCard
@@ -347,7 +353,7 @@ export function Quiz() {
                     onClick={() => handleCardClick(card, 'russian')}
                   />
                 ) : (
-                  <div key={`empty-russian-${idx}`} className="h-14" />
+                  <div key={`empty-russian-${idx}`} className="h-14 md:h-20" />
                 )
               ))}
             </div>
@@ -359,65 +365,65 @@ export function Quiz() {
 
   // Экран победы/поражения
   return (
-    <div className="min-h-screen bg-background text-text p-6 flex flex-col items-center justify-center">
-      <div className="text-center max-w-md w-full">
-        <div className="mb-8">
+    <div className="min-h-screen bg-background text-text p-6 md:p-8 flex flex-col items-center justify-center">
+      <div className="text-center max-w-md md:max-w-lg w-full">
+        <div className="mb-8 md:mb-10">
           {gameState === 'victory' ? (
-            <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-done/20 flex items-center justify-center">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#76FF03" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+            <div className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-6 md:mb-8 rounded-full bg-done/20 flex items-center justify-center">
+              <svg width="48" height="48" className="md:w-16 md:h-16" viewBox="0 0 24 24" fill="none" stroke="#76FF03" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="20 6 9 17 4 12"></polyline>
               </svg>
             </div>
           ) : (
-            <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-error/20 flex items-center justify-center">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#FF5252" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+            <div className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-6 md:mb-8 rounded-full bg-error/20 flex items-center justify-center">
+              <svg width="48" height="48" className="md:w-16 md:h-16" viewBox="0 0 24 24" fill="none" stroke="#FF5252" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
                 <line x1="12" y1="8" x2="12" y2="12"></line>
                 <line x1="12" y1="16" x2="12.01" y2="16"></line>
               </svg>
             </div>
           )}
-          <h1 className={`text-4xl font-bold ${gameState === 'victory' ? 'text-done' : 'text-error'}`}>
+          <h1 className={`text-4xl md:text-5xl font-bold ${gameState === 'victory' ? 'text-done' : 'text-error'}`}>
             {gameState === 'victory' ? 'Отлично!' : 'Время вышло!'}
           </h1>
           {gameState === 'victory' && (
-            <p className="text-text-secondary mt-2">Все пары найдены!</p>
+            <p className="text-text-secondary mt-2 md:text-lg">Все пары найдены!</p>
           )}
         </div>
 
-        <div className="bg-primary p-6 rounded-2xl mb-6 space-y-4">
+        <div className="bg-primary p-6 md:p-8 rounded-2xl mb-6 md:mb-8 space-y-4 md:space-y-5">
           <div className="flex justify-between items-center">
-            <span className="text-text-secondary">Время</span>
-            <span className="font-bold text-xl">{formatTime(elapsedTime)}</span>
+            <span className="text-text-secondary md:text-lg">Время</span>
+            <span className="font-bold text-xl md:text-2xl">{formatTime(elapsedTime)}</span>
           </div>
           <div className="h-px bg-card-border" />
           <div className="flex justify-between items-center">
-            <span className="text-text-secondary">Пройдено</span>
-            <span className="font-bold text-xl">{completedCards}/{cardCount}</span>
+            <span className="text-text-secondary md:text-lg">Пройдено</span>
+            <span className="font-bold text-xl md:text-2xl">{completedCards}/{cardCount}</span>
           </div>
           <div className="h-px bg-card-border" />
           <div className="flex justify-between items-center">
-            <span className="text-text-secondary">Макс. комбо</span>
-            <span className="font-bold text-xl text-cyan">{maxCombo}x</span>
+            <span className="text-text-secondary md:text-lg">Макс. комбо</span>
+            <span className="font-bold text-xl md:text-2xl text-cyan">{maxCombo}x</span>
           </div>
         </div>
 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 md:gap-4">
           <button
             onClick={startGame}
-            className="w-full py-4 bg-cyan text-background rounded-2xl font-bold text-lg hover:bg-cyan/90 transition-colors shadow-lg"
+            className="w-full py-4 md:py-5 bg-cyan text-background rounded-2xl font-bold text-lg md:text-xl hover:bg-cyan/90 transition-colors shadow-lg"
           >
             Играть ещё
           </button>
           <button
             onClick={() => setGameState('setup')}
-            className="w-full py-4 bg-primary text-text rounded-2xl font-bold text-lg hover:bg-hover transition-colors border-2 border-card-border"
+            className="w-full py-4 md:py-5 bg-primary text-text rounded-2xl font-bold text-lg md:text-xl hover:bg-hover transition-colors border-2 border-card-border"
           >
             Настройки
           </button>
           <button
             onClick={() => void navigate('/')}
-            className="w-full py-3 text-text-secondary font-medium hover:text-text transition-colors"
+            className="w-full py-3 md:py-4 text-text-secondary font-medium md:text-lg hover:text-text transition-colors"
           >
             На главную
           </button>

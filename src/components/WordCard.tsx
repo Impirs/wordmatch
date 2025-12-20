@@ -24,7 +24,7 @@ export function WordCard({ word, isSelected, isError, isCorrect, isFading, onCli
     <button
       onClick={onClick}
       className={`
-        h-18 px-4 rounded-xl font-medium text-xl
+        h-18 md:h-22 px-4 md:px-6 rounded-xl md:rounded-2xl font-medium text-xl md:text-2xl
         flex items-center justify-center text-center
         transition-all duration-150 select-none
         ${stateClass}

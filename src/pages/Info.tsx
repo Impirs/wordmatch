@@ -27,16 +27,16 @@ export function Info() {
           href={`https://github.com/${githubUsername}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="mb-6 group"
+          className="mb-6 md:mb-8 group"
         >
           <img
             src={avatarUrl}
             alt="GitHub Avatar"
-            className="w-28 h-28 rounded-full border-4 border-accent shadow-lg group-hover:border-accent/70 transition-colors"
+            className="w-28 h-28 md:w-36 md:h-36 rounded-full border-4 border-accent shadow-lg group-hover:border-accent/70 transition-colors"
           />
         </a>
 
-        <div className="max-w-md space-y-4 text-text-secondary leading-relaxed text-center">
+        <div className="max-w-md md:max-w-lg space-y-4 md:space-y-5 text-text-secondary leading-relaxed text-center md:text-lg">
           <p>
             Привет! Я создал этот сайт, чтобы самому тренировать сербские слова до автоматизма. 
             Когда переезжаешь в новую страну, важно быстро освоить базовую лексику, 

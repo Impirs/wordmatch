@@ -92,17 +92,17 @@ export function Dictionary() {
       </div>
 
       {/* Поиск и переключатель направления */}
-      <div className="px-4 pb-4 flex gap-2">
+      <div className="px-4 md:px-6 pb-4 flex gap-2 md:gap-3 max-w-3xl mx-auto w-full">
         <input
           type="text"
           placeholder="Поиск..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="flex-1 px-4 py-2 bg-primary rounded-lg border border-transparent focus:border-accent focus:outline-none"
+          className="flex-1 px-4 py-2 md:py-3 md:text-lg bg-primary rounded-lg md:rounded-xl border border-transparent focus:border-accent focus:outline-none"
         />
         <button
           onClick={toggleDirection}
-          className="px-4 py-2 bg-primary rounded-lg hover:bg-hover transition-colors text-sm whitespace-nowrap"
+          className="px-4 md:px-5 py-2 md:py-3 bg-primary rounded-lg md:rounded-xl hover:bg-hover transition-colors text-sm md:text-base whitespace-nowrap"
           title="Переключить направление перевода"
         >
           {direction === 'serbian-russian' ? 'SR → RU' : 'RU → SR'}
@@ -110,14 +110,14 @@ export function Dictionary() {
       </div>
 
       {/* Основной контент */}
-      <div className="flex flex-1 overflow-hidden">
+      <div className="flex flex-1 overflow-hidden max-w-3xl mx-auto w-full">
         {/* Алфавитная навигация - закреплена */}
-        <div className="w-6 flex flex-col items-center py-2 text-xs flex-shrink-0">
+        <div className="w-6 md:w-8 flex flex-col items-center py-2 text-xs md:text-sm flex-shrink-0">
           {alphabet.map(letter => (
             <button
               key={letter}
               onClick={() => scrollToLetter(letter)}
-              className="py-0.5 text-accent hover:text-accent/80 transition-colors"
+              className="py-0.5 md:py-1 text-accent hover:text-accent/80 transition-colors"
             >
               {letter}
             </button>
@@ -125,22 +125,22 @@ export function Dictionary() {
         </div>
 
         {/* Список слов - прокручивается */}
-        <div ref={listRef} className="flex-1 overflow-y-auto px-4 pb-4">
+        <div ref={listRef} className="flex-1 overflow-y-auto px-4 md:px-6 pb-4">
           {alphabet.length === 0 ? (
-            <p className="text-text-secondary text-center py-8">
+            <p className="text-text-secondary text-center py-8 md:text-lg">
               Слова не найдены
             </p>
           ) : (
             alphabet.map(letter => (
               <div key={letter} id={`letter-${letter}`}>
-                <h2 className="text-lg font-bold text-accent sticky top-0 bg-background py-2">
+                <h2 className="text-lg md:text-xl font-bold text-accent sticky top-0 bg-background py-2">
                   {letter}
                 </h2>
-                <div className="space-y-1">
+                <div className="space-y-1 md:space-y-2">
                   {groupedWords[letter].map(({ word, translation }, index) => (
                     <div
                       key={`${word}-${index}`}
-                      className="py-2 border-b border-primary/50"
+                      className="py-2 md:py-3 border-b border-primary/50 md:text-lg"
                     >
                       <span className="font-medium">{word}</span>
                       <span className="text-text-secondary"> — </span>
