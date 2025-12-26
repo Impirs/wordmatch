@@ -11,28 +11,28 @@ export function Home() {
 
       <div className="w-full max-w-xs md:max-w-sm space-y-4 md:space-y-5">
         <button
-          onClick={() => navigate('/quiz')}
+          onClick={() => { void navigate('/quiz'); }}
           className="w-full py-4 md:py-5 bg-accent text-white rounded-lg md:rounded-xl font-bold text-lg md:text-xl hover:bg-accent/80 transition-colors shadow-lg"
         >
           Играть
         </button>
 
         <button
-          onClick={() => navigate('/dictionary')}
+          onClick={() => { void navigate('/dictionary'); }}
           className="w-full py-4 md:py-5 bg-primary text-text rounded-lg md:rounded-xl font-medium md:text-lg hover:bg-hover transition-colors"
         >
           Словарь
         </button>
 
         <button
-          onClick={() => navigate('/settings')}
+          onClick={() => { void navigate('/settings'); }}
           className="w-full py-4 md:py-5 bg-primary text-text rounded-lg md:rounded-xl font-medium md:text-lg hover:bg-hover transition-colors"
         >
           Настройки
         </button>
 
         <button
-          onClick={() => navigate('/info')}
+          onClick={() => { void navigate('/info'); }}
           className="w-full py-4 md:py-5 bg-primary text-text rounded-lg md:rounded-xl font-medium md:text-lg hover:bg-hover transition-colors"
         >
           О проекте

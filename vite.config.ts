@@ -5,7 +5,7 @@ import path from 'node:path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/wordmatch/',
+  base: '/',
   plugins: [
     react(),
     tailwindcss()

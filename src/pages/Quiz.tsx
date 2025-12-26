@@ -27,7 +27,6 @@ export function Quiz() {
   const [correctCards, setCorrectCards] = useState<Set<number>>(new Set());
   const [timeRemaining, setTimeRemaining] = useState(0);
   const [elapsedTime, setElapsedTime] = useState(0);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [combo, setCombo] = useState(0);
   const [maxCombo, setMaxCombo] = useState(0);
   const [completedCards, setCompletedCards] = useState(0);
@@ -332,9 +331,15 @@ export function Quiz() {
         </div>
 
         {/* Комбо */}
-        {/* <div className="px-4 md:px-6 pb-2 max-w-2xl mx-auto w-full">
-          <span className="text-text-secondary text-lg md:text-xl">Комбо: <span className="text-accent font-bold">{combo}</span></span>
-        </div> */}
+        {combo > 0 && (
+          <div className="px-4 md:px-6 pb-2 text-center">
+            <div className="inline-block px-4 py-2 bg-accent/20 rounded-full">
+              <span className="text-lg md:text-xl">
+                🔥 Комбо: <span className="text-accent font-bold">{combo}</span>
+              </span>
+            </div>
+          </div>
+        )}
 
         {/* Карточки - по центру */}
         <div className="flex-1 flex items-center justify-center px-4 md:px-6 pb-8">
