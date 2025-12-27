@@ -2,29 +2,30 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Header } from '../components';
 import { allWordSets } from '../words';
+import { getAssetPath } from '../utils';
 
 const STORAGE_KEY = 'wordmatch_enabled_sets';
 
 export function Settings() {
   const navigate = useNavigate();
-  const [enabledSets, setEnabledSets] = useState<string[]>([]);
-
-  useEffect(() => {
+  const [enabledSets, setEnabledSets] = useState<string[]>(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
-      setEnabledSets(JSON.parse(saved));
-    } else {
-      // По умолчанию все наборы включены
-      setEnabledSets(allWordSets.map(set => set.id));
+      return JSON.parse(saved) as string[];
     }
-  }, []);
+    // По умолчанию все наборы включены
+    return allWordSets.map(set => set.id);
+  });
+
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(enabledSets));
+  }, [enabledSets]);
 
   const toggleSet = (setId: string) => {
     setEnabledSets(prev => {
       const newSets = prev.includes(setId)
         ? prev.filter(id => id !== setId)
         : [...prev, setId];
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(newSets));
       return newSets;
     });
   };
@@ -35,11 +36,11 @@ export function Settings() {
 
       <div className="flex px-4 py-4 justify-between items-center flex-row w-full">
         <button
-          onClick={() => navigate('/')}
+          onClick={() => { void navigate('/'); }}
           className="text-accent bg-secondary hover:bg-hover rounded-lg
                     transition-colors flex items-center justify-center"
         >
-          <img src="/icons/undo.svg" alt="go_back" className="h-12 w-12" />
+          <img src={getAssetPath('/icons/undo.svg')} alt="go_back" className="h-12 w-12" />
         </button>
         <h1 className="text-3xl font-bold text-center flex-1">Настройки</h1>
         <div className="h-12 w-12"></div>
@@ -47,7 +48,7 @@ export function Settings() {
 
       <div className="max-w-md md:max-w-xl mx-auto px-4 md:px-6">
         <h2 className="text-lg md:text-xl font-semibold mb-4 md:mb-6 text-text-secondary">Наборы слов</h2>
-        
+
         <div className="space-y-3 md:space-y-4">
           {allWordSets.map(set => (
             <div

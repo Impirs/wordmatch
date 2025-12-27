@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { Header } from '../components';
+import { getAssetPath } from '../utils';
 
 export function Info() {
   const navigate = useNavigate();
@@ -12,18 +13,18 @@ export function Info() {
 
       <div className="flex px-4 py-4 justify-between items-center flex-row w-full">
         <button
-          onClick={() => navigate('/')}
+          onClick={() => { void navigate('/'); }}
           className="text-accent bg-secondary hover:bg-hover rounded-lg
                     transition-colors flex items-center justify-center"
         >
-          <img src="/icons/undo.svg" alt="go_back" className="h-12 w-12" />
+          <img src={getAssetPath('/icons/undo.svg')} alt="go_back" className="h-12 w-12" />
         </button>
         <h1 className="text-3xl font-bold text-center flex-1">О проекте</h1>
         <div className="h-12 w-12"></div>
       </div>
 
       <div className="flex-1 flex flex-col items-center px-6 pb-6">
-        <a 
+        <a
           href={`https://github.com/${githubUsername}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -38,18 +39,18 @@ export function Info() {
 
         <div className="max-w-md md:max-w-lg space-y-4 md:space-y-5 text-text-secondary leading-relaxed text-center md:text-lg">
           <p>
-            Привет! Я создал этот сайт, чтобы самому тренировать сербские слова до автоматизма. 
-            Когда переезжаешь в новую страну, важно быстро освоить базовую лексику, 
+            Привет! Я создал этот сайт, чтобы самому тренировать сербские слова до автоматизма.
+            Когда переезжаешь в новую страну, важно быстро освоить базовую лексику,
             и я решил сделать инструмент, который поможет в этом.
           </p>
 
           <p>
-            Надеюсь, что WordMatch поможет и тебе! Учить слова через игру намного эффективнее, 
+            Надеюсь, что WordMatch поможет и тебе! Учить слова через игру намного эффективнее,
             чем просто читать словарь.
           </p>
 
           <p>
-            Буду рад, если ты оценишь приложение и расскажешь, какие улучшения хотел бы видеть. 
+            Буду рад, если ты оценишь приложение и расскажешь, какие улучшения хотел бы видеть.
             Твой отзыв очень важен для развития проекта!
           </p>
         </div>
@@ -58,7 +59,7 @@ export function Info() {
           href="#" // TODO: Добавить ссылку на форму отзыва
           className="mt-8 px-6 py-3 bg-accent text-white rounded-lg font-medium hover:bg-accent/80 transition-colors shadow-lg flex items-center gap-2"
         >
-          <img src="/icons/heart.svg" alt="" className="h-5 w-5" />
+          <img src={getAssetPath('/icons/heart.svg')} alt="" className="h-5 w-5" />
           Оставить отзыв
         </a>
 

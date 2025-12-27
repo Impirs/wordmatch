@@ -1,28 +1,41 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import tailwindcss from '@tailwindcss/vite'
-import path from 'node:path'
+// import path from 'node:path'
+
+    // resolve: {
+      // alias: {
+        // '@': path.resolve(__dirname, './src'),
+      // },
+    // },
 
 // https://vite.dev/config/
-export default defineConfig(({ command }) => ({
-  base: command === 'build' ? '/wordmatch/' : '/',
-  plugins: [
-    react(),
-    tailwindcss()
-  ],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
+export default defineConfig(({ mode }) => {
+  const base = mode === 'development' ? '/' : '/wordmatch/'
+
+  return {
+    base,
+    define: {
+      __BASE_URL__: JSON.stringify(base),
     },
-  },
-  build: {
-    sourcemap: true,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
+    plugins: [
+      react(),
+      tailwindcss()
+    ],
+    build: {
+      outDir: 'dist',
+      assetsDir: 'assets',
+      sourcemap: false,
+      rollupOptions: {
+        output: {
+          assetFileNames: 'assets/[name]-[hash][extname]',
+          chunkFileNames: 'assets/[name]-[hash].js',
+          entryFileNames: 'assets/[name]-[hash].js',
+          manualChunks: {
+            vendor: ['react', 'react-dom', 'react-router-dom'],
+          },
         },
       },
     },
-  },
-}))
+  }
+})

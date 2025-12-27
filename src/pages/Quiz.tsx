@@ -8,6 +8,7 @@ import {
   prepareInitialSlots,
   replaceCardInSlots,
   formatTime,
+  getAssetPath,
 } from '../utils';
 
 type GameState = 'setup' | 'playing' | 'victory' | 'defeat';
@@ -223,7 +224,7 @@ export function Quiz() {
               className="text-accent bg-secondary hover:bg-hover rounded-lg
                         transition-colors flex items-center justify-center"
             >
-              <img src="/icons/undo.svg" alt="go_back" className="h-12 w-12" />
+              <img src={getAssetPath('/icons/undo.svg')} alt="go_back" className="h-12 w-12" />
             </button>
             <h1 className="text-2xl font-bold text-center flex-1">Найди пару</h1>
             <div className="h-8 w-8"></div>
@@ -312,7 +313,7 @@ export function Quiz() {
               className="text-accent bg-secondary hover:bg-hover rounded-lg
                         transition-colors flex items-center justify-center"
             >
-              <img src="/icons/undo.svg" alt="go_back" className="h-12 w-12" />
+              <img src={getAssetPath('/icons/undo.svg')} alt="go_back" className="h-12 w-12" />
             </button>
 
             {/* Таймер */}

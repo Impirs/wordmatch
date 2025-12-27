@@ -2,6 +2,7 @@ import { useState, useMemo, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Header } from '../components';
 import { getAllUniqueWords } from '../words';
+import { getAssetPath } from '../utils';
 
 type Direction = 'serbian-russian' | 'russian-serbian';
 
@@ -85,7 +86,7 @@ export function Dictionary() {
           className="text-accent bg-secondary hover:bg-hover rounded-lg
                     transition-colors flex items-center justify-center"
         >
-          <img src="/icons/undo.svg" alt="go_back" className="h-12 w-12" />
+          <img src={getAssetPath('/icons/undo.svg')} alt="go_back" className="h-12 w-12" />
         </button>
         <h1 className="text-3xl font-bold text-center flex-1">Словарь</h1>
         <div className="h-12 w-12"></div>

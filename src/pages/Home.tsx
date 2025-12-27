@@ -1,11 +1,12 @@
 import { useNavigate } from 'react-router-dom';
+import { getAssetPath } from '../utils';
 
 export function Home() {
   const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-background text-text flex flex-col items-center justify-center p-6">
-      <img src="/logo.png" alt="WordMatch" className="h-24 w-24 md:h-32 md:w-32 mb-4 md:mb-6" />
+      <img src={getAssetPath('/logo.png')} alt="WordMatch" className="h-24 w-24 md:h-32 md:w-32 mb-4 md:mb-6" />
       <h1 className="text-4xl md:text-5xl font-bold mb-2 text-accent">WordMatch</h1>
       <p className="text-text-secondary md:text-lg mb-12 md:mb-16">Учи сербский играючи</p>
 
