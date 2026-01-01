@@ -5,10 +5,10 @@ export function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-background text-text flex flex-col items-center justify-center p-6">
-      <img src={getAssetPath('/logo.png')} alt="WordMatch" className="h-24 w-24 md:h-32 md:w-32 mb-4 md:mb-6" />
+    <div className="min-h-screen bg-background text-text flex flex-col items-center justify-center">
+      <img src={getAssetPath('/logo.png')} alt="WordMatch" className="h-24 w-24 md:h-32 md:w-32" />
       <h1 className="text-4xl md:text-5xl font-bold mb-2 text-accent">WordMatch</h1>
-      <p className="text-text-secondary md:text-lg mb-12 md:mb-16">Учи сербский играючи</p>
+      <p className="text-text-secondary md:text-lg mb-12">Учи сербский играючи</p>
 
       <div className="w-full max-w-xs md:max-w-sm space-y-4 md:space-y-5">
         <button

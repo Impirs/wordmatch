@@ -46,8 +46,8 @@ export function Settings() {
         <div className="h-12 w-12"></div>
       </div>
 
-      <div className="max-w-md md:max-w-xl mx-auto px-4 md:px-6">
-        <h2 className="text-lg md:text-xl font-semibold mb-4 md:mb-6 text-text-secondary">Наборы слов</h2>
+      <div className="max-w-full mx-6">
+        {/* <h2 className="text-lg md:text-xl font-semibold mb-4 md:mb-6 text-text-secondary">Наборы слов</h2> */}
 
         <div className="space-y-3 md:space-y-4">
           {allWordSets.map(set => (

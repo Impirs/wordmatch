@@ -43,6 +43,7 @@ export function Quiz() {
 
   // Текущие 5 отображаемых слотов (сербские)
   const [serbianSlots, setSerbianSlots] = useState<(CardData | null)[]>([]);
+
   // Текущие 5 отображаемых слотов (русские)
   const [russianSlots, setRussianSlots] = useState<(CardData | null)[]>([]);
 
@@ -245,23 +246,27 @@ export function Quiz() {
               </button>
             </div>
 
-            {timerEnabled && (
-              <div className="flex items-center justify-between bg-secondary rounded-xl py-3 md:py-4 mt-3 md:mt-4">
-                <button
-                  onClick={() => setTimeLimit(prev => Math.max(5, prev - 5))}
-                  className="w-12 h-12 md:w-14 md:h-14 bg-white/15 rounded-xl hover:bg-accent transition-colors text-2xl md:text-3xl font-bold"
-                >
-                  −
-                </button>
-                <span className="text-2xl md:text-3xl font-bold text-cyan">{formatTime(timeLimit)}</span>
-                <button
-                  onClick={() => setTimeLimit(prev => prev + 5)}
-                  className="w-12 h-12 md:w-14 md:h-14 bg-white/15 rounded-xl hover:bg-accent transition-colors text-2xl md:text-3xl font-bold"
-                >
-                  +
-                </button>
-              </div>
-            )}
+            <div className="flex items-center justify-between bg-secondary rounded-xl py-3 md:py-4 mt-3 md:mt-4">
+              <button
+                onClick={() => setTimeLimit(prev => Math.max(5, prev - 5))}
+                className={`w-12 h-12 md:w-14 md:h-14 bg-white/15 rounded-xl hover:bg-accent
+                          transition-colors text-2xl md:text-3xl font-bold ${timerEnabled ? '' : 'opacity-50 cursor-not-allowed'}`}
+                disabled={!timerEnabled}
+              >
+                −
+              </button>
+              <span className={`text-2xl md:text-3xl font-bold ${timerEnabled ? 'text-text' : 'text-white/50'}`}>
+                {formatTime(timeLimit)}
+              </span>
+              <button
+                onClick={() => setTimeLimit(prev => prev + 5)}
+                className={`w-12 h-12 md:w-14 md:h-14 bg-white/15 rounded-xl hover:bg-accent
+                          transition-colors text-2xl md:text-3xl font-bold ${timerEnabled ? '' : 'opacity-50 cursor-not-allowed'}`}
+                disabled={!timerEnabled}
+              >
+                +
+              </button>
+            </div>
           </div>
 
           {/* Настройка количества карточек */}
