@@ -15,9 +15,6 @@ export default defineConfig(({ mode }) => {
 
   return {
     base,
-    define: {
-      __BASE_URL__: JSON.stringify(base),
-    },
     plugins: [
       react(),
       tailwindcss()
