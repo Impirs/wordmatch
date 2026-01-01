@@ -29,7 +29,7 @@ export const clothingWords: [string, string][] = [
   ["rukavice", "перчатки"],
   ["pojas", "ремень"],
   ["kravata", "галстук"],
-  ["leptir mašna", "бабочка (галстук)"],
+  ["leptir mašna", "бабочка"],
   ["kaiš", "ремешок"],
   ["džep", "карман"],
   ["dugme", "пуговица"],

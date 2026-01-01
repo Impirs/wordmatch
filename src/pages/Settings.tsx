@@ -13,8 +13,8 @@ export function Settings() {
     if (saved) {
       return JSON.parse(saved) as string[];
     }
-    // По умолчанию все наборы включены
-    return allWordSets.map(set => set.id);
+    // По умолчанию включен только базовый набор
+    return ['basic'];
   });
 
   useEffect(() => {

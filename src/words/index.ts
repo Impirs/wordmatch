@@ -7,7 +7,8 @@ export { itemsAdvancedWords, itemsAdvancedSetInfo } from './itemsAdvanced';
 export { relationshipsWords, relationshipsSetInfo } from './relationships';
 export { foodWords, foodSetInfo } from './food';
 export { directionsWords, directionsSetInfo } from './directions';
-export { verbsAspectsWords, verbsAspectsSetInfo } from './verbsAspects';
+export { verbsImperfectiveWords, verbsImperfectiveSetInfo } from './verbsImperfective';
+export { verbsPerfectiveWords, verbsPerfectiveSetInfo } from './verbsPerfective';
 
 import { basicWords, basicSetInfo } from './basic';
 import { adjectiveWords, adjectivesSetInfo } from './adjectives';
@@ -18,7 +19,8 @@ import { itemsAdvancedWords, itemsAdvancedSetInfo } from './itemsAdvanced';
 import { relationshipsWords, relationshipsSetInfo } from './relationships';
 import { foodWords, foodSetInfo } from './food';
 import { directionsWords, directionsSetInfo } from './directions';
-import { verbsAspectsWords, verbsAspectsSetInfo } from './verbsAspects';
+import { verbsImperfectiveWords, verbsImperfectiveSetInfo } from './verbsImperfective';
+import { verbsPerfectiveWords, verbsPerfectiveSetInfo } from './verbsPerfective';
 
 export interface WordSet {
   id: string;
@@ -37,7 +39,8 @@ export const allWordSets: WordSet[] = [
   { ...relationshipsSetInfo, words: relationshipsWords },
   { ...foodSetInfo, words: foodWords },
   { ...directionsSetInfo, words: directionsWords },
-  { ...verbsAspectsSetInfo, words: verbsAspectsWords },
+  { ...verbsImperfectiveSetInfo, words: verbsImperfectiveWords },
+  { ...verbsPerfectiveSetInfo, words: verbsPerfectiveWords },
 ];
 
 // Получить все уникальные слова из выбранных наборов
