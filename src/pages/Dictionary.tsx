@@ -23,7 +23,6 @@ export function Dictionary() {
     );
   }, [allWords, direction]);
 
-  // Фильтрация по поиску
   const filteredWords = useMemo(() => {
     if (!searchQuery.trim()) return words;
     const query = searchQuery.toLowerCase();
@@ -113,12 +112,19 @@ export function Dictionary() {
       {/* Основной контент */}
       <div className="flex flex-1 overflow-hidden max-w-3xl mx-auto w-full">
         {/* Алфавитная навигация - закреплена */}
-        <div className="w-6 md:w-8 flex flex-col items-center py-2 text-xs md:text-sm flex-shrink-0">
+        <div
+          className="w-10 md:w-14 flex-shrink-0 py-2 text-xs md:text-sm overflow-hidden"
+          style={{
+            columnCount: 2,
+            columnFill: 'auto',
+            height: '100%'
+          }}
+        >
           {alphabet.map(letter => (
             <button
               key={letter}
               onClick={() => scrollToLetter(letter)}
-              className="py-0.5 md:py-1 text-accent hover:text-accent/80 transition-colors"
+              className="block w-full py-0.5 md:py-1 text-accent hover:text-accent/80 transition-colors text-center"
             >
               {letter}
             </button>

@@ -32,19 +32,10 @@ export function Quiz() {
   const [maxCombo, setMaxCombo] = useState(0);
   const [completedCards, setCompletedCards] = useState(0);
 
-  // Для отзывчивости: отслеживаем карточки в процессе исчезновения
   const [fadingCards, setFadingCards] = useState<Set<number>>(new Set());
-
-  // Очередь пар карточек для перекрёстного добавления
   const [cardQueue, setCardQueue] = useState<QueuePair[]>([]);
-
-  // Ожидающие "половинки" карточек
   const [pendingHalves, setPendingHalves] = useState<PendingHalf[]>([]);
-
-  // Текущие 5 отображаемых слотов (сербские)
   const [serbianSlots, setSerbianSlots] = useState<(CardData | null)[]>([]);
-
-  // Текущие 5 отображаемых слотов (русские)
   const [russianSlots, setRussianSlots] = useState<(CardData | null)[]>([]);
 
   // Таймер
@@ -114,24 +105,19 @@ export function Quiz() {
     setPendingHalves(newPendingHalves);
   }, [cardQueue, pendingHalves, serbianSlots, russianSlots]);
 
-  // Обработка клика по карточке
   const handleCardClick = useCallback((card: CardData, type: 'serbian' | 'russian') => {
     // Игнорируем клики по исчезающим карточкам
     if (fadingCards.has(card.id)) return;
 
-    // Очищаем ошибки при новом клике (быстрее через функцию)
     setErrorCards(prev => prev.size > 0 ? new Set() : prev);
     setCorrectCards(prev => prev.size > 0 ? new Set() : prev);
 
     setSelectedCard(prevSelected => {
       if (!prevSelected) {
-        // Первый выбор
         return { id: card.id, type };
       } else if (prevSelected.id === card.id && prevSelected.type === type) {
-        // Клик по той же карточке - снять выбор
         return null;
       } else if (prevSelected.type === type) {
-        // Клик по карточке того же типа - сменить выбор
         return { id: card.id, type };
       } else {
         // Клик по карточке другого типа - проверяем пару
@@ -140,11 +126,23 @@ export function Quiz() {
           ? serbianSlots.find(c => c?.id === prevSelected.id)
           : russianSlots.find(c => c?.id === prevSelected.id);
 
-        // Проверяем совпадение по ТЕКСТУ (serbian и russian), а не только по ID
-        // Это решает проблему дубликатов слов
+        // Проверяем совпадение по ТЕКСТУ
         const isMatch = firstCard &&
-          firstCard.serbian === card.serbian &&
           firstCard.russian === card.russian;
+        // firstCard.serbian === card.serbian; -- test
+        /*
+          Проблема дубликатов:
+          Если из-за настроек выбраны наборы с одинаковыми словами, то в случае отображения двух одинаковых пар
+          может выдаваться ошибка при проверке совпадения по ID, так как у одинаковых слов будут разные ID.
+          Решение - проверять совпадение по тексту слов, а не по ID.
+
+          Проблема совпадающих переводов:
+          Если в разных наборах есть слова с одинаковым переводом, то при проверке совпадения по тексту перевода
+          Praviti - делать
+          Činiti - делать
+          Radim - делать
+          Vršiti - делать
+        */
 
         if (isMatch) {
           // Правильная пара! Обрабатываем синхронно для отзывчивости
@@ -153,7 +151,6 @@ export function Quiz() {
 
           setFadingCards(prev => new Set([...prev, matchedCardId]));
 
-          // Помечаем как правильные для визуального фидбека
           setCorrectCards(new Set([matchedCardId]));
 
           setCompletedCards(prev => {
@@ -171,7 +168,7 @@ export function Quiz() {
               if (newCount >= cardCount) {
                 setGameState('victory');
               } else {
-                // Помечаем карточки как исчезающие
+
                 setSerbianSlots(slots => slots.map(c =>
                   c?.id === matchedCardId ? { ...c, fading: true } : c
                 ));
@@ -179,7 +176,6 @@ export function Quiz() {
                   c?.id === matchedCardId ? { ...c, fading: true } : c
                 ));
 
-                // Заменяем карточки
                 setTimeout(() => {
                   replaceCard(matchedCardId);
                 }, 250);
@@ -197,14 +193,12 @@ export function Quiz() {
 
           return null;
         } else {
-          // Неправильная пара
           setErrorCards(new Set([prevSelected.id, card.id]));
           setCombo(0);
 
-          // Автоматически убираем ошибку через короткое время
           setTimeout(() => {
             setErrorCards(new Set());
-          }, 400);
+          }, 300);
 
           return null;
         }

@@ -43,7 +43,6 @@ export const allWordSets: WordSet[] = [
   { ...verbsPerfectiveSetInfo, words: verbsPerfectiveWords },
 ];
 
-// Получить все уникальные слова из выбранных наборов
 export function getUniqueWords(setIds: string[]): [string, string][] {
   const seen = new Set<string>();
   const result: [string, string][] = [];
@@ -63,7 +62,6 @@ export function getUniqueWords(setIds: string[]): [string, string][] {
   return result;
 }
 
-// Получить все уникальные слова из всех наборов
 export function getAllUniqueWords(): [string, string][] {
   const seen = new Set<string>();
   const result: [string, string][] = [];
