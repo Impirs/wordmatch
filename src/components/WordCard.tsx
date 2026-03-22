@@ -7,17 +7,24 @@ interface WordCardProps {
   onClick: () => void;
 }
 
-export function WordCard({ word, isSelected, isError, isCorrect, isFading, onClick }: WordCardProps) {
-  let stateClass = 'bg-secondary border-2 border-primary';
+export function WordCard({
+  word,
+  isSelected,
+  isError,
+  isCorrect,
+  isFading,
+  onClick,
+}: WordCardProps) {
+  let stateClass = "bg-secondary border-2 border-primary";
 
   if (isFading) {
     stateClass = isCorrect
-      ? 'opacity-0 bg-done/30 border-2 border-done'
-      : 'opacity-0';
+      ? "opacity-0 bg-done/30 border-2 border-done"
+      : "opacity-0";
   } else if (isError) {
-    stateClass = 'bg-error/25 border-2 border-error text-error animate-shake';
+    stateClass = "bg-error/25 border-2 border-error text-error animate-shake";
   } else if (isSelected) {
-    stateClass = 'bg-accent/25 border-2 border-accent';
+    stateClass = "bg-accent/25 border-2 border-accent";
   }
 
   return (

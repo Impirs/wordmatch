@@ -2,23 +2,23 @@
 
 /* Raleway Variable Font */
 @font-face {
-  font-family: 'Raleway';
-  src: url('/font/Raleway-VariableFont_wght.ttf') format('truetype');
+  font-family: "Raleway";
+  src: url("/font/Raleway-VariableFont_wght.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Raleway';
-  src: url('/font/Raleway-Italic-VariableFont_wght.ttf') format('truetype');
+  font-family: "Raleway";
+  src: url("/font/Raleway-Italic-VariableFont_wght.ttf") format("truetype");
   font-weight: 100 900;
   font-style: italic;
   font-display: swap;
 }
 
 :root {
-  font-family: 'Raleway', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Raleway", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -35,26 +35,37 @@
 @theme {
   --color-background: #181617;
 
-  --color-text: #F9F8FF;
-  --color-text-secondary: #E0E0E0;
+  --color-text: #f9f8ff;
+  --color-text-secondary: #e0e0e0;
 
-  --color-primary: #1C1A1B;
+  --color-primary: #1c1a1b;
   --color-hover: #242424;
 
   --color-secondary: #242424;
 
-  --color-accent: #5551FE;
-  --color-error: #FF6666;
-  --color-done: #66FF00;
+  --color-accent: #5551fe;
+  --color-error: #ff6666;
+  --color-done: #66ff00;
 }
 
 /* Shake animation for wrong answers */
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  20% { transform: translateX(-6px); }
-  40% { transform: translateX(6px); }
-  60% { transform: translateX(-4px); }
-  80% { transform: translateX(4px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-6px);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
 }
 
 .animate-shake {

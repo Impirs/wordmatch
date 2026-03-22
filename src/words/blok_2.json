@@ -1,0 +1,744 @@
+{
+  "block_name_lat": "Blok 2",
+  "block_name_cyr": "Блок 2",
+  "part_1": {
+    "name_lat": "Hrana",
+    "name_cyr": "Храна",
+    "words": [
+      {
+        "subtopic_cyr": "Опште",
+        "subtopic_lat": "Opšte",
+        "entries": [
+          { "sr_cyr": "храна", "sr_lat": "hrana", "ru": "еда" },
+          { "sr_cyr": "јело", "sr_lat": "jelo", "ru": "блюдо" },
+          { "sr_cyr": "оброк", "sr_lat": "obrok", "ru": "приём пищи" },
+          { "sr_cyr": "порција", "sr_lat": "porcija", "ru": "порция" },
+          { "sr_cyr": "рецепт", "sr_lat": "recept", "ru": "рецепт" },
+          {
+            "sr_cyr": "састојак (множина: састојци)",
+            "sr_lat": "sastojak (množina: sastojci)",
+            "ru": "ингредиент"
+          },
+          { "sr_cyr": "укус", "sr_lat": "ukus", "ru": "вкус" },
+          { "sr_cyr": "мирис", "sr_lat": "miris", "ru": "запах" },
+          { "sr_cyr": "слатко", "sr_lat": "slatko", "ru": "сладкое" },
+          { "sr_cyr": "слано", "sr_lat": "slano", "ru": "солёное" },
+          { "sr_cyr": "љуто", "sr_lat": "ljuto", "ru": "острое" },
+          { "sr_cyr": "кисело", "sr_lat": "kiselo", "ru": "кислое" },
+          { "sr_cyr": "горко", "sr_lat": "gorko", "ru": "горькое" },
+          { "sr_cyr": "топло", "sr_lat": "toplo", "ru": "горячее" },
+          { "sr_cyr": "хладно", "sr_lat": "hladno", "ru": "холодное" },
+          { "sr_cyr": "домаће", "sr_lat": "domaće", "ru": "домашнее" },
+          { "sr_cyr": "свеже", "sr_lat": "sveže", "ru": "свежее" },
+          { "sr_cyr": "покварено", "sr_lat": "pokvareno", "ru": "испорченное" }
+        ]
+      },
+      {
+        "subtopic_cyr": "Воће",
+        "subtopic_lat": "Voće",
+        "entries": [
+          { "sr_cyr": "јабука", "sr_lat": "jabuka", "ru": "яблоко" },
+          { "sr_cyr": "крушка", "sr_lat": "kruška", "ru": "груша" },
+          { "sr_cyr": "банана", "sr_lat": "banana", "ru": "банан" },
+          {
+            "sr_cyr": "наранџа/поморанџа",
+            "sr_lat": "narandža/pomorandža",
+            "ru": "апельсин"
+          },
+          { "sr_cyr": "мандарина", "sr_lat": "mandarina", "ru": "мандарин" },
+          { "sr_cyr": "лимун", "sr_lat": "limun", "ru": "лимон" },
+          { "sr_cyr": "грејп", "sr_lat": "grejp", "ru": "грейпфрут" },
+          { "sr_cyr": "јагода", "sr_lat": "jagoda", "ru": "клубника" },
+          { "sr_cyr": "малина", "sr_lat": "malina", "ru": "малина" },
+          { "sr_cyr": "купина", "sr_lat": "kupina", "ru": "ежевика" },
+          {
+            "sr_cyr": "боровница",
+            "sr_lat": "borovnica",
+            "ru": "черника/голубика"
+          },
+          { "sr_cyr": "вишња", "sr_lat": "višnja", "ru": "вишня" },
+          { "sr_cyr": "трешња", "sr_lat": "trešnja", "ru": "черешня" },
+          { "sr_cyr": "бресква", "sr_lat": "breskva", "ru": "персик" },
+          { "sr_cyr": "кајсија", "sr_lat": "kajsija", "ru": "абрикос" },
+          { "sr_cyr": "шљива", "sr_lat": "šljiva", "ru": "слива" },
+          { "sr_cyr": "грозђе", "sr_lat": "grožđe", "ru": "виноград" },
+          { "sr_cyr": "диња", "sr_lat": "dinja", "ru": "дыня" },
+          { "sr_cyr": "лубеница", "sr_lat": "lubenica", "ru": "арбуз" },
+          { "sr_cyr": "ананас", "sr_lat": "ananas", "ru": "ананас" },
+          { "sr_cyr": "манго", "sr_lat": "mango", "ru": "манго" },
+          { "sr_cyr": "киви", "sr_lat": "kivi", "ru": "киви" },
+          { "sr_cyr": "смоква", "sr_lat": "smokva", "ru": "инжир" },
+          { "sr_cyr": "нар", "sr_lat": "nar", "ru": "гранат" }
+        ]
+      },
+      {
+        "subtopic_cyr": "Поврће",
+        "subtopic_lat": "Povrće",
+        "entries": [
+          { "sr_cyr": "кромпир", "sr_lat": "krompir", "ru": "картофель" },
+          { "sr_cyr": "батат", "sr_lat": "batat", "ru": "сладкий картофель" },
+          { "sr_cyr": "парадајз", "sr_lat": "paradajz", "ru": "помидор" },
+          { "sr_cyr": "краставац", "sr_lat": "krastavac", "ru": "огурец" },
+          { "sr_cyr": "лук", "sr_lat": "luk", "ru": "лук" },
+          { "sr_cyr": "празилук", "sr_lat": "praziluk", "ru": "лук порей" },
+          { "sr_cyr": "бели лук", "sr_lat": "beli luk", "ru": "чеснок" },
+          { "sr_cyr": "млади лук", "sr_lat": "mladi luk", "ru": "зелёный лук" },
+          { "sr_cyr": "шаргарепа", "sr_lat": "šargarepa", "ru": "морковь" },
+          { "sr_cyr": "целер", "sr_lat": "celer", "ru": "сельдерей" },
+          { "sr_cyr": "першун", "sr_lat": "peršun", "ru": "петрушка" },
+          { "sr_cyr": "паприка", "sr_lat": "paprika", "ru": "перец" },
+          {
+            "sr_cyr": "љута паприка",
+            "sr_lat": "ljuta paprika",
+            "ru": "острый перец"
+          },
+          { "sr_cyr": "тиквица", "sr_lat": "tikvica", "ru": "кабачок" },
+          { "sr_cyr": "патлиџан", "sr_lat": "patlidžan", "ru": "баклажан" },
+          { "sr_cyr": "купус", "sr_lat": "kupus", "ru": "капуста" },
+          {
+            "sr_cyr": "кисели купус",
+            "sr_lat": "kiseli kupus",
+            "ru": "квашеная капуста"
+          },
+          { "sr_cyr": "карфиол", "sr_lat": "karfiol", "ru": "цветная капуста" },
+          { "sr_cyr": "броколи", "sr_lat": "brokoli", "ru": "брокколи" },
+          { "sr_cyr": "спанаћ", "sr_lat": "spanać", "ru": "шпинат" },
+          { "sr_cyr": "рукола", "sr_lat": "rukola", "ru": "руккола" },
+          { "sr_cyr": "салата", "sr_lat": "salata", "ru": "салат (листья)" },
+          { "sr_cyr": "цвекла", "sr_lat": "cvekla", "ru": "свёкла" },
+          { "sr_cyr": "кукуруз", "sr_lat": "kukuruz", "ru": "кукуруза" },
+          { "sr_cyr": "печурке", "sr_lat": "pečurke", "ru": "грибы" }
+        ]
+      },
+      {
+        "subtopic_cyr": "Махунарке",
+        "subtopic_lat": "Mahunarke",
+        "entries": [
+          { "sr_cyr": "грашак", "sr_lat": "grašak", "ru": "горох" },
+          {
+            "sr_cyr": "боранија",
+            "sr_lat": "boranija",
+            "ru": "стручковая фасоль"
+          },
+          { "sr_cyr": "пасуљ", "sr_lat": "pasulj", "ru": "фасоль" },
+          { "sr_cyr": "сочиво", "sr_lat": "sočivo", "ru": "чечевица" },
+          { "sr_cyr": "леблебије", "sr_lat": "leblebije", "ru": "нут" },
+          { "sr_cyr": "соја", "sr_lat": "soja", "ru": "соя" }
+        ]
+      },
+      {
+        "subtopic_cyr": "Месо, риба и морски плодови",
+        "subtopic_lat": "Meso, riba i morski plodovi",
+        "entries": [
+          { "sr_cyr": "месо", "sr_lat": "meso", "ru": "мясо" },
+          { "sr_cyr": "пилетина", "sr_lat": "piletina", "ru": "курица" },
+          { "sr_cyr": "ћуретина", "sr_lat": "ćuretina", "ru": "индейка" },
+          { "sr_cyr": "свињетина", "sr_lat": "svinjetina", "ru": "свинина" },
+          { "sr_cyr": "говедина", "sr_lat": "govedina", "ru": "говядина" },
+          { "sr_cyr": "телетина", "sr_lat": "teletina", "ru": "телятина" },
+          { "sr_cyr": "јагњетина", "sr_lat": "jagnjetina", "ru": "баранина" },
+          { "sr_cyr": "млевено месо", "sr_lat": "mleveno meso", "ru": "фарш" },
+          { "sr_cyr": "кобасица", "sr_lat": "kobasica", "ru": "колбаса" },
+          { "sr_cyr": "сланина", "sr_lat": "slanina", "ru": "сало" },
+          { "sr_cyr": "шунка", "sr_lat": "šunka", "ru": "ветчина" },
+          { "sr_cyr": "риба", "sr_lat": "riba", "ru": "рыба" },
+          { "sr_cyr": "лосос", "sr_lat": "losos", "ru": "лосось" },
+          { "sr_cyr": "туна", "sr_lat": "tuna", "ru": "тунец" },
+          { "sr_cyr": "бакалар", "sr_lat": "bakalar", "ru": "треска" },
+          { "sr_cyr": "пастрмка", "sr_lat": "pastrmka", "ru": "форель" },
+          { "sr_cyr": "сардина", "sr_lat": "sardina", "ru": "сардина" },
+          { "sr_cyr": "папалине", "sr_lat": "papaline", "ru": "шпроты" },
+          {
+            "sr_cyr": "сурими штапићи",
+            "sr_lat": "surimi štapići",
+            "ru": "крабовые палочки"
+          },
+          { "sr_cyr": "лигње", "sr_lat": "lignje", "ru": "кальмары" },
+          {
+            "sr_cyr": "шкампи (гамбори/козице)",
+            "sr_lat": "škampi (gambori/kozice)",
+            "ru": "креветки"
+          },
+          {
+            "sr_cyr": "плодови мора/морски плодови",
+            "sr_lat": "plodovi mora/morski plodovi",
+            "ru": "морепродукты"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Млечни производи и јаја",
+        "subtopic_lat": "Mlečni proizvodi i jaja",
+        "entries": [
+          { "sr_cyr": "млеко", "sr_lat": "mleko", "ru": "молоко" },
+          {
+            "sr_cyr": "кисело млеко",
+            "sr_lat": "kiselo mleko",
+            "ru": "простокваша"
+          },
+          { "sr_cyr": "јогурт", "sr_lat": "jogurt", "ru": "йогурт" },
+          {
+            "sr_cyr": "грчки јогурт",
+            "sr_lat": "grčki jogurt",
+            "ru": "греческий йогурт"
+          },
+          { "sr_cyr": "павлака", "sr_lat": "pavlaka", "ru": "сметана" },
+          {
+            "sr_cyr": "слатка павлака или павлака за кување",
+            "sr_lat": "slatka pavlaka ili pavlaka za kuvanje",
+            "ru": "сливки"
+          },
+          { "sr_cyr": "сир", "sr_lat": "sir", "ru": "сыр" },
+          { "sr_cyr": "тврди сир", "sr_lat": "tvrdi sir", "ru": "твёрдый сыр" },
+          { "sr_cyr": "млади сир", "sr_lat": "mladi sir", "ru": "молодой сыр" },
+          { "sr_cyr": "качкаваљ", "sr_lat": "kačkavalj", "ru": "жёлтый сыр" },
+          { "sr_cyr": "фета", "sr_lat": "feta", "ru": "фета" },
+          {
+            "sr_cyr": "путер/маслац",
+            "sr_lat": "puter/maslac",
+            "ru": "сливочное масло"
+          },
+          { "sr_cyr": "маргарин", "sr_lat": "margarin", "ru": "маргарин" },
+          { "sr_cyr": "јаја", "sr_lat": "jaja", "ru": "яйца" }
+        ]
+      },
+      {
+        "subtopic_cyr": "Житарице и тестенина",
+        "subtopic_lat": "Žitarice i testenina",
+        "entries": [
+          { "sr_cyr": "хлеб", "sr_lat": "hleb", "ru": "хлеб" },
+          { "sr_cyr": "бели хлеб", "sr_lat": "beli hleb", "ru": "белый хлеб" },
+          { "sr_cyr": "црни хлеб", "sr_lat": "crni hleb", "ru": "чёрный хлеб" },
+          {
+            "sr_cyr": "интегрални хлеб",
+            "sr_lat": "integralni hleb",
+            "ru": "цельнозерновой хлеб"
+          },
+          { "sr_cyr": "пецива", "sr_lat": "pecivo", "ru": "выпечка" },
+          { "sr_cyr": "земичка", "sr_lat": "zemička", "ru": "булочка" },
+          { "sr_cyr": "погача", "sr_lat": "pogača", "ru": "лепёшка" },
+          { "sr_cyr": "брашно", "sr_lat": "brašno", "ru": "мука" },
+          { "sr_cyr": "грис", "sr_lat": "griz", "ru": "манка" },
+          { "sr_cyr": "овас", "sr_lat": "ovas", "ru": "овёс" },
+          {
+            "sr_cyr": "овсене пахуљице",
+            "sr_lat": "ovsene pahuljice",
+            "ru": "овсяные хлопья"
+          },
+          { "sr_cyr": "пиринач", "sr_lat": "pirinač", "ru": "рис" },
+          { "sr_cyr": "тестенина", "sr_lat": "testenina", "ru": "макароны" },
+          { "sr_cyr": "шпагете", "sr_lat": "špagete", "ru": "спагетти" },
+          { "sr_cyr": "резанци", "sr_lat": "rezanci", "ru": "лапша" },
+          { "sr_cyr": "кус-кус", "sr_lat": "kus-kus", "ru": "кускус" },
+          { "sr_cyr": "хељда", "sr_lat": "heljda", "ru": "гречка" }
+        ]
+      },
+      {
+        "subtopic_cyr": "Зачини и додаци",
+        "subtopic_lat": "Začini i dodaci",
+        "entries": [
+          { "sr_cyr": "со", "sr_lat": "so", "ru": "соль" },
+          { "sr_cyr": "бибер", "sr_lat": "biber", "ru": "перец" },
+          { "sr_cyr": "шећер", "sr_lat": "šećer", "ru": "сахар" },
+          {
+            "sr_cyr": "браон шећер",
+            "sr_lat": "braon šećer",
+            "ru": "коричневый сахар"
+          },
+          { "sr_cyr": "мед", "sr_lat": "med", "ru": "мёд" },
+          { "sr_cyr": "сирће", "sr_lat": "sirće", "ru": "уксус" },
+          {
+            "sr_cyr": "балзамико",
+            "sr_lat": "balzamiko",
+            "ru": "бальзамический уксус"
+          },
+          { "sr_cyr": "уље", "sr_lat": "ulje", "ru": "растительное масло" },
+          {
+            "sr_cyr": "маслиново уље",
+            "sr_lat": "maslinovo ulje",
+            "ru": "оливковое масло"
+          },
+          { "sr_cyr": "сенф", "sr_lat": "senf", "ru": "горчица" },
+          { "sr_cyr": "кечап", "sr_lat": "kečap", "ru": "кетчуп" },
+          { "sr_cyr": "мајонез", "sr_lat": "majonez", "ru": "майонез" },
+          { "sr_cyr": "соја сос", "sr_lat": "soja sos", "ru": "соевый соус" },
+          { "sr_cyr": "орегано", "sr_lat": "origano", "ru": "орегано" },
+          { "sr_cyr": "босиљак", "sr_lat": "bosiljak", "ru": "базилик" },
+          {
+            "sr_cyr": "ловоров лист",
+            "sr_lat": "lovorov list",
+            "ru": "лавровый лист"
+          },
+          { "sr_cyr": "цимет", "sr_lat": "cimet", "ru": "корица" },
+          { "sr_cyr": "ванила", "sr_lat": "vanila", "ru": "ваниль" }
+        ]
+      },
+      {
+        "subtopic_cyr": "Дезерти и слаткиши",
+        "subtopic_lat": "Dezerti i slatkiši",
+        "entries": [
+          { "sr_cyr": "колач", "sr_lat": "kolač", "ru": "пирог / торт" },
+          { "sr_cyr": "торта", "sr_lat": "torta", "ru": "торт" },
+          { "sr_cyr": "пита", "sr_lat": "pita", "ru": "пирог" },
+          { "sr_cyr": "чоколада", "sr_lat": "čokolada", "ru": "шоколад" },
+          {
+            "sr_cyr": "бела чоколада",
+            "sr_lat": "bela čokolada",
+            "ru": "белый шоколад"
+          },
+          {
+            "sr_cyr": "црна чоколада",
+            "sr_lat": "crna čokolada",
+            "ru": "тёмный шоколад"
+          },
+          { "sr_cyr": "бомбоне", "sr_lat": "bombone", "ru": "конфеты" },
+          { "sr_cyr": "кекс", "sr_lat": "keks", "ru": "печенье" },
+          { "sr_cyr": "бисквит", "sr_lat": "biskvit", "ru": "бисквит" },
+          { "sr_cyr": "сладолед", "sr_lat": "sladoled", "ru": "мороженое" },
+          { "sr_cyr": "пудинг", "sr_lat": "puding", "ru": "пудинг" },
+          { "sr_cyr": "палачинке", "sr_lat": "palačinke", "ru": "блинчики" },
+          { "sr_cyr": "вафли/галете", "sr_lat": "vafli/galete", "ru": "вафли" },
+          { "sr_cyr": "крофна", "sr_lat": "krofna", "ru": "пончик" },
+          { "sr_cyr": "баклава", "sr_lat": "baklava", "ru": "пахлава" },
+          { "sr_cyr": "џем", "sr_lat": "džem", "ru": "джем" },
+          { "sr_cyr": "мармелада", "sr_lat": "marmelada", "ru": "мармелад" }
+        ]
+      },
+      {
+        "subtopic_cyr": "Пиће",
+        "subtopic_lat": "Piće",
+        "entries": [
+          { "sr_cyr": "вода", "sr_lat": "voda", "ru": "вода" },
+          {
+            "sr_cyr": "минерална вода/кисела вода",
+            "sr_lat": "mineralna voda/kisela voda",
+            "ru": "минеральная вода"
+          },
+          { "sr_cyr": "сок", "sr_lat": "sok", "ru": "сок" },
+          {
+            "sr_cyr": "цеђени сок",
+            "sr_lat": "ceđeni sok",
+            "ru": "свежевыжатый сок"
+          },
+          { "sr_cyr": "кафа", "sr_lat": "kafa", "ru": "кофе" },
+          { "sr_cyr": "еспресо", "sr_lat": "espreso", "ru": "эспрессо" },
+          {
+            "sr_cyr": "кафа с млеком",
+            "sr_lat": "kafa s mlekom",
+            "ru": "кофе с молоком"
+          },
+          { "sr_cyr": "чај", "sr_lat": "čaj", "ru": "чай" },
+          {
+            "sr_cyr": "биљни чај",
+            "sr_lat": "biljni čaj",
+            "ru": "травяной чай"
+          },
+          { "sr_cyr": "какао", "sr_lat": "kakao", "ru": "какао" },
+          { "sr_cyr": "млеко", "sr_lat": "mleko", "ru": "молоко" },
+          { "sr_cyr": "пиво", "sr_lat": "pivo", "ru": "пиво" },
+          { "sr_cyr": "вино", "sr_lat": "vino", "ru": "вино" },
+          {
+            "sr_cyr": "црвено вино",
+            "sr_lat": "crveno vino",
+            "ru": "красное вино"
+          },
+          { "sr_cyr": "бело вино", "sr_lat": "belo vino", "ru": "белое вино" },
+          {
+            "sr_cyr": "пенушаво вино",
+            "sr_lat": "penušavo vino",
+            "ru": "игристое вино"
+          },
+          { "sr_cyr": "шампањац", "sr_lat": "šampanjac", "ru": "шампанское" },
+          { "sr_cyr": "ракија", "sr_lat": "rakija", "ru": "ракия" },
+          { "sr_cyr": "ликер", "sr_lat": "liker", "ru": "ликёр" }
+        ]
+      },
+      {
+        "subtopic_cyr": "Ресторан",
+        "subtopic_lat": "Restoran",
+        "entries": [
+          { "sr_cyr": "ресторан", "sr_lat": "restoran", "ru": "ресторан" },
+          { "sr_cyr": "кафић", "sr_lat": "kafić", "ru": "кафе" },
+          {
+            "sr_cyr": "мени/јеловник",
+            "sr_lat": "meni/jelovnik",
+            "ru": "меню"
+          },
+          { "sr_cyr": "предјело", "sr_lat": "predjelo", "ru": "закуска" },
+          {
+            "sr_cyr": "главно јело",
+            "sr_lat": "glavno jelo",
+            "ru": "основное блюдо"
+          },
+          { "sr_cyr": "десерт", "sr_lat": "dezert", "ru": "десерт" },
+          { "sr_cyr": "конобар", "sr_lat": "konobar", "ru": "официант" },
+          { "sr_cyr": "шанкер", "sr_lat": "šanker", "ru": "бармен" },
+          { "sr_cyr": "поручити", "sr_lat": "poručiti", "ru": "заказать" },
+          {
+            "sr_cyr": "препоручити",
+            "sr_lat": "preporučiti",
+            "ru": "порекомендовать"
+          },
+          { "sr_cyr": "чекати", "sr_lat": "čekati", "ru": "ждать" },
+          { "sr_cyr": "рачун", "sr_lat": "račun", "ru": "счёт" },
+          { "sr_cyr": "платити", "sr_lat": "platiti", "ru": "заплатить" },
+          {
+            "sr_cyr": "готовина/кеш",
+            "sr_lat": "gotovina/keš",
+            "ru": "наличные"
+          },
+          { "sr_cyr": "картица", "sr_lat": "kartica", "ru": "карта" },
+          {
+            "sr_cyr": "бакшиш/напојница",
+            "sr_lat": "bakšiš/napojnica",
+            "ru": "чаевые"
+          },
+          { "sr_cyr": "резервација", "sr_lat": "rezervacija", "ru": "бронь" }
+        ]
+      },
+      {
+        "subtopic_cyr": "Продавница",
+        "subtopic_lat": "Prodavnica",
+        "entries": [
+          { "sr_cyr": "продавница", "sr_lat": "prodavnica", "ru": "магазин" },
+          {
+            "sr_cyr": "супермаркет",
+            "sr_lat": "supermarket",
+            "ru": "супермаркет"
+          },
+          { "sr_cyr": "пијаца", "sr_lat": "pijaca", "ru": "рынок" },
+          { "sr_cyr": "пекара", "sr_lat": "pekara", "ru": "пекарня" },
+          { "sr_cyr": "месара", "sr_lat": "mesara", "ru": "мясная лавка" },
+          {
+            "sr_cyr": "рибарница",
+            "sr_lat": "ribarnica",
+            "ru": "рыбный магазин"
+          },
+          { "sr_cyr": "каса", "sr_lat": "kasa", "ru": "касса" },
+          { "sr_cyr": "ред", "sr_lat": "red", "ru": "очередь" },
+          { "sr_cyr": "цена", "sr_lat": "cena", "ru": "цена" },
+          { "sr_cyr": "скупље", "sr_lat": "skuplje", "ru": "дороже" },
+          { "sr_cyr": "јефтиније", "sr_lat": "jeftinije", "ru": "дешевле" },
+          { "sr_cyr": "попуст", "sr_lat": "popust", "ru": "скидка" },
+          { "sr_cyr": "акција", "sr_lat": "akcija", "ru": "акция" },
+          {
+            "sr_cyr": "рок трајања",
+            "sr_lat": "rok trajanja",
+            "ru": "срок годности"
+          },
+          { "sr_cyr": "амбалажа", "sr_lat": "ambalaža", "ru": "упаковка" },
+          { "sr_cyr": "кеса", "sr_lat": "kesa", "ru": "пакет" },
+          { "sr_cyr": "колица", "sr_lat": "kolica", "ru": "тележка" },
+          { "sr_cyr": "корпа", "sr_lat": "korpa", "ru": "корзина" },
+          { "sr_cyr": "рачун", "sr_lat": "račun", "ru": "чек" },
+          { "sr_cyr": "кусур", "sr_lat": "kusur", "ru": "сдача" }
+        ]
+      }
+    ]
+  },
+  "phrases": [
+    {
+      "subtopic_cyr": "Корисне фразе – продавница, супермаркет, пијаца",
+      "subtopic_lat": "Korisne fraze – prodavnica, supermarket, pijaca",
+      "entries": [
+        {
+          "sr_cyr": "Имате ли _____?",
+          "sr_lat": "Imate li _____?",
+          "ru": "У вас есть _____?"
+        },
+        {
+          "sr_cyr": "Где се налази _____?",
+          "sr_lat": "Gde se nalazi _____?",
+          "ru": "Где находится _____?"
+        },
+        {
+          "sr_cyr": "Где је каса?",
+          "sr_lat": "Gde je kasa?",
+          "ru": "Где касса?"
+        },
+        {
+          "sr_cyr": "Колико кошта _____?",
+          "sr_lat": "Koliko košta _____?",
+          "ru": "Сколько стоит _____?"
+        },
+        {
+          "sr_cyr": "Колико је ово?",
+          "sr_lat": "Koliko je ovo?",
+          "ru": "Сколько это стоит?"
+        },
+        {
+          "sr_cyr": "По којој цени?",
+          "sr_lat": "Po kojoj ceni?",
+          "ru": "По какой цене?"
+        },
+        {
+          "sr_cyr": "Да ли је ово свеже?",
+          "sr_lat": "Da li je ovo sveže?",
+          "ru": "Это свежее?"
+        },
+        {
+          "sr_cyr": "Да ли је домаће?",
+          "sr_lat": "Da li je domaće?",
+          "ru": "Это домашнее?"
+        },
+        {
+          "sr_cyr": "Имате ли нешто свежије?",
+          "sr_lat": "Imate li nešto svežije?",
+          "ru": "Есть что-нибудь посвежее?"
+        },
+        {
+          "sr_cyr": "Шта препоручујете?",
+          "sr_lat": "Šta preporučujete?",
+          "ru": "Что вы порекомендуете?"
+        },
+        {
+          "sr_cyr": "Могу ли да пробам?",
+          "sr_lat": "Mogu li da probam?",
+          "ru": "Можно попробовать?"
+        },
+        {
+          "sr_cyr": "Могу ли да погледам?",
+          "sr_lat": "Mogu li da pogledam?",
+          "ru": "Можно посмотреть?"
+        },
+        {
+          "sr_cyr": "Можете ли да ми измерите?",
+          "sr_lat": "Možete li da mi izmerite?",
+          "ru": "Можете взвесить?"
+        },
+        {
+          "sr_cyr": "Колико је килограм?",
+          "sr_lat": "Koliko je kilogram?",
+          "ru": "Сколько за килограмм?"
+        },
+        {
+          "sr_cyr": "Пола килограма, молим вас.",
+          "sr_lat": "Pola kilograma, molim Vas.",
+          "ru": "Полкило, пожалуйста"
+        },
+        { "sr_cyr": "мало више", "sr_lat": "malo više", "ru": "чуть больше" },
+        { "sr_cyr": "мало мање", "sr_lat": "malo manje", "ru": "чуть меньше" },
+        { "sr_cyr": "Скупо је", "sr_lat": "Skupo je", "ru": "дорого" },
+        { "sr_cyr": "Јефтино је", "sr_lat": "Jeftino je", "ru": "дёшево" },
+        {
+          "sr_cyr": "Може ли јефтиније?",
+          "sr_lat": "Može li jeftinije?",
+          "ru": "Можно подешевле?"
+        },
+        {
+          "sr_cyr": "Имате ли попуст?",
+          "sr_lat": "Imate li popust?",
+          "ru": "Есть скидка?"
+        },
+        {
+          "sr_cyr": "Тражим нешто јефтиније",
+          "sr_lat": "Tražim nešto jeftinije",
+          "ru": "Я ищу что-нибудь подешевле"
+        },
+        {
+          "sr_cyr": "Имате ли јефтинију варијанту?",
+          "sr_lat": "Imate li jeftiniju varijantu?",
+          "ru": "У вас есть вариант подешевле?"
+        },
+        {
+          "sr_cyr": "То је превише",
+          "sr_lat": "To je previše",
+          "ru": "Это слишком дорого"
+        },
+        {
+          "sr_cyr": "Добро, може",
+          "sr_lat": "Dobro, može",
+          "ru": "Хорошо, берём"
+        },
+        {
+          "sr_cyr": "Резано или у комаду?",
+          "sr_lat": "Rezano ili u komadu?",
+          "ru": "Нарезать или куском?"
+        },
+        {
+          "sr_cyr": "Можете ли да исечете (на шницле, на коцкице, на крупније комаде)?",
+          "sr_lat": "Možete li da isečete (na šnicle, na kockice, na krupnije komade)?",
+          "ru": "Можете нарезать (на отбивные, кубиками, на крупные куски)?"
+        },
+        {
+          "sr_cyr": "Можете ли да одвојите од костију?",
+          "sr_lat": "Možete li da odvojite od kostiju?",
+          "ru": "Можете отделить от костей?"
+        },
+        { "sr_cyr": "Узимам ово", "sr_lat": "Uzimam ovo", "ru": "Беру это" },
+        { "sr_cyr": "Узећу ово", "sr_lat": "Uzeću ovo", "ru": "Я возьму это" },
+        {
+          "sr_cyr": "Нећу, хвала",
+          "sr_lat": "Neću, hvala",
+          "ru": "Не буду, спасибо"
+        },
+        {
+          "sr_cyr": "Само гледам",
+          "sr_lat": "Samo gledam",
+          "ru": "Просто смотрю"
+        },
+        {
+          "sr_cyr": "Ставите у кесу",
+          "sr_lat": "Stavite u kesu",
+          "ru": "Положите в пакет"
+        },
+        {
+          "sr_cyr": "Дајте ми кесу",
+          "sr_lat": "Dajte mi kesu",
+          "ru": "Дайте пакет"
+        },
+        {
+          "sr_cyr": "Имате ли ситно?",
+          "sr_lat": "Imate li sitno?",
+          "ru": "У вас есть мелочь?"
+        },
+        {
+          "sr_cyr": "Немам ситно",
+          "sr_lat": "Nemam sitno",
+          "ru": "У меня нет мелочи"
+        },
+        { "sr_cyr": "У реду је", "sr_lat": "U redu je", "ru": "Всё в порядке" },
+        { "sr_cyr": "Хвала", "sr_lat": "Hvala", "ru": "спасибо" },
+        { "sr_cyr": "Пријатно", "sr_lat": "Prijatno", "ru": "Всего доброго" }
+      ]
+    },
+    {
+      "subtopic_cyr": "Корисне фразе – ресторан, кафић, кафана",
+      "subtopic_lat": "Korisne fraze – restoran, kafić, kafana",
+      "entries": [
+        {
+          "sr_cyr": "Имате ли слободан сто за двоје?",
+          "sr_lat": "Imate li slobodan sto za dvoje?",
+          "ru": "У вас есть свободный столик на двоих?"
+        },
+        {
+          "sr_cyr": "Имамо резервацију",
+          "sr_lat": "Imamo rezervaciju",
+          "ru": "У нас есть бронь"
+        },
+        { "sr_cyr": "На име…", "sr_lat": "Na ime…", "ru": "На имя…" },
+        {
+          "sr_cyr": "Можемо ли да добијемо мени?",
+          "sr_lat": "Možemo li da dobijemo meni?",
+          "ru": "Можно меню?"
+        },
+        {
+          "sr_cyr": "Шта препоручујете?",
+          "sr_lat": "Šta preporučujete?",
+          "ru": "Что вы порекомендуете?"
+        },
+        {
+          "sr_cyr": "Који је специјалитет куће?",
+          "sr_lat": "Koji je specijalitet kuće?",
+          "ru": "Какое фирменное блюдо?"
+        },
+        {
+          "sr_cyr": "Да ли је ово љуто?",
+          "sr_lat": "Da li je ovo ljuto?",
+          "ru": "Это острое?"
+        },
+        {
+          "sr_cyr": "Да ли је ово хладно/топло?",
+          "sr_lat": "Da li je ovo hladno/toplo?",
+          "ru": "Это холодное / горячее?"
+        },
+        {
+          "sr_cyr": "Да ли је свеже?",
+          "sr_lat": "Da li je sveže?",
+          "ru": "Это свежее?"
+        },
+        { "sr_cyr": "Узећу ово", "sr_lat": "Uzeću ovo", "ru": "Я возьму это" },
+        {
+          "sr_cyr": "Узимамо ово",
+          "sr_lat": "Uzimamo ovo",
+          "ru": "Мы берём это"
+        },
+        { "sr_cyr": "За мене...", "sr_lat": "Za mene...", "ru": "Для меня…" },
+        { "sr_cyr": "Ја ћу...", "sr_lat": "Ja ću...", "ru": "Я буду…" },
+        { "sr_cyr": "Желим...", "sr_lat": "Želim...", "ru": "Я хочу…" },
+        {
+          "sr_cyr": "Даћете ми / Дајте ми...",
+          "sr_lat": "Daćete mi / Dajte mi...",
+          "ru": "Дайте мне…"
+        },
+        {
+          "sr_cyr": "Треба ми...",
+          "sr_lat": "Treba mi...",
+          "ru": "Мне нужно…"
+        },
+        {
+          "sr_cyr": "Могу ли да добијем...",
+          "sr_lat": "Mogu li da dobijem...",
+          "ru": "Могу ли я получить…"
+        },
+        { "sr_cyr": "Ја бих…", "sr_lat": "Ja bih…", "ru": "Я бы хотел(а)..." },
+        {
+          "sr_cyr": "Може још један/једну _____",
+          "sr_lat": "Može još jedan/jednu _____",
+          "ru": "Можно ещё один/одну ______"
+        },
+        { "sr_cyr": "Без леда", "sr_lat": "Bez leda", "ru": "Без льда" },
+        { "sr_cyr": "Са ледом", "sr_lat": "Sa ledom", "ru": "Со льдом" },
+        {
+          "sr_cyr": "Треба нам још мало времена",
+          "sr_lat": "Treba nam još malo vremena",
+          "ru": "Нам нужно ещё немного времени"
+        },
+        {
+          "sr_cyr": "Можете ли да сачекате, молим вас?",
+          "sr_lat": "Možete li da sačekate, molim Vas?",
+          "ru": "Можете подождать, пожалуйста?"
+        },
+        {
+          "sr_cyr": "Може рачун/Молим вас, рачун",
+          "sr_lat": "Može račun/Molim Vas, račun",
+          "ru": "Можно счёт/Счёт, пожалуйста"
+        },
+        {
+          "sr_cyr": "Може заједно/одвојено?",
+          "sr_lat": "Može zajedno/odvojeno?",
+          "ru": "Можно вместе/раздельно?"
+        },
+        { "sr_cyr": "заједно", "sr_lat": "zajedno", "ru": "вместе" },
+        { "sr_cyr": "одвојено", "sr_lat": "odvojeno", "ru": "раздельно" },
+        {
+          "sr_cyr": "Можемо ли да платимо?",
+          "sr_lat": "Možemo li da platimo?",
+          "ru": "Можно оплатить?"
+        },
+        {
+          "sr_cyr": "Наплатите, молим вас",
+          "sr_lat": "Naplatite, molim Vas",
+          "ru": "Рассчитайте нас, пожалуйста"
+        },
+        {
+          "sr_cyr": "Плаћамо картицом",
+          "sr_lat": "Plaćamo karticom",
+          "ru": "Платим картой"
+        },
+        {
+          "sr_cyr": "Плаћамо готовином",
+          "sr_lat": "Plaćamo gotovinom",
+          "ru": "Платим наличными"
+        },
+        {
+          "sr_cyr": "Задржите кусур/У реду је",
+          "sr_lat": "Zadržite kusur/U redu je",
+          "ru": "Оставьте сдачу"
+        },
+        {
+          "sr_cyr": "Било је одлично",
+          "sr_lat": "Bilo je odlično",
+          "ru": "Было очень вкусно"
+        },
+        {
+          "sr_cyr": "Све је било супер",
+          "sr_lat": "Sve je bilo super",
+          "ru": "Всё было отлично"
+        },
+        { "sr_cyr": "Хвала", "sr_lat": "Hvala", "ru": "Спасибо" },
+        { "sr_cyr": "Пријатно", "sr_lat": "Prijatno", "ru": "Всего доброго" }
+      ]
+    }
+  ]
+}

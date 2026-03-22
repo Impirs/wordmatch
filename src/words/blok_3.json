@@ -1,0 +1,2714 @@
+{
+  "block_name_lat": "Blok 3",
+  "block_name_cyr": "Блок 3",
+  "part_1": {
+    "name_lat": "Životinje",
+    "name_cyr": "Животиње",
+    "words": [
+      {
+        "subtopic": "Domaće životinje",
+        "entries": [
+          {
+            "sr_cyr": "пас",
+            "sr_lat": "pas",
+            "ru": "собака"
+          },
+          {
+            "sr_cyr": "штене",
+            "sr_lat": "štene",
+            "ru": "щенок"
+          },
+          {
+            "sr_cyr": "мачка",
+            "sr_lat": "mačka",
+            "ru": "кошка"
+          },
+          {
+            "sr_cyr": "мачак",
+            "sr_lat": "mačak",
+            "ru": "кот"
+          },
+          {
+            "sr_cyr": "маче",
+            "sr_lat": "mače",
+            "ru": "котёнок"
+          },
+          {
+            "sr_cyr": "крава",
+            "sr_lat": "krava",
+            "ru": "корова"
+          },
+          {
+            "sr_cyr": "теле",
+            "sr_lat": "tele",
+            "ru": "телёнок"
+          },
+          {
+            "sr_cyr": "коњ",
+            "sr_lat": "konj",
+            "ru": "лошадь"
+          },
+          {
+            "sr_cyr": "ждребе",
+            "sr_lat": "ždrebe",
+            "ru": "жеребёнок"
+          },
+          {
+            "sr_cyr": "свиња",
+            "sr_lat": "svinja",
+            "ru": "свинья"
+          },
+          {
+            "sr_cyr": "прасе",
+            "sr_lat": "prase",
+            "ru": "поросёнок"
+          },
+          {
+            "sr_cyr": "овца",
+            "sr_lat": "ovca",
+            "ru": "овца"
+          },
+          {
+            "sr_cyr": "ован",
+            "sr_lat": "ovan",
+            "ru": "баран"
+          },
+          {
+            "sr_cyr": "јагње",
+            "sr_lat": "jagnje",
+            "ru": "ягнёнок"
+          },
+          {
+            "sr_cyr": "коза",
+            "sr_lat": "koza",
+            "ru": "коза"
+          },
+          {
+            "sr_cyr": "јарац",
+            "sr_lat": "jarac",
+            "ru": "козёл"
+          },
+          {
+            "sr_cyr": "јаре",
+            "sr_lat": "jare",
+            "ru": "козлёнок"
+          },
+          {
+            "sr_cyr": "кокошка",
+            "sr_lat": "kokoška",
+            "ru": "курица"
+          },
+          {
+            "sr_cyr": "петао",
+            "sr_lat": "petao",
+            "ru": "петух"
+          },
+          {
+            "sr_cyr": "пиле",
+            "sr_lat": "pile",
+            "ru": "цыплёнок"
+          },
+          {
+            "sr_cyr": "патка",
+            "sr_lat": "patka",
+            "ru": "утка"
+          },
+          {
+            "sr_cyr": "патак",
+            "sr_lat": "patak",
+            "ru": "селезень"
+          },
+          {
+            "sr_cyr": "паче",
+            "sr_lat": "pače",
+            "ru": "утёнок"
+          },
+          {
+            "sr_cyr": "гуска",
+            "sr_lat": "guska",
+            "ru": "гусь"
+          },
+          {
+            "sr_cyr": "ћурка",
+            "sr_lat": "ćurka",
+            "ru": "индейка"
+          },
+          {
+            "sr_cyr": "ћуран",
+            "sr_lat": "ćuran",
+            "ru": "индюк"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Дивље животиње",
+        "subtopic_lat": "Divlje životinje",
+        "entries": [
+          {
+            "sr_cyr": "вук",
+            "sr_lat": "vuk",
+            "ru": "волк"
+          },
+          {
+            "sr_cyr": "лисица",
+            "sr_lat": "lisica",
+            "ru": "лиса"
+          },
+          {
+            "sr_cyr": "медвед",
+            "sr_lat": "medved",
+            "ru": "медведь"
+          },
+          {
+            "sr_cyr": "јелен",
+            "sr_lat": "jelen",
+            "ru": "олень"
+          },
+          {
+            "sr_cyr": "срна",
+            "sr_lat": "srna",
+            "ru": "косуля"
+          },
+          {
+            "sr_cyr": "дивља свиња",
+            "sr_lat": "divlja svinja",
+            "ru": "кабан"
+          },
+          {
+            "sr_cyr": "зец",
+            "sr_lat": "zec",
+            "ru": "заяц"
+          },
+          {
+            "sr_cyr": "кртица",
+            "sr_lat": "krtica",
+            "ru": "крот"
+          },
+          {
+            "sr_cyr": "веверица",
+            "sr_lat": "veverica",
+            "ru": "белка"
+          },
+          {
+            "sr_cyr": "јеж",
+            "sr_lat": "jež",
+            "ru": "ёж"
+          },
+          {
+            "sr_cyr": "пуж",
+            "sr_lat": "puž",
+            "ru": "улитка"
+          },
+          {
+            "sr_cyr": "јазавац",
+            "sr_lat": "jazavac",
+            "ru": "барсук"
+          },
+          {
+            "sr_cyr": "твор",
+            "sr_lat": "tvor",
+            "ru": "скунс"
+          },
+          {
+            "sr_cyr": "видра",
+            "sr_lat": "vidra",
+            "ru": "выдра"
+          },
+          {
+            "sr_cyr": "хијена",
+            "sr_lat": "hijena",
+            "ru": "гиена"
+          },
+          {
+            "sr_cyr": "рис",
+            "sr_lat": "ris",
+            "ru": "рысь"
+          },
+          {
+            "sr_cyr": "тигар",
+            "sr_lat": "tigar",
+            "ru": "тигр"
+          },
+          {
+            "sr_cyr": "лав",
+            "sr_lat": "lav",
+            "ru": "лев"
+          },
+          {
+            "sr_cyr": "пума",
+            "sr_lat": "puma",
+            "ru": "пума"
+          },
+          {
+            "sr_cyr": "леопард",
+            "sr_lat": "leopard",
+            "ru": "леопард"
+          },
+          {
+            "sr_cyr": "гепард",
+            "sr_lat": "gepard",
+            "ru": "гепард"
+          },
+          {
+            "sr_cyr": "газела",
+            "sr_lat": "gazela",
+            "ru": "газель"
+          },
+          {
+            "sr_cyr": "слон",
+            "sr_lat": "slon",
+            "ru": "слон"
+          },
+          {
+            "sr_cyr": "жирафа",
+            "sr_lat": "žirafa",
+            "ru": "жираф"
+          },
+          {
+            "sr_cyr": "носорог",
+            "sr_lat": "nosorog",
+            "ru": "носорог"
+          },
+          {
+            "sr_cyr": "мајмун",
+            "sr_lat": "majmun",
+            "ru": "обезьяна"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Птице",
+        "subtopic_lat": "Ptice",
+        "entries": [
+          {
+            "sr_cyr": "врабац",
+            "sr_lat": "vrabac",
+            "ru": "воробей"
+          },
+          {
+            "sr_cyr": "голуб",
+            "sr_lat": "golub",
+            "ru": "голубь"
+          },
+          {
+            "sr_cyr": "орао",
+            "sr_lat": "orao",
+            "ru": "орёл"
+          },
+          {
+            "sr_cyr": "сова",
+            "sr_lat": "sova",
+            "ru": "сова"
+          },
+          {
+            "sr_cyr": "лабуд",
+            "sr_lat": "labud",
+            "ru": "лебедь"
+          },
+          {
+            "sr_cyr": "патка",
+            "sr_lat": "patka",
+            "ru": "утка"
+          },
+          {
+            "sr_cyr": "рода",
+            "sr_lat": "roda",
+            "ru": "аист"
+          },
+          {
+            "sr_cyr": "ласта",
+            "sr_lat": "lasta",
+            "ru": "ласточка"
+          },
+          {
+            "sr_cyr": "галеб",
+            "sr_lat": "galeb",
+            "ru": "чайка"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Инсекти",
+        "subtopic_lat": "Insekti",
+        "entries": [
+          {
+            "sr_cyr": "инсект",
+            "sr_lat": "insekt",
+            "ru": "насекомое"
+          },
+          {
+            "sr_cyr": "мрав",
+            "sr_lat": "mrav",
+            "ru": "муравей"
+          },
+          {
+            "sr_cyr": "пчела",
+            "sr_lat": "pčela",
+            "ru": "пчела"
+          },
+          {
+            "sr_cyr": "оса",
+            "sr_lat": "osa",
+            "ru": "оса"
+          },
+          {
+            "sr_cyr": "буба",
+            "sr_lat": "buba",
+            "ru": "жук"
+          },
+          {
+            "sr_cyr": "бубамара",
+            "sr_lat": "bubamara",
+            "ru": "божья коровка"
+          },
+          {
+            "sr_cyr": "лептир",
+            "sr_lat": "leptir",
+            "ru": "бабочка"
+          },
+          {
+            "sr_cyr": "лептирица",
+            "sr_lat": "leptirica",
+            "ru": "мотылёк"
+          },
+          {
+            "sr_cyr": "крпељ",
+            "sr_lat": "krpelj",
+            "ru": "клещ"
+          },
+          {
+            "sr_cyr": "бува",
+            "sr_lat": "buva",
+            "ru": "блоха"
+          },
+          {
+            "sr_cyr": "комарац",
+            "sr_lat": "komarac",
+            "ru": "комар"
+          },
+          {
+            "sr_cyr": "мува",
+            "sr_lat": "muva",
+            "ru": "муха"
+          },
+          {
+            "sr_cyr": "скакавац",
+            "sr_lat": "skakavac",
+            "ru": "кузнечик"
+          },
+          {
+            "sr_cyr": "смрдибуба",
+            "sr_lat": "smrdibuba",
+            "ru": "клоп"
+          },
+          {
+            "sr_cyr": "бубашваба",
+            "sr_lat": "bubašvaba",
+            "ru": "таракан"
+          },
+          {
+            "sr_cyr": "паук",
+            "sr_lat": "pauk",
+            "ru": "паук"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Морски свет",
+        "subtopic_lat": "Morski svet",
+        "entries": [
+          {
+            "sr_cyr": "риба",
+            "sr_lat": "riba",
+            "ru": "рыба"
+          },
+          {
+            "sr_cyr": "ајкула",
+            "sr_lat": "ajkula",
+            "ru": "акула"
+          },
+          {
+            "sr_cyr": "кит",
+            "sr_lat": "kit",
+            "ru": "кит"
+          },
+          {
+            "sr_cyr": "делфин",
+            "sr_lat": "delfin",
+            "ru": "дельфин"
+          },
+          {
+            "sr_cyr": "хоботница",
+            "sr_lat": "hobotnica",
+            "ru": "осьминог"
+          },
+          {
+            "sr_cyr": "лигња",
+            "sr_lat": "lignja",
+            "ru": "кальмар"
+          },
+          {
+            "sr_cyr": "рак",
+            "sr_lat": "rak",
+            "ru": "рак"
+          },
+          {
+            "sr_cyr": "јастог",
+            "sr_lat": "jastog",
+            "ru": "омар"
+          },
+          {
+            "sr_cyr": "медуза",
+            "sr_lat": "meduza",
+            "ru": "медуза"
+          },
+          {
+            "sr_cyr": "морска звезда",
+            "sr_lat": "morska zvezda",
+            "ru": "морская звезда"
+          },
+          {
+            "sr_cyr": "морски коњиц",
+            "sr_lat": "morski konjic",
+            "ru": "морской конёк"
+          },
+          {
+            "sr_cyr": "шкољка",
+            "sr_lat": "školjka",
+            "ru": "ракушка"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Гмизавци",
+        "subtopic_lat": "Gmizavci",
+        "entries": [
+          {
+            "sr_cyr": "гмизавци",
+            "sr_lat": "gmizavci",
+            "ru": "пресмыкающиеся"
+          },
+          {
+            "sr_cyr": "змија",
+            "sr_lat": "zmija",
+            "ru": "змея"
+          },
+          {
+            "sr_cyr": "отровна змија",
+            "sr_lat": "otrovna zmija",
+            "ru": "ядовитая змея"
+          },
+          {
+            "sr_cyr": "гуштер",
+            "sr_lat": "gušter",
+            "ru": "ящерица"
+          },
+          {
+            "sr_cyr": "камелеон",
+            "sr_lat": "kameleon",
+            "ru": "хамелеон"
+          },
+          {
+            "sr_cyr": "крокодил",
+            "sr_lat": "krokodil",
+            "ru": "крокодил"
+          },
+          {
+            "sr_cyr": "алигатор",
+            "sr_lat": "aligator",
+            "ru": "аллигатор"
+          },
+          {
+            "sr_cyr": "корњача",
+            "sr_lat": "kornjača",
+            "ru": "черепаха"
+          },
+          {
+            "sr_cyr": "копнена корњача",
+            "sr_lat": "kopnena kornjača",
+            "ru": "сухопутная черепаха"
+          },
+          {
+            "sr_cyr": "морска корњача",
+            "sr_lat": "morska kornjača",
+            "ru": "морская черепаха"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Општи појмови",
+        "subtopic_lat": "Opšti pojmovi",
+        "entries": [
+          {
+            "sr_cyr": "животиња",
+            "sr_lat": "životinja",
+            "ru": "животное"
+          },
+          {
+            "sr_cyr": "дивља животиња",
+            "sr_lat": "divlja životinja",
+            "ru": "дикое животное"
+          },
+          {
+            "sr_cyr": "домаћа животиња",
+            "sr_lat": "domaća životinja",
+            "ru": "домашнее животное"
+          },
+          {
+            "sr_cyr": "кућни љубимац",
+            "sr_lat": "kućni ljubimac",
+            "ru": "домашний питомец"
+          },
+          {
+            "sr_cyr": "крзно",
+            "sr_lat": "krzno",
+            "ru": "шерсть"
+          },
+          {
+            "sr_cyr": "перје",
+            "sr_lat": "perje",
+            "ru": "перья"
+          },
+          {
+            "sr_cyr": "пераја",
+            "sr_lat": "peraja",
+            "ru": "плавники"
+          },
+          {
+            "sr_cyr": "крљушт",
+            "sr_lat": "krljušt",
+            "ru": "чешуя"
+          },
+          {
+            "sr_cyr": "реп",
+            "sr_lat": "rep",
+            "ru": "хвост"
+          },
+          {
+            "sr_cyr": "шапа",
+            "sr_lat": "šapa",
+            "ru": "лапа"
+          },
+          {
+            "sr_cyr": "канџе",
+            "sr_lat": "kandže",
+            "ru": "когти"
+          },
+          {
+            "sr_cyr": "кљун",
+            "sr_lat": "kljun",
+            "ru": "клюв"
+          },
+          {
+            "sr_cyr": "рог",
+            "sr_lat": "rog",
+            "ru": "рог"
+          }
+        ]
+      }
+    ]
+  },
+  "part_2": {
+    "name_lat": "Vreme",
+    "name_cyr": "Време",
+    "words": [
+      {
+        "subtopic_cyr": "Опште",
+        "subtopic_lat": "Opšte",
+        "entries": [
+          {
+            "sr_cyr": "време",
+            "sr_lat": "vreme",
+            "ru": "погода"
+          },
+          {
+            "sr_cyr": "временске прилике",
+            "sr_lat": "vremenske prilike",
+            "ru": "погодные условия"
+          },
+          {
+            "sr_cyr": "клима",
+            "sr_lat": "klima",
+            "ru": "климат"
+          },
+          {
+            "sr_cyr": "температура",
+            "sr_lat": "temperatura",
+            "ru": "температура"
+          },
+          {
+            "sr_cyr": "степен",
+            "sr_lat": "stepen",
+            "ru": "градус"
+          },
+          {
+            "sr_cyr": "минус",
+            "sr_lat": "minus",
+            "ru": "минус"
+          },
+          {
+            "sr_cyr": "плус",
+            "sr_lat": "plus",
+            "ru": "плюс"
+          },
+          {
+            "sr_cyr": "топло",
+            "sr_lat": "toplo",
+            "ru": "тепло"
+          },
+          {
+            "sr_cyr": "хладно",
+            "sr_lat": "hladno",
+            "ru": "холодно"
+          },
+          {
+            "sr_cyr": "свеже",
+            "sr_lat": "sveže",
+            "ru": "прохладно"
+          },
+          {
+            "sr_cyr": "спарно",
+            "sr_lat": "sparno",
+            "ru": "душно"
+          },
+          {
+            "sr_cyr": "кишовито",
+            "sr_lat": "kišovito",
+            "ru": "дождливo"
+          },
+          {
+            "sr_cyr": "ветровито",
+            "sr_lat": "vetrovito",
+            "ru": "ветренo"
+          },
+          {
+            "sr_cyr": "магловито",
+            "sr_lat": "maglovito",
+            "ru": "туманно"
+          },
+          {
+            "sr_cyr": "променљиво",
+            "sr_lat": "promenljivo",
+            "ru": "переменчиво"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Сунце и ведрина",
+        "subtopic_lat": "Sunce i vedrina",
+        "entries": [
+          {
+            "sr_cyr": "Сунце",
+            "sr_lat": "Sunce",
+            "ru": "Cолнце"
+          },
+          {
+            "sr_cyr": "сунчано",
+            "sr_lat": "sunčano",
+            "ru": "солнечно"
+          },
+          {
+            "sr_cyr": "разведравање",
+            "sr_lat": "razvedravanje",
+            "ru": "прояснение"
+          },
+          {
+            "sr_cyr": "Разведрило се",
+            "sr_lat": "Razvedrilo se",
+            "ru": "Погода прояснилась"
+          },
+          {
+            "sr_cyr": "ведро",
+            "sr_lat": "vedro",
+            "ru": "ясно"
+          },
+          {
+            "sr_cyr": "плаво небо",
+            "sr_lat": "plavo nebo",
+            "ru": "голубое небо"
+          },
+          {
+            "sr_cyr": "сунчеви зраци",
+            "sr_lat": "sunčevi zraci",
+            "ru": "солнечные лучи"
+          },
+          {
+            "sr_cyr": "УВ (ултраљубичасто) зрачење)",
+            "sr_lat": "UV (ultraljubičasto) zračenje)",
+            "ru": "ультрафиолетовое излучение"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Облаци и облачност",
+        "subtopic_lat": "Oblaci i oblačnost",
+        "entries": [
+          {
+            "sr_cyr": "облак",
+            "sr_lat": "oblak",
+            "ru": "облако"
+          },
+          {
+            "sr_cyr": "облаци",
+            "sr_lat": "oblaci",
+            "ru": "облака"
+          },
+          {
+            "sr_cyr": "облачно",
+            "sr_lat": "oblačno",
+            "ru": "облачно"
+          },
+          {
+            "sr_cyr": "делимично облачно",
+            "sr_lat": "delimično oblačno",
+            "ru": "переменная облачность"
+          },
+          {
+            "sr_cyr": "наоблачење",
+            "sr_lat": "naoblačenje",
+            "ru": "затягивание неба"
+          },
+          {
+            "sr_cyr": "Наоблачило се",
+            "sr_lat": "Naoblačilo se",
+            "ru": "Затянуло небо"
+          },
+          {
+            "sr_cyr": "магла",
+            "sr_lat": "magla",
+            "ru": "туман"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Падавине",
+        "subtopic_lat": "Padavine",
+        "entries": [
+          {
+            "sr_cyr": "киша",
+            "sr_lat": "kiša",
+            "ru": "дождь"
+          },
+          {
+            "sr_cyr": "пљусак",
+            "sr_lat": "pljusak",
+            "ru": "ливень"
+          },
+          {
+            "sr_cyr": "слаба киша",
+            "sr_lat": "slaba kiša",
+            "ru": "небольшой дождь"
+          },
+          {
+            "sr_cyr": "јака киша",
+            "sr_lat": "jaka kiša",
+            "ru": "сильный дождь"
+          },
+          {
+            "sr_cyr": "снег",
+            "sr_lat": "sneg",
+            "ru": "снег"
+          },
+          {
+            "sr_cyr": "снежне падавине",
+            "sr_lat": "snežne padavine",
+            "ru": "снегопад"
+          },
+          {
+            "sr_cyr": "суснежица",
+            "sr_lat": "susnežica",
+            "ru": "мокрый снег/дождь, переходящий в снег"
+          },
+          {
+            "sr_cyr": "град",
+            "sr_lat": "grad",
+            "ru": "град"
+          },
+          {
+            "sr_cyr": "поледица",
+            "sr_lat": "poledica",
+            "ru": "гололёд"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Ветар и олуја",
+        "subtopic_lat": "Vetar i oluja",
+        "entries": [
+          {
+            "sr_cyr": "ветар",
+            "sr_lat": "vetar",
+            "ru": "ветер"
+          },
+          {
+            "sr_cyr": "поветарац",
+            "sr_lat": "povetarac",
+            "ru": "лёгкий ветерок"
+          },
+          {
+            "sr_cyr": "јак ветар",
+            "sr_lat": "jak vetar",
+            "ru": "сильный ветер"
+          },
+          {
+            "sr_cyr": "олуја",
+            "sr_lat": "oluja",
+            "ru": "буря"
+          },
+          {
+            "sr_cyr": "муња",
+            "sr_lat": "munja",
+            "ru": "молния"
+          },
+          {
+            "sr_cyr": "гром, грмљавина",
+            "sr_lat": "grom, grmljavina",
+            "ru": "гром"
+          },
+          {
+            "sr_cyr": "невреме",
+            "sr_lat": "nevreme",
+            "ru": "непогода"
+          },
+          {
+            "sr_cyr": "ураган",
+            "sr_lat": "uragan",
+            "ru": "ураган"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Температура и осећај",
+        "subtopic_lat": "Temperatura i osećaj",
+        "entries": [
+          {
+            "sr_cyr": "топлотни талас",
+            "sr_lat": "toplotni talas",
+            "ru": "волна жары"
+          },
+          {
+            "sr_cyr": "врућина",
+            "sr_lat": "vrućina",
+            "ru": "жара"
+          },
+          {
+            "sr_cyr": "спарина",
+            "sr_lat": "sparina",
+            "ru": "духота"
+          },
+          {
+            "sr_cyr": "отопљење",
+            "sr_lat": "otopljenje",
+            "ru": "потепление"
+          },
+          {
+            "sr_cyr": "хладноћа",
+            "sr_lat": "hladnoća",
+            "ru": "холод"
+          },
+          {
+            "sr_cyr": "захлађење",
+            "sr_lat": "zahlađenje",
+            "ru": "похолодание"
+          },
+          {
+            "sr_cyr": "смрзавање",
+            "sr_lat": "smrzavanje",
+            "ru": "замерзание"
+          },
+          {
+            "sr_cyr": "влажност ваздуха",
+            "sr_lat": "vlažnost vazduha",
+            "ru": "влажность воздуха"
+          },
+          {
+            "sr_cyr": "притисак ваздуха",
+            "sr_lat": "pritisak vazduha",
+            "ru": "атмосферное давление"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Прогноза",
+        "subtopic_lat": "Prognoza",
+        "entries": [
+          {
+            "sr_cyr": "временска прогноза",
+            "sr_lat": "vremenska prognoza",
+            "ru": "прогноз погоды"
+          },
+          {
+            "sr_cyr": "прогноза за данас",
+            "sr_lat": "prognoza za danas",
+            "ru": "прогноз на сегодня"
+          },
+          {
+            "sr_cyr": "прогноза за сутра",
+            "sr_lat": "prognoza za sutra",
+            "ru": "прогноз на завтра"
+          },
+          {
+            "sr_cyr": "прогноза за недељу",
+            "sr_lat": "prognoza za nedelju",
+            "ru": "прогноз на неделю"
+          },
+          {
+            "sr_cyr": "очекује се",
+            "sr_lat": "očekuje se",
+            "ru": "ожидается"
+          },
+          {
+            "sr_cyr": "могуће је",
+            "sr_lat": "moguće je",
+            "ru": "возможно"
+          },
+          {
+            "sr_cyr": "вероватноћа",
+            "sr_lat": "verovatnoća",
+            "ru": "вероятность"
+          }
+        ]
+      }
+    ]
+  },
+  "part_3": {
+    "name_lat": "Ustanove, Organizacije, Radnje I Druga Mesta",
+    "name_cyr": "Установе, Организације, Радње И Друга Места",
+    "words": [
+      {
+        "subtopic_cyr": "Здравство",
+        "subtopic_lat": "Zdravstvo",
+        "entries": [
+          {
+            "sr_cyr": "болница",
+            "sr_lat": "bolnica",
+            "ru": "больница"
+          },
+          {
+            "sr_cyr": "клиника",
+            "sr_lat": "klinika",
+            "ru": "клиника"
+          },
+          {
+            "sr_cyr": "клинички центар",
+            "sr_lat": "klinički centar",
+            "ru": "клинический центр"
+          },
+          {
+            "sr_cyr": "дом здравља",
+            "sr_lat": "dom zdravlja",
+            "ru": "поликлиника"
+          },
+          {
+            "sr_cyr": "амбуланта",
+            "sr_lat": "ambulanta",
+            "ru": "амбулатория"
+          },
+          {
+            "sr_cyr": "приватна клиника",
+            "sr_lat": "privatna klinika",
+            "ru": "частная клиника"
+          },
+          {
+            "sr_cyr": "ординација",
+            "sr_lat": "ordinacija",
+            "ru": "врачебный кабинет"
+          },
+          {
+            "sr_cyr": "хитна помоћ",
+            "sr_lat": "hitna pomoć",
+            "ru": "скорая помощь"
+          },
+          {
+            "sr_cyr": "дечја болница",
+            "sr_lat": "dečja bolnica",
+            "ru": "детская больница"
+          },
+          {
+            "sr_cyr": "апотека",
+            "sr_lat": "apoteka",
+            "ru": "аптека"
+          },
+          {
+            "sr_cyr": "лабораторија",
+            "sr_lat": "laboratorija",
+            "ru": "лаборатория"
+          },
+          {
+            "sr_cyr": "стоматолошка ординација",
+            "sr_lat": "stomatološka ordinacija",
+            "ru": "стоматологический кабинет"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Образовање",
+        "subtopic_lat": "Obrazovanje",
+        "entries": [
+          {
+            "sr_cyr": "образовна установа",
+            "sr_lat": "obrazovna ustanova",
+            "ru": "образовательное учреждение"
+          },
+          {
+            "sr_cyr": "вртић",
+            "sr_lat": "vrtić",
+            "ru": "детский сад"
+          },
+          {
+            "sr_cyr": "јаслице",
+            "sr_lat": "jaslice",
+            "ru": "ясли"
+          },
+          {
+            "sr_cyr": "школа",
+            "sr_lat": "škola",
+            "ru": "школа"
+          },
+          {
+            "sr_cyr": "основна школа",
+            "sr_lat": "osnovna škola",
+            "ru": "начальная школа"
+          },
+          {
+            "sr_cyr": "средња школа",
+            "sr_lat": "srednja škola",
+            "ru": "средняя школа"
+          },
+          {
+            "sr_cyr": "гимназија",
+            "sr_lat": "gimnazija",
+            "ru": "гимназия"
+          },
+          {
+            "sr_cyr": "стручна школа",
+            "sr_lat": "stručna škola",
+            "ru": "профессиональное училище"
+          },
+          {
+            "sr_cyr": "факултет",
+            "sr_lat": "fakultet",
+            "ru": "факультет"
+          },
+          {
+            "sr_cyr": "универзитет",
+            "sr_lat": "univerzitet",
+            "ru": "университет"
+          },
+          {
+            "sr_cyr": "висока школа",
+            "sr_lat": "visoka škola",
+            "ru": "высшая школа"
+          },
+          {
+            "sr_cyr": "приватна школа",
+            "sr_lat": "privatna škola",
+            "ru": "частная школа"
+          },
+          {
+            "sr_cyr": "музичка школа",
+            "sr_lat": "muzička škola",
+            "ru": "музыкальная школа"
+          },
+          {
+            "sr_cyr": "језичка школа",
+            "sr_lat": "jezička škola",
+            "ru": "языковая школа"
+          },
+          {
+            "sr_cyr": "школа страних језика",
+            "sr_lat": "škola stranih jezika",
+            "ru": "школа иностранных языков"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Државне и градске институције",
+        "subtopic_lat": "Državne i gradske institucije",
+        "entries": [
+          {
+            "sr_cyr": "општина",
+            "sr_lat": "opština",
+            "ru": "муниципалитет"
+          },
+          {
+            "sr_cyr": "градска управа",
+            "sr_lat": "gradska uprava",
+            "ru": "городская администрация"
+          },
+          {
+            "sr_cyr": "месна заједница",
+            "sr_lat": "mesna zajednica",
+            "ru": "местное сообщество"
+          },
+          {
+            "sr_cyr": "суд",
+            "sr_lat": "sud",
+            "ru": "суд"
+          },
+          {
+            "sr_cyr": "основни суд",
+            "sr_lat": "osnovni sud",
+            "ru": "районный суд"
+          },
+          {
+            "sr_cyr": "полицијска станица",
+            "sr_lat": "policijska stanica",
+            "ru": "полицейский участок"
+          },
+          {
+            "sr_cyr": "МУП (Министарство унутрашњих послова)",
+            "sr_lat": "MUP (Ministarstvo unutrašnjih poslova)",
+            "ru": "МВД"
+          },
+          {
+            "sr_cyr": "саобраћајна полиција",
+            "sr_lat": "saobraćajna policija",
+            "ru": "ГИБДД"
+          },
+          {
+            "sr_cyr": "пошта",
+            "sr_lat": "pošta",
+            "ru": "почта"
+          },
+          {
+            "sr_cyr": "пореска управа",
+            "sr_lat": "poreska uprava",
+            "ru": "налоговая служба"
+          },
+          {
+            "sr_cyr": "матична служба",
+            "sr_lat": "matična služba",
+            "ru": "ЗАГС"
+          },
+          {
+            "sr_cyr": "биро за запошљавање",
+            "sr_lat": "biro za zapošljavanje",
+            "ru": "служба занятости"
+          },
+          {
+            "sr_cyr": "социјална служба",
+            "sr_lat": "socijalna služba",
+            "ru": "социальная служба"
+          },
+          {
+            "sr_cyr": "пензиони фонд",
+            "sr_lat": "penzioni fond",
+            "ru": "пенсионный фонд"
+          },
+          {
+            "sr_cyr": "завод за здравствено осигурање (РФЗО)",
+            "sr_lat": "zavod za zdravstveno osiguranje (RFZO)",
+            "ru": "страховая компания (государственная страховка)"
+          },
+          {
+            "sr_cyr": "агенција за привредне регистре",
+            "sr_lat": "agencija za privredne registre",
+            "ru": "агентство регистрации предприятий"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Култура и јавна места",
+        "subtopic_lat": "Kultura i javna mesta",
+        "entries": [
+          {
+            "sr_cyr": "библиотека",
+            "sr_lat": "biblioteka",
+            "ru": "библиотека"
+          },
+          {
+            "sr_cyr": "градска библиотека",
+            "sr_lat": "gradska biblioteka",
+            "ru": "городская библиотека"
+          },
+          {
+            "sr_cyr": "музеј",
+            "sr_lat": "muzej",
+            "ru": "музей"
+          },
+          {
+            "sr_cyr": "галерија",
+            "sr_lat": "galerija",
+            "ru": "галерея"
+          },
+          {
+            "sr_cyr": "позориште",
+            "sr_lat": "pozorište",
+            "ru": "театр"
+          },
+          {
+            "sr_cyr": "биоскоп",
+            "sr_lat": "bioskop",
+            "ru": "кинотеатр"
+          },
+          {
+            "sr_cyr": "културни центар",
+            "sr_lat": "kulturni centar",
+            "ru": "культурный центр"
+          },
+          {
+            "sr_cyr": "дом културе",
+            "sr_lat": "dom kulture",
+            "ru": "дом культуры"
+          },
+          {
+            "sr_cyr": "концертна сала",
+            "sr_lat": "koncertna sala",
+            "ru": "концертный зал"
+          },
+          {
+            "sr_cyr": "изложбени простор",
+            "sr_lat": "izložbeni prostor",
+            "ru": "выставочный зал"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Трговина и услуге",
+        "subtopic_lat": "Trgovina i usluge",
+        "entries": [
+          {
+            "sr_cyr": "продавница",
+            "sr_lat": "prodavnica",
+            "ru": "магазин"
+          },
+          {
+            "sr_cyr": "самопослуга",
+            "sr_lat": "samoposluga",
+            "ru": "самообслуживание"
+          },
+          {
+            "sr_cyr": "супермаркет",
+            "sr_lat": "supermarket",
+            "ru": "супермаркет"
+          },
+          {
+            "sr_cyr": "пијаца",
+            "sr_lat": "pijaca",
+            "ru": "рынок"
+          },
+          {
+            "sr_cyr": "тржни центар",
+            "sr_lat": "tržni centar",
+            "ru": "торговый центр"
+          },
+          {
+            "sr_cyr": "робна кућа",
+            "sr_lat": "robna kuća",
+            "ru": "универмаг"
+          },
+          {
+            "sr_cyr": "пекара",
+            "sr_lat": "pekara",
+            "ru": "пекарня"
+          },
+          {
+            "sr_cyr": "месара",
+            "sr_lat": "mesara",
+            "ru": "мясная лавка"
+          },
+          {
+            "sr_cyr": "рибарница",
+            "sr_lat": "ribarnica",
+            "ru": "рыбный магазин"
+          },
+          {
+            "sr_cyr": "пумпа/бензинска станица",
+            "sr_lat": "pumpa/benzinska stanica",
+            "ru": "заправка"
+          },
+          {
+            "sr_cyr": "апотека",
+            "sr_lat": "apoteka",
+            "ru": "аптека"
+          },
+          {
+            "sr_cyr": "банка",
+            "sr_lat": "banka",
+            "ru": "банк"
+          },
+          {
+            "sr_cyr": "банкомат",
+            "sr_lat": "bankomat",
+            "ru": "банкомат"
+          },
+          {
+            "sr_cyr": "мењачница",
+            "sr_lat": "menjačnica",
+            "ru": "обмен валюты"
+          },
+          {
+            "sr_cyr": "пошта",
+            "sr_lat": "pošta",
+            "ru": "почта"
+          },
+          {
+            "sr_cyr": "поштански шалтер",
+            "sr_lat": "poštanski šalter",
+            "ru": "почтовое окно"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Угоститељство",
+        "subtopic_lat": "Ugostiteljstvo",
+        "entries": [
+          {
+            "sr_cyr": "ресторан",
+            "sr_lat": "restoran",
+            "ru": "ресторан"
+          },
+          {
+            "sr_cyr": "кафић",
+            "sr_lat": "kafić",
+            "ru": "кафе"
+          },
+          {
+            "sr_cyr": "бар",
+            "sr_lat": "bar",
+            "ru": "бар"
+          },
+          {
+            "sr_cyr": "кафана",
+            "sr_lat": "kafana",
+            "ru": "трактир / кабак"
+          },
+          {
+            "sr_cyr": "ноћни клуб",
+            "sr_lat": "noćni klub",
+            "ru": "ночной клуб"
+          },
+          {
+            "sr_cyr": "сплав",
+            "sr_lat": "splav",
+            "ru": "плавучий ресторан / клуб на понтоне"
+          },
+          {
+            "sr_cyr": "дискотека",
+            "sr_lat": "diskoteka",
+            "ru": "дискотека"
+          },
+          {
+            "sr_cyr": "посластичарница",
+            "sr_lat": "poslastičarnica",
+            "ru": "кондитерская"
+          },
+          {
+            "sr_cyr": "брза храна",
+            "sr_lat": "brza hrana",
+            "ru": "фастфуд"
+          },
+          {
+            "sr_cyr": "пицерија",
+            "sr_lat": "picerija",
+            "ru": "пиццерия"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Саобраћај",
+        "subtopic_lat": "Saobraćaj",
+        "entries": [
+          {
+            "sr_cyr": "аутобуска станица",
+            "sr_lat": "autobuska stanica",
+            "ru": "автовокзал"
+          },
+          {
+            "sr_cyr": "железничка станица",
+            "sr_lat": "železnička stanica",
+            "ru": "железнодорожный вокзал"
+          },
+          {
+            "sr_cyr": "аеродром",
+            "sr_lat": "aerodrom",
+            "ru": "аэропорт"
+          },
+          {
+            "sr_cyr": "лука",
+            "sr_lat": "luka",
+            "ru": "порт"
+          },
+          {
+            "sr_cyr": "стајалиште",
+            "sr_lat": "stajalište",
+            "ru": "остановка"
+          },
+          {
+            "sr_cyr": "такси станица",
+            "sr_lat": "taksi stanica",
+            "ru": "стоянка такси"
+          },
+          {
+            "sr_cyr": "паркинг",
+            "sr_lat": "parking",
+            "ru": "парковка"
+          },
+          {
+            "sr_cyr": "гаража",
+            "sr_lat": "garaža",
+            "ru": "гараж"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Спорт и слободно време",
+        "subtopic_lat": "Sport i slobodno vreme",
+        "entries": [
+          {
+            "sr_cyr": "спортски центар",
+            "sr_lat": "sportski centar",
+            "ru": "спортивный центр"
+          },
+          {
+            "sr_cyr": "стадион",
+            "sr_lat": "stadion",
+            "ru": "стадион"
+          },
+          {
+            "sr_cyr": "дворана",
+            "sr_lat": "dvorana",
+            "ru": "спортивный зал"
+          },
+          {
+            "sr_cyr": "теретана",
+            "sr_lat": "teretana",
+            "ru": "тренажерный зал"
+          },
+          {
+            "sr_cyr": "спортски терен",
+            "sr_lat": "sportski teren",
+            "ru": "спортивная площадка"
+          },
+          {
+            "sr_cyr": "базен",
+            "sr_lat": "bazen",
+            "ru": "бассейн"
+          },
+          {
+            "sr_cyr": "парк",
+            "sr_lat": "park",
+            "ru": "парк"
+          },
+          {
+            "sr_cyr": "игралиште",
+            "sr_lat": "igralište",
+            "ru": "детская площадка"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Посао и организације",
+        "subtopic_lat": "Posao i organizacije",
+        "entries": [
+          {
+            "sr_cyr": "фирма",
+            "sr_lat": "firma",
+            "ru": "фирма"
+          },
+          {
+            "sr_cyr": "књиговодствена/рачуноводствена агенција",
+            "sr_lat": "knjigovodstvena/računovodstvena agencija",
+            "ru": "бухгалтерское агентство"
+          },
+          {
+            "sr_cyr": "компанија",
+            "sr_lat": "kompanija",
+            "ru": "компания"
+          },
+          {
+            "sr_cyr": "канцеларија",
+            "sr_lat": "kancelarija",
+            "ru": "офис"
+          },
+          {
+            "sr_cyr": "седиште фирме",
+            "sr_lat": "sedište firme",
+            "ru": "головной офис"
+          },
+          {
+            "sr_cyr": "фабрика",
+            "sr_lat": "fabrika",
+            "ru": "фабрика"
+          },
+          {
+            "sr_cyr": "радионица",
+            "sr_lat": "radionica",
+            "ru": "мастерская"
+          },
+          {
+            "sr_cyr": "магацин / складиште",
+            "sr_lat": "magacin / skladište",
+            "ru": "склад"
+          },
+          {
+            "sr_cyr": "невладина организација",
+            "sr_lat": "nevladina organizacija",
+            "ru": "неправительственная организация"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Лепота и нега",
+        "subtopic_lat": "Lepota i nega",
+        "entries": [
+          {
+            "sr_cyr": "козметички салон",
+            "sr_lat": "kozmetički salon",
+            "ru": "салон красоты"
+          },
+          {
+            "sr_cyr": "фризерски салон",
+            "sr_lat": "frizerski salon",
+            "ru": "парикмахерская"
+          },
+          {
+            "sr_cyr": "барбер схоп",
+            "sr_lat": "barber shop",
+            "ru": "барбершоп"
+          },
+          {
+            "sr_cyr": "студио лепоте",
+            "sr_lat": "studio lepote",
+            "ru": "студия красоты"
+          },
+          {
+            "sr_cyr": "козметички студио",
+            "sr_lat": "kozmetički studio",
+            "ru": "косметологическая студия"
+          },
+          {
+            "sr_cyr": "салон за негу лица",
+            "sr_lat": "salon za negu lica",
+            "ru": "салон по уходу за лицом"
+          },
+          {
+            "sr_cyr": "салон за негу тела",
+            "sr_lat": "salon za negu tela",
+            "ru": "салон по уходу за телом"
+          },
+          {
+            "sr_cyr": "салон за маникир и педикир",
+            "sr_lat": "salon za manikir i pedikir",
+            "ru": "салон маникюра и педикюра"
+          },
+          {
+            "sr_cyr": "спа центар",
+            "sr_lat": "spa centar",
+            "ru": "спа"
+          },
+          {
+            "sr_cyr": "wеллнесс центар",
+            "sr_lat": "wellness centar",
+            "ru": "велнес"
+          },
+          {
+            "sr_cyr": "масажни салон",
+            "sr_lat": "masažni salon",
+            "ru": "массажный салон"
+          },
+          {
+            "sr_cyr": "студио за депилацију",
+            "sr_lat": "studio za depilaciju",
+            "ru": "студия депиляции"
+          },
+          {
+            "sr_cyr": "салон за шминкање",
+            "sr_lat": "salon za šminkanje",
+            "ru": "студия макияжа"
+          },
+          {
+            "sr_cyr": "естетска клиника",
+            "sr_lat": "estetska klinika",
+            "ru": "клиника эстетической медицины"
+          }
+        ]
+      }
+    ]
+  },
+  "part_4": {
+    "name_lat": "Profesije I Posao",
+    "name_cyr": "Професије И Посао",
+    "words": [
+      {
+        "subtopic_cyr": "Наука",
+        "subtopic_lat": "Nauka",
+        "entries": [
+          {
+            "sr_cyr": "биолог",
+            "sr_lat": "biolog",
+            "ru": "биолог"
+          },
+          {
+            "sr_cyr": "хемичар",
+            "sr_lat": "hemičar",
+            "ru": "химик"
+          },
+          {
+            "sr_cyr": "физичар",
+            "sr_lat": "fizičar",
+            "ru": "физик"
+          },
+          {
+            "sr_cyr": "математичар",
+            "sr_lat": "matematičar",
+            "ru": "математик"
+          },
+          {
+            "sr_cyr": "географ",
+            "sr_lat": "geograf",
+            "ru": "географ"
+          },
+          {
+            "sr_cyr": "историчар",
+            "sr_lat": "istoričar",
+            "ru": "историк"
+          },
+          {
+            "sr_cyr": "истраживач",
+            "sr_lat": "istraživač",
+            "ru": "исследователь"
+          },
+          {
+            "sr_cyr": "астроном",
+            "sr_lat": "astronom",
+            "ru": "астроном"
+          },
+          {
+            "sr_cyr": "геолог",
+            "sr_lat": "geolog",
+            "ru": "геолог"
+          },
+          {
+            "sr_cyr": "филолог",
+            "sr_lat": "filolog",
+            "ru": "филолог"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Инжењерство",
+        "subtopic_lat": "Inženjerstvo",
+        "entries": [
+          {
+            "sr_cyr": "инжењер",
+            "sr_lat": "inženjer",
+            "ru": "инженер"
+          },
+          {
+            "sr_cyr": "машински инжењер",
+            "sr_lat": "mašinski inženjer",
+            "ru": "машиностроительный инженер"
+          },
+          {
+            "sr_cyr": "електроинжењер",
+            "sr_lat": "elektroinženjer",
+            "ru": "инженер-электрик"
+          },
+          {
+            "sr_cyr": "грађевински инжењер",
+            "sr_lat": "građevinski inženjer",
+            "ru": "строительный инженер"
+          },
+          {
+            "sr_cyr": "архитекта",
+            "sr_lat": "arhitekta",
+            "ru": "архитектор"
+          },
+          {
+            "sr_cyr": "програмер",
+            "sr_lat": "programer",
+            "ru": "программист"
+          },
+          {
+            "sr_cyr": "ИТ стручњак",
+            "sr_lat": "IT stručnjak",
+            "ru": "IT"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Техничке и грађевинске струке",
+        "subtopic_lat": "Tehničke i građevinske struke",
+        "entries": [
+          {
+            "sr_cyr": "електричар",
+            "sr_lat": "električar",
+            "ru": "электрик"
+          },
+          {
+            "sr_cyr": "водоинсталатер",
+            "sr_lat": "vodoinstalater",
+            "ru": "сантехник"
+          },
+          {
+            "sr_cyr": "механичар",
+            "sr_lat": "mehaničar",
+            "ru": "механик"
+          },
+          {
+            "sr_cyr": "аутомеханичар",
+            "sr_lat": "automehaničar",
+            "ru": "автомеханик"
+          },
+          {
+            "sr_cyr": "аутолимар",
+            "sr_lat": "autolimar",
+            "ru": "кузовщик"
+          },
+          {
+            "sr_cyr": "заваривач",
+            "sr_lat": "zavarivač",
+            "ru": "сварщик"
+          },
+          {
+            "sr_cyr": "тесар",
+            "sr_lat": "tesar",
+            "ru": "плотник"
+          },
+          {
+            "sr_cyr": "зидар",
+            "sr_lat": "zidar",
+            "ru": "каменщик"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Уметност и стваралаштво",
+        "subtopic_lat": "Umetnost i stvaralaštvo",
+        "entries": [
+          {
+            "sr_cyr": "дизајнер",
+            "sr_lat": "dizajner",
+            "ru": "дизайнер"
+          },
+          {
+            "sr_cyr": "графички дизајнер",
+            "sr_lat": "grafički dizajner",
+            "ru": "графический дизайнер"
+          },
+          {
+            "sr_cyr": "веб дизајнер",
+            "sr_lat": "veb dizajner",
+            "ru": "веб-дизайнер"
+          },
+          {
+            "sr_cyr": "модни дизајнер",
+            "sr_lat": "modni dizajner",
+            "ru": "модельер"
+          },
+          {
+            "sr_cyr": "стилиста",
+            "sr_lat": "stilista",
+            "ru": "стилист"
+          },
+          {
+            "sr_cyr": "фотограф",
+            "sr_lat": "fotograf",
+            "ru": "фотограф"
+          },
+          {
+            "sr_cyr": "камерман",
+            "sr_lat": "kamerman",
+            "ru": "оператор"
+          },
+          {
+            "sr_cyr": "режисер",
+            "sr_lat": "režiser",
+            "ru": "режиссёр"
+          },
+          {
+            "sr_cyr": "глумац",
+            "sr_lat": "glumac",
+            "ru": "актёр"
+          },
+          {
+            "sr_cyr": "глумица",
+            "sr_lat": "glumica",
+            "ru": "актриса"
+          },
+          {
+            "sr_cyr": "певач",
+            "sr_lat": "pevač",
+            "ru": "певец"
+          },
+          {
+            "sr_cyr": "певачица",
+            "sr_lat": "pevačica",
+            "ru": "певица"
+          },
+          {
+            "sr_cyr": "музичар",
+            "sr_lat": "muzičar",
+            "ru": "музыкант"
+          },
+          {
+            "sr_cyr": "композитор",
+            "sr_lat": "kompozitor",
+            "ru": "композитор"
+          },
+          {
+            "sr_cyr": "плесач",
+            "sr_lat": "plesač",
+            "ru": "танцор"
+          },
+          {
+            "sr_cyr": "писац",
+            "sr_lat": "pisac",
+            "ru": "писатель"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Образовање",
+        "subtopic_lat": "Obrazovanje",
+        "entries": [
+          {
+            "sr_cyr": "учитељ",
+            "sr_lat": "učitelj",
+            "ru": "учитель (начальная школа)"
+          },
+          {
+            "sr_cyr": "учитељица",
+            "sr_lat": "učiteljica",
+            "ru": "учительница (начальная школа)"
+          },
+          {
+            "sr_cyr": "наставник",
+            "sr_lat": "nastavnik",
+            "ru": "учитель (средняя школа)"
+          },
+          {
+            "sr_cyr": "наставница",
+            "sr_lat": "nastavnica",
+            "ru": "учительница (средняя школа)"
+          },
+          {
+            "sr_cyr": "професор",
+            "sr_lat": "profesor",
+            "ru": "преподаватель/профессор"
+          },
+          {
+            "sr_cyr": "професорица",
+            "sr_lat": "profesorica",
+            "ru": "преподаватель/профессор"
+          },
+          {
+            "sr_cyr": "педагог",
+            "sr_lat": "pedagog",
+            "ru": "педагог"
+          },
+          {
+            "sr_cyr": "библиотекар",
+            "sr_lat": "bibliotekar",
+            "ru": "библиотекарь"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Право и државне службе",
+        "subtopic_lat": "Pravo i državne službe",
+        "entries": [
+          {
+            "sr_cyr": "адвокат",
+            "sr_lat": "advokat",
+            "ru": "адвокат"
+          },
+          {
+            "sr_cyr": "правник",
+            "sr_lat": "pravnik",
+            "ru": "юрист"
+          },
+          {
+            "sr_cyr": "судија",
+            "sr_lat": "sudija",
+            "ru": "судья"
+          },
+          {
+            "sr_cyr": "полицајац",
+            "sr_lat": "policajac",
+            "ru": "полицейский"
+          },
+          {
+            "sr_cyr": "ватрогасац",
+            "sr_lat": "vatrogasac",
+            "ru": "пожарный"
+          },
+          {
+            "sr_cyr": "војник",
+            "sr_lat": "vojnik",
+            "ru": "солдат"
+          },
+          {
+            "sr_cyr": "цариник",
+            "sr_lat": "carinik",
+            "ru": "таможенник"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Туризам и угоститељство",
+        "subtopic_lat": "Turizam i ugostiteljstvo",
+        "entries": [
+          {
+            "sr_cyr": "конобар",
+            "sr_lat": "konobar",
+            "ru": "официант"
+          },
+          {
+            "sr_cyr": "бармен",
+            "sr_lat": "barmen",
+            "ru": "бармен"
+          },
+          {
+            "sr_cyr": "кувар",
+            "sr_lat": "kuvar",
+            "ru": "повар"
+          },
+          {
+            "sr_cyr": "пекар",
+            "sr_lat": "pekar",
+            "ru": "пекарь"
+          },
+          {
+            "sr_cyr": "посластичар",
+            "sr_lat": "poslastičar",
+            "ru": "кондитер"
+          },
+          {
+            "sr_cyr": "хотелијер",
+            "sr_lat": "hotelijer",
+            "ru": "работник гостиницы"
+          },
+          {
+            "sr_cyr": "туристички водич",
+            "sr_lat": "turistički vodič",
+            "ru": "гид"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Пољопривреда и шумарство",
+        "subtopic_lat": "Poljoprivreda i šumarstvo",
+        "entries": [
+          {
+            "sr_cyr": "пољопривредник",
+            "sr_lat": "poljoprivrednik",
+            "ru": "фермер"
+          },
+          {
+            "sr_cyr": "баштован",
+            "sr_lat": "baštovan",
+            "ru": "садовник"
+          },
+          {
+            "sr_cyr": "воћар",
+            "sr_lat": "voćar",
+            "ru": "садовод"
+          },
+          {
+            "sr_cyr": "рибар",
+            "sr_lat": "ribar",
+            "ru": "рыбак"
+          },
+          {
+            "sr_cyr": "пчелар",
+            "sr_lat": "pčelar",
+            "ru": "пчеловод"
+          },
+          {
+            "sr_cyr": "шумар",
+            "sr_lat": "šumar",
+            "ru": "лесник"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Превоз",
+        "subtopic_lat": "Prevoz",
+        "entries": [
+          {
+            "sr_cyr": "возач",
+            "sr_lat": "vozač",
+            "ru": "водитель"
+          },
+          {
+            "sr_cyr": "таксиста",
+            "sr_lat": "taksista",
+            "ru": "таксист"
+          },
+          {
+            "sr_cyr": "пилот",
+            "sr_lat": "pilot",
+            "ru": "пилот"
+          },
+          {
+            "sr_cyr": "стјуард/стјуардеса",
+            "sr_lat": "stjuard/stjuardesa",
+            "ru": "стюард/стюардесса"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Пословне позиције",
+        "subtopic_lat": "Poslovne pozicije",
+        "entries": [
+          {
+            "sr_cyr": "директор",
+            "sr_lat": "direktor",
+            "ru": "директор"
+          },
+          {
+            "sr_cyr": "заменик директора",
+            "sr_lat": "zamenik direktora",
+            "ru": "заместитель директора"
+          },
+          {
+            "sr_cyr": "менаџер",
+            "sr_lat": "menadžer",
+            "ru": "менеджер"
+          },
+          {
+            "sr_cyr": "супервизор",
+            "sr_lat": "supervizor",
+            "ru": "супервайзер"
+          },
+          {
+            "sr_cyr": "шеф одељења",
+            "sr_lat": "šef odeljenja",
+            "ru": "начальник отдела"
+          },
+          {
+            "sr_cyr": "административни радник",
+            "sr_lat": "administrativni radnik",
+            "ru": "административный сотрудник"
+          },
+          {
+            "sr_cyr": "асистент",
+            "sr_lat": "asistent",
+            "ru": "ассистент"
+          },
+          {
+            "sr_cyr": "секретарица",
+            "sr_lat": "sekretarica",
+            "ru": "секретарь"
+          },
+          {
+            "sr_cyr": "референт",
+            "sr_lat": "referent",
+            "ru": "референт"
+          },
+          {
+            "sr_cyr": "комерцијалиста",
+            "sr_lat": "komercijalista",
+            "ru": "коммерческий агент"
+          },
+          {
+            "sr_cyr": "менаџер набавке",
+            "sr_lat": "menadžer nabavke",
+            "ru": "менеджер по закупкам"
+          },
+          {
+            "sr_cyr": "менаџер продаје",
+            "sr_lat": "menadžer prodaje",
+            "ru": "менеджер по продажам"
+          },
+          {
+            "sr_cyr": "рачуновођа",
+            "sr_lat": "računovođa",
+            "ru": "бухгалтер"
+          },
+          {
+            "sr_cyr": "финансијски аналитичар",
+            "sr_lat": "finansijski analitičar",
+            "ru": "финансовый аналитик"
+          },
+          {
+            "sr_cyr": "банкар",
+            "sr_lat": "bankar",
+            "ru": "банкир"
+          },
+          {
+            "sr_cyr": "магационер",
+            "sr_lat": "magacioner",
+            "ru": "кладовщик"
+          },
+          {
+            "sr_cyr": "логистичар",
+            "sr_lat": "logističar",
+            "ru": "логист"
+          },
+          {
+            "sr_cyr": "возач",
+            "sr_lat": "vozač",
+            "ru": "водитель"
+          },
+          {
+            "sr_cyr": "касир",
+            "sr_lat": "kasir",
+            "ru": "кассир"
+          },
+          {
+            "sr_cyr": "продавац",
+            "sr_lat": "prodavac",
+            "ru": "продавец"
+          },
+          {
+            "sr_cyr": "оператер на машини",
+            "sr_lat": "operater na mašini",
+            "ru": "оператор станка / оператор машины"
+          },
+          {
+            "sr_cyr": "техничар",
+            "sr_lat": "tehničar",
+            "ru": "техник"
+          },
+          {
+            "sr_cyr": "инжењер",
+            "sr_lat": "inženjer",
+            "ru": "инженер"
+          },
+          {
+            "sr_cyr": "стручњак / експерт",
+            "sr_lat": "stručnjak / ekspert",
+            "ru": "специалист / эксперт"
+          }
+        ]
+      },
+      {
+        "subtopic_lat": "Kompanija i organizacija",
+        "subtopic_cyr": "Компанија и организација",
+        "entries": [
+          {
+            "sr_cyr": "фабрика",
+            "sr_lat": "fabrika",
+            "ru": "завод / фабрика"
+          },
+          {
+            "sr_cyr": "компанија",
+            "sr_lat": "kompanija",
+            "ru": "компания"
+          },
+          {
+            "sr_cyr": "фирма",
+            "sr_lat": "firma",
+            "ru": "фирма"
+          },
+          {
+            "sr_cyr": "корпорација",
+            "sr_lat": "korporacija",
+            "ru": "корпорация"
+          },
+          {
+            "sr_cyr": "одељење",
+            "sr_lat": "odeljenje",
+            "ru": "отдел"
+          },
+          {
+            "sr_cyr": "сектор",
+            "sr_lat": "sektor",
+            "ru": "сектор"
+          },
+          {
+            "sr_cyr": "тим",
+            "sr_lat": "tim",
+            "ru": "команда"
+          },
+          {
+            "sr_cyr": "производни погон",
+            "sr_lat": "proizvodni pogon",
+            "ru": "производственный цех"
+          },
+          {
+            "sr_cyr": "складиште",
+            "sr_lat": "skladište",
+            "ru": "склад"
+          },
+          {
+            "sr_cyr": "магацин",
+            "sr_lat": "magacin",
+            "ru": "склад"
+          },
+          {
+            "sr_cyr": "канцеларија",
+            "sr_lat": "kancelarija",
+            "ru": "офис"
+          },
+          {
+            "sr_cyr": "пословни простор",
+            "sr_lat": "poslovni prostor",
+            "ru": "помещение для работы"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Сектори и службе",
+        "subtopic_lat": "Sektori i službe",
+        "entries": [
+          {
+            "sr_cyr": "сектор набавке",
+            "sr_lat": "sektor nabavke",
+            "ru": "отдел закупок"
+          },
+          {
+            "sr_cyr": "сектор продаје",
+            "sr_lat": "sektor prodaje",
+            "ru": "отдел продаж"
+          },
+          {
+            "sr_cyr": "сектор рачуноводства",
+            "sr_lat": "sektor računovodstva",
+            "ru": "бухгалтерия"
+          },
+          {
+            "sr_cyr": "кадровска служба",
+            "sr_lat": "kadrovska služba",
+            "ru": "отдел кадров / HR"
+          },
+          {
+            "sr_cyr": "сектор производње",
+            "sr_lat": "sektor proizvodnje",
+            "ru": "производственный отдел"
+          },
+          {
+            "sr_cyr": "сектор логистике",
+            "sr_lat": "sektor logistike",
+            "ru": "логистический отдел"
+          },
+          {
+            "sr_cyr": "правна служба",
+            "sr_lat": "pravna služba",
+            "ru": "юридический отдел"
+          },
+          {
+            "sr_cyr": "маркетинг служба",
+            "sr_lat": "marketing služba",
+            "ru": "маркетинговый отдел"
+          },
+          {
+            "sr_cyr": "ИТ сектор",
+            "sr_lat": "IT sektor",
+            "ru": "IT"
+          },
+          {
+            "sr_cyr": "менаџмент",
+            "sr_lat": "menadžment",
+            "ru": "руководство"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Документација и администрација",
+        "subtopic_lat": "Dokumentacija i administracija",
+        "entries": [
+          {
+            "sr_cyr": "уговор",
+            "sr_lat": "ugovor",
+            "ru": "договор"
+          },
+          {
+            "sr_cyr": "фактура",
+            "sr_lat": "faktura",
+            "ru": "счёт-фактура"
+          },
+          {
+            "sr_cyr": "рачун",
+            "sr_lat": "račun",
+            "ru": "счёт"
+          },
+          {
+            "sr_cyr": "извештај",
+            "sr_lat": "izveštaj",
+            "ru": "отчёт"
+          },
+          {
+            "sr_cyr": "наручивање",
+            "sr_lat": "naručivanje",
+            "ru": "заказ"
+          },
+          {
+            "sr_cyr": "поруџбина",
+            "sr_lat": "porudžbina",
+            "ru": "заказ"
+          },
+          {
+            "sr_cyr": "записник",
+            "sr_lat": "zapisnik",
+            "ru": "протокол"
+          },
+          {
+            "sr_cyr": "допуна",
+            "sr_lat": "dopuna",
+            "ru": "дополнение"
+          },
+          {
+            "sr_cyr": "обрачун",
+            "sr_lat": "obračun",
+            "ru": "расчёт"
+          },
+          {
+            "sr_cyr": "пријава",
+            "sr_lat": "prijava",
+            "ru": "заявление"
+          },
+          {
+            "sr_cyr": "одјава",
+            "sr_lat": "odjava",
+            "ru": "выписка"
+          },
+          {
+            "sr_cyr": "рок испоруке",
+            "sr_lat": "rok isporuke",
+            "ru": "срок доставки"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Радни процес",
+        "subtopic_lat": "Radni proces",
+        "entries": [
+          {
+            "sr_cyr": "производња",
+            "sr_lat": "proizvodnja",
+            "ru": "производство"
+          },
+          {
+            "sr_cyr": "састављање",
+            "sr_lat": "sastavljanje",
+            "ru": "сборка"
+          },
+          {
+            "sr_cyr": "паковање",
+            "sr_lat": "pakovanje",
+            "ru": "упаковка"
+          },
+          {
+            "sr_cyr": "контрола квалитета",
+            "sr_lat": "kontrola kvaliteta",
+            "ru": "контроль качества"
+          },
+          {
+            "sr_cyr": "слање / отпрема",
+            "sr_lat": "slanje / otprema",
+            "ru": "отправка"
+          },
+          {
+            "sr_cyr": "транспорт",
+            "sr_lat": "transport",
+            "ru": "транспортировка"
+          },
+          {
+            "sr_cyr": "испорука",
+            "sr_lat": "isporuka",
+            "ru": "доставка"
+          },
+          {
+            "sr_cyr": "шеф смене",
+            "sr_lat": "šef smene",
+            "ru": "начальник смены"
+          },
+          {
+            "sr_cyr": "радна смена",
+            "sr_lat": "radna smena",
+            "ru": "рабочая смена"
+          },
+          {
+            "sr_cyr": "прековремени рад",
+            "sr_lat": "prekovremeni rad",
+            "ru": "сверхурочная работа"
+          },
+          {
+            "sr_cyr": "запослени",
+            "sr_lat": "zaposleni",
+            "ru": "сотрудник"
+          },
+          {
+            "sr_cyr": "послодавац",
+            "sr_lat": "poslodavac",
+            "ru": "работодатель"
+          }
+        ]
+      }
+    ]
+  },
+  "phrases": [
+    {
+      "subtopic_cyr": "Временске фразе",
+      "subtopic_lat": "Vremenske fraze",
+      "entries": [
+        {
+          "sr_cyr": "Пада киша.",
+          "sr_lat": "Pada kiša.",
+          "ru": "Идет дождь."
+        },
+        {
+          "sr_cyr": "Пљушти.",
+          "sr_lat": "Pljušti.",
+          "ru": "Льет как из ведра."
+        },
+        {
+          "sr_cyr": "Промиче киша.",
+          "sr_lat": "Promiče kiša.",
+          "ru": "Начинается дождь."
+        },
+        {
+          "sr_cyr": "Изгледа да ће бити кише.",
+          "sr_lat": "Izgleda da će biti kiše.",
+          "ru": "Похоже, будет дождь."
+        },
+        {
+          "sr_cyr": "Очекује се невреме.",
+          "sr_lat": "Očekuje se nevreme.",
+          "ru": "Ожидается ненастье."
+        },
+        {
+          "sr_cyr": "Биће кишовито.",
+          "sr_lat": "Biće kišovito.",
+          "ru": "Будет дождливо."
+        },
+        {
+          "sr_cyr": "Једва чекам отопљење.",
+          "sr_lat": "Jedva čekam otopljenje.",
+          "ru": "С нетерпением жду потепления."
+        },
+        {
+          "sr_cyr": "Не прија ми врућина.",
+          "sr_lat": "Ne prija mi vrućina.",
+          "ru": "Мне не нравится жара."
+        },
+        {
+          "sr_cyr": "Вруће је и спарно – најгора комбинација.",
+          "sr_lat": "Vruće je i sparno – najgora kombinacija.",
+          "ru": "Жара и духота — худшее сочетание."
+        }
+      ]
+    },
+    {
+      "subtopic_cyr": "Посао – фразе",
+      "subtopic_lat": "Posao – fraze",
+      "entries": [
+        {
+          "sr_cyr": "запослити се",
+          "sr_lat": "zaposliti se",
+          "ru": "устроиться на работу"
+        },
+        {
+          "sr_cyr": "дати отказ",
+          "sr_lat": "dati otkaz",
+          "ru": "уволиться"
+        },
+        {
+          "sr_cyr": "дати отказ (некоме) / отпустити некога",
+          "sr_lat": "dati otkaz (nekome) / otpustiti nekoga",
+          "ru": "уволить кого"
+        },
+        {
+          "sr_cyr": "отказни рок",
+          "sr_lat": "otkazni rok",
+          "ru": "срок уведомления об увольнении"
+        },
+        {
+          "sr_cyr": "тражити посао",
+          "sr_lat": "tražiti posao",
+          "ru": "искать работу"
+        },
+        {
+          "sr_cyr": "наћи посао",
+          "sr_lat": "naći posao",
+          "ru": "найти работу"
+        },
+        {
+          "sr_cyr": "променити посао",
+          "sr_lat": "promeniti posao",
+          "ru": "сменить работу"
+        },
+        {
+          "sr_cyr": "оглас за посао",
+          "sr_lat": "oglas za posao",
+          "ru": "объявление о работе"
+        },
+        {
+          "sr_cyr": "радна биографија",
+          "sr_lat": "radna biografija",
+          "ru": "резюме"
+        },
+        {
+          "sr_cyr": "радни стаж",
+          "sr_lat": "radni staž",
+          "ru": "трудовой стаж"
+        },
+        {
+          "sr_cyr": "плата / зарада",
+          "sr_lat": "plata / zarada",
+          "ru": "зарплата"
+        },
+        {
+          "sr_cyr": "исплата плате",
+          "sr_lat": "isplata plate",
+          "ru": "выплата зарплаты"
+        },
+        {
+          "sr_cyr": "кашњење плате",
+          "sr_lat": "kašnjenje plate",
+          "ru": "задержка зарплаты"
+        },
+        {
+          "sr_cyr": "повишица",
+          "sr_lat": "povišica",
+          "ru": "повышение зарплаты"
+        },
+        {
+          "sr_cyr": "унапређење",
+          "sr_lat": "unapređenje",
+          "ru": "повышение должности"
+        },
+        {
+          "sr_cyr": "напредовање на послу",
+          "sr_lat": "napredovanje na poslu",
+          "ru": "карьерный рост"
+        },
+        {
+          "sr_cyr": "преговарати о плати",
+          "sr_lat": "pregovarati o plati",
+          "ru": "договариваться о зарплате"
+        },
+        {
+          "sr_cyr": "путни трошкови",
+          "sr_lat": "putni troškovi",
+          "ru": "транспортные расходы"
+        },
+        {
+          "sr_cyr": "порези и доприноси",
+          "sr_lat": "porezi i doprinosi",
+          "ru": "налоги и взносы"
+        },
+        {
+          "sr_cyr": "минимална плата / минималац",
+          "sr_lat": "minimalna plata / minimalac",
+          "ru": "минимальная зарплата"
+        },
+        {
+          "sr_cyr": "радно време",
+          "sr_lat": "radno vreme",
+          "ru": "рабочее время"
+        },
+        {
+          "sr_cyr": "радити прековремено",
+          "sr_lat": "raditi prekovremeno",
+          "ru": "работать сверхурочно"
+        },
+        {
+          "sr_cyr": "потписати уговор о раду",
+          "sr_lat": "potpisati ugovor o radu",
+          "ru": "подписать трудовой договор"
+        },
+        {
+          "sr_cyr": "раскинути уговор",
+          "sr_lat": "raskinuti ugovor",
+          "ru": "расторгнуть договор"
+        },
+        {
+          "sr_cyr": "радити на одређено време",
+          "sr_lat": "raditi na određeno vreme",
+          "ru": "работать по срочному договору"
+        },
+        {
+          "sr_cyr": "радити на неодређено време",
+          "sr_lat": "raditi na neodređeno vreme",
+          "ru": "работать по бессрочному договору"
+        },
+        {
+          "sr_cyr": "радити пуно радно време",
+          "sr_lat": "raditi puno radno vreme",
+          "ru": "работать полный рабочий день"
+        },
+        {
+          "sr_cyr": "радити скраћено радно време",
+          "sr_lat": "raditi skraćeno radno vreme",
+          "ru": "работать неполный рабочий день"
+        },
+        {
+          "sr_cyr": "пробни рад",
+          "sr_lat": "probni rad",
+          "ru": "испытательный срок"
+        },
+        {
+          "sr_cyr": "пријава (у контексту посла)",
+          "sr_lat": "prijava (u kontekstu posla)",
+          "ru": "официальное трудоустройство"
+        },
+        {
+          "sr_cyr": "боловање",
+          "sr_lat": "bolovanje",
+          "ru": "больничный"
+        },
+        {
+          "sr_cyr": "годишњи одмор",
+          "sr_lat": "godišnji odmor",
+          "ru": "ежегодный отпуск"
+        },
+        {
+          "sr_cyr": "слободан дан",
+          "sr_lat": "slobodan dan",
+          "ru": "выходной день"
+        },
+        {
+          "sr_cyr": "плаћено одсуство",
+          "sr_lat": "plaćeno odsustvo",
+          "ru": "оплачиваемый отпуск"
+        },
+        {
+          "sr_cyr": "неплаћено одсуство",
+          "sr_lat": "neplaćeno odsustvo",
+          "ru": "неоплачиваемый отпуск"
+        },
+        {
+          "sr_cyr": "радно место",
+          "sr_lat": "radno mesto",
+          "ru": "рабочее место"
+        },
+        {
+          "sr_cyr": "опис посла",
+          "sr_lat": "opis posla",
+          "ru": "описание должности"
+        },
+        {
+          "sr_cyr": "услови рада",
+          "sr_lat": "uslovi rada",
+          "ru": "условия труда"
+        },
+        {
+          "sr_cyr": "безбедност на раду",
+          "sr_lat": "bezbednost na radu",
+          "ru": "охрана труда"
+        },
+        {
+          "sr_cyr": "колега/колегиница",
+          "sr_lat": "kolega/koleginica",
+          "ru": "коллега"
+        },
+        {
+          "sr_cyr": "шеф / надређени",
+          "sr_lat": "šef / nadređeni",
+          "ru": "начальник"
+        },
+        {
+          "sr_cyr": "радни задаци",
+          "sr_lat": "radni zadaci",
+          "ru": "рабочие обязанности"
+        },
+        {
+          "sr_cyr": "радно искуство",
+          "sr_lat": "radno iskustvo",
+          "ru": "опыт работы"
+        },
+        {
+          "sr_cyr": "радна дисциплина",
+          "sr_lat": "radna disciplina",
+          "ru": "трудовая дисциплина"
+        }
+      ]
+    }
+  ]
+}

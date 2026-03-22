@@ -1,0 +1,539 @@
+{
+  "block_name_lat": "Blok 1",
+  "block_name_cyr": "Блок 1",
+  "part_1": {
+    "name_lat": "Kućni Aparati, Uređaji I Predmeti",
+    "name_cyr": "Кућни Апарати, Уређаји И Предмети",
+    "words": [
+      {
+        "subtopic_cyr": "Опште",
+        "subtopic_lat": "Opšte",
+        "entries": [
+          { "sr_cyr": "плафон", "sr_lat": "plafon", "ru": "потолок" },
+          { "sr_cyr": "под", "sr_lat": "pod", "ru": "пол" },
+          { "sr_cyr": "ламинат", "sr_lat": "laminat", "ru": "ламинат" },
+          { "sr_cyr": "паркет", "sr_lat": "parket", "ru": "паркет" },
+          { "sr_cyr": "плочице", "sr_lat": "pločice", "ru": "плитка" },
+          { "sr_cyr": "кров", "sr_lat": "krov", "ru": "крыша" },
+          {
+            "sr_cyr": "поткровље",
+            "sr_lat": "potkrovlje",
+            "ru": "чердак / мансарда"
+          },
+          { "sr_cyr": "димњак", "sr_lat": "dimnjak", "ru": "дымоход" },
+          { "sr_cyr": "сутерен", "sr_lat": "suteren", "ru": "цокольный этаж" },
+          { "sr_cyr": "подрум", "sr_lat": "podrum", "ru": "подвал" },
+          { "sr_cyr": "степенице", "sr_lat": "stepenice", "ru": "лестница" },
+          { "sr_cyr": "гелендер", "sr_lat": "gelender", "ru": "перила" },
+          { "sr_cyr": "ограда", "sr_lat": "ograda", "ru": "забор" },
+          { "sr_cyr": "капија", "sr_lat": "kapija", "ru": "ворота" },
+          { "sr_cyr": "двориште", "sr_lat": "dvorište", "ru": "двор" }
+        ]
+      },
+      {
+        "subtopic_cyr": "Спаваћа соба",
+        "subtopic_lat": "Spavaća soba",
+        "entries": [
+          { "sr_cyr": "кревет", "sr_lat": "krevet", "ru": "кровать" },
+          { "sr_cyr": "ормар", "sr_lat": "ormar", "ru": "шкаф" },
+          {
+            "sr_cyr": "ноћни сточић",
+            "sr_lat": "noćni stočić",
+            "ru": "прикроватная тумбочка"
+          },
+          { "sr_cyr": "лампа", "sr_lat": "lampa", "ru": "лампа" },
+          { "sr_cyr": "јастук", "sr_lat": "jastuk", "ru": "подушка" },
+          { "sr_cyr": "ћебе", "sr_lat": "ćebe", "ru": "плед" },
+          { "sr_cyr": "јорган", "sr_lat": "jorgan", "ru": "одеяло" },
+          { "sr_cyr": "чаршав", "sr_lat": "čaršav", "ru": "простыня" }
+        ]
+      },
+      {
+        "subtopic_cyr": "Дневна соба",
+        "subtopic_lat": "Dnevna soba",
+        "entries": [
+          {
+            "sr_cyr": "угаона гарнитура/кауч/софа",
+            "sr_lat": "ugaona garnitura/kauč/sofa",
+            "ru": "угловой диван / диван / софа"
+          },
+          { "sr_cyr": "фотеља", "sr_lat": "fotelja", "ru": "кресло" },
+          { "sr_cyr": "сточић", "sr_lat": "stočić", "ru": "столик" },
+          { "sr_cyr": "тепих", "sr_lat": "tepih", "ru": "ковёр" },
+          { "sr_cyr": "комода", "sr_lat": "komoda", "ru": "комод" },
+          {
+            "sr_cyr": "ТВ полица",
+            "sr_lat": "TV polica",
+            "ru": "тумба под телевизор"
+          },
+          { "sr_cyr": "полица", "sr_lat": "polica", "ru": "полка" },
+          { "sr_cyr": "ормарић", "sr_lat": "ormarić", "ru": "шкафчик" },
+          {
+            "sr_cyr": "балконска врата",
+            "sr_lat": "balkonska vrata",
+            "ru": "балконная дверь"
+          },
+          { "sr_cyr": "прозор", "sr_lat": "prozor", "ru": "окно" },
+          { "sr_cyr": "завесе", "sr_lat": "zavese", "ru": "шторы" },
+          { "sr_cyr": "ролетне", "sr_lat": "roletne", "ru": "ролеты" },
+          { "sr_cyr": "утичница", "sr_lat": "utičnica", "ru": "розетка" },
+          { "sr_cyr": "телевизор", "sr_lat": "televizor", "ru": "телевизор" },
+          {
+            "sr_cyr": "пуњач",
+            "sr_lat": "punjač",
+            "ru": "зарядное устройство"
+          },
+          { "sr_cyr": "радијатор", "sr_lat": "radijator", "ru": "радиатор" },
+          {
+            "sr_cyr": "клима (клима уређај)",
+            "sr_lat": "klima (klima uređaj)",
+            "ru": "кондиционер"
+          },
+          { "sr_cyr": "сат", "sr_lat": "sat", "ru": "часы" },
+          { "sr_cyr": "слика", "sr_lat": "slika", "ru": "картина" },
+          { "sr_cyr": "постер", "sr_lat": "poster", "ru": "постер" },
+          {
+            "sr_cyr": "фотографија/слика",
+            "sr_lat": "fotografija/slika",
+            "ru": "фотография / изображение"
+          },
+          {
+            "sr_cyr": "декоративни предмети",
+            "sr_lat": "dekorativni predmeti",
+            "ru": "декоративные предметы"
+          },
+          {
+            "sr_cyr": "собне биљке",
+            "sr_lat": "sobne biljke",
+            "ru": "комнатные растения"
+          },
+          { "sr_cyr": "усисивач", "sr_lat": "usisivač", "ru": "пылесос" }
+        ]
+      },
+      {
+        "subtopic_cyr": "Кухиња",
+        "subtopic_lat": "Kuhinja",
+        "entries": [
+          { "sr_cyr": "фрижидер", "sr_lat": "frižider", "ru": "холодильник" },
+          {
+            "sr_cyr": "микроталасна пећница",
+            "sr_lat": "mikrotalasna pećnica",
+            "ru": "микроволновая печь"
+          },
+          { "sr_cyr": "шпорет", "sr_lat": "šporet", "ru": "плита" },
+          { "sr_cyr": "рерна", "sr_lat": "rerna", "ru": "духовка" },
+          {
+            "sr_cyr": "фритеза на врућ ваздух",
+            "sr_lat": "friteza na vruć vazduh",
+            "ru": "аэрогриль"
+          },
+          { "sr_cyr": "миксер", "sr_lat": "mikser", "ru": "миксер" },
+          { "sr_cyr": "соковник", "sr_lat": "sokovnik", "ru": "соковыжималка" },
+          {
+            "sr_cyr": "машина за прање судова",
+            "sr_lat": "mašina za pranje sudova",
+            "ru": "посудомоечная машина"
+          },
+          { "sr_cyr": "судопера", "sr_lat": "sudopera", "ru": "мойка" },
+          {
+            "sr_cyr": "славина/чесма",
+            "sr_lat": "slavina/česma",
+            "ru": "кран"
+          },
+          { "sr_cyr": "сто", "sr_lat": "sto", "ru": "стол" },
+          { "sr_cyr": "столица", "sr_lat": "stolica", "ru": "стул" },
+          {
+            "sr_cyr": "кухињски ормарић",
+            "sr_lat": "kuhinjski ormarić",
+            "ru": "кухонный шкаф"
+          },
+          {
+            "sr_cyr": "радна површина",
+            "sr_lat": "radna površina",
+            "ru": "рабочая поверхность"
+          },
+          { "sr_cyr": "тањир", "sr_lat": "tanjir", "ru": "тарелка" },
+          { "sr_cyr": "чинија", "sr_lat": "činija", "ru": "миска" },
+          { "sr_cyr": "шерпа", "sr_lat": "šerpa", "ru": "кастрюля" },
+          { "sr_cyr": "лонац", "sr_lat": "lonac", "ru": "кастрюля" },
+          { "sr_cyr": "тигањ", "sr_lat": "tiganj", "ru": "сковорода" },
+          { "sr_cyr": "плех", "sr_lat": "pleh", "ru": "противень" },
+          {
+            "sr_cyr": "тепсија",
+            "sr_lat": "tepsija",
+            "ru": "форма для запекания"
+          },
+          { "sr_cyr": "пекач", "sr_lat": "pekač", "ru": "ростер" },
+          { "sr_cyr": "цедило", "sr_lat": "cedilo", "ru": "дуршлаг" },
+          { "sr_cyr": "кутлача", "sr_lat": "kutlača", "ru": "половник" },
+          { "sr_cyr": "ренде", "sr_lat": "rende", "ru": "тёрка" },
+          { "sr_cyr": "кашика", "sr_lat": "kašika", "ru": "ложка" },
+          { "sr_cyr": "виљушка", "sr_lat": "viljuška", "ru": "вилка" },
+          { "sr_cyr": "нож", "sr_lat": "nož", "ru": "нож" },
+          { "sr_cyr": "чаша", "sr_lat": "čaša", "ru": "стакан" },
+          { "sr_cyr": "шоља", "sr_lat": "šolja", "ru": "кружка" },
+          { "sr_cyr": "џезва", "sr_lat": "džezva", "ru": "джезва" },
+          { "sr_cyr": "салвете", "sr_lat": "salvete", "ru": "салфетки" },
+          { "sr_cyr": "убрус", "sr_lat": "ubrus", "ru": "бумажное полотенце" },
+          { "sr_cyr": "крпа", "sr_lat": "krpa", "ru": "тряпка" },
+          { "sr_cyr": "сунђер", "sr_lat": "sunđer", "ru": "губка" },
+          { "sr_cyr": "жица", "sr_lat": "žica", "ru": "металлическая губка" }
+        ]
+      },
+      {
+        "subtopic_cyr": "Купатило",
+        "subtopic_lat": "Kupatilo",
+        "entries": [
+          {
+            "sr_cyr": "лавабо/умиваоник",
+            "sr_lat": "lavabo/umivaonik",
+            "ru": "раковина"
+          },
+          { "sr_cyr": "када", "sr_lat": "kada", "ru": "ванна" },
+          {
+            "sr_cyr": "туш кабина",
+            "sr_lat": "tuš kabina",
+            "ru": "душевая кабина"
+          },
+          { "sr_cyr": "ВЦ шоља", "sr_lat": "WC šolja", "ru": "унитаз" },
+          {
+            "sr_cyr": "водокотлић",
+            "sr_lat": "vodokotlić",
+            "ru": "сливной бачок"
+          },
+          { "sr_cyr": "бојлер", "sr_lat": "bojler", "ru": "бойлер" },
+          { "sr_cyr": "огледало", "sr_lat": "ogledalo", "ru": "зеркало" },
+          {
+            "sr_cyr": "веш машина",
+            "sr_lat": "veš mašina",
+            "ru": "стиральная машина"
+          },
+          {
+            "sr_cyr": "машина за сушење",
+            "sr_lat": "mašina za sušenje",
+            "ru": "сушильная машина"
+          },
+          {
+            "sr_cyr": "простирка за купатило",
+            "sr_lat": "prostirka za kupatilo",
+            "ru": "коврик для ванной"
+          }
+        ]
+      },
+      {
+        "subtopic_cyr": "Предсобље",
+        "subtopic_lat": "Predsoblje",
+        "entries": [
+          { "sr_cyr": "ципеларник", "sr_lat": "cipelarnik", "ru": "обувница" },
+          { "sr_cyr": "чивилук", "sr_lat": "čiviluk", "ru": "вешалка" },
+          { "sr_cyr": "клупа", "sr_lat": "klupa", "ru": "скамейка" },
+          { "sr_cyr": "отирач", "sr_lat": "otirač", "ru": "придверный коврик" },
+          {
+            "sr_cyr": "кашика за обување",
+            "sr_lat": "kašika za obuvanje",
+            "ru": "ложка для обуви"
+          }
+        ]
+      }
+    ]
+  },
+  "part_2": {
+    "name_lat": "Odeća, Telo I Higijena",
+    "name_cyr": "Одећа, Тело И Хигијена",
+    "words": [
+      {
+        "subtopic_cyr": "Лична хигијена",
+        "subtopic_lat": "Lična higijena",
+        "entries": [
+          { "sr_cyr": "сапун", "sr_lat": "sapun", "ru": "мыло" },
+          {
+            "sr_cyr": "течни сапун",
+            "sr_lat": "tečni sapun",
+            "ru": "жидкое мыло"
+          },
+          {
+            "sr_cyr": "гел за туширање",
+            "sr_lat": "gel za tuširanje",
+            "ru": "гель для душа"
+          },
+          {
+            "sr_cyr": "сунђер за купање",
+            "sr_lat": "sunđer za kupanje",
+            "ru": "губка для купания"
+          },
+          { "sr_cyr": "шампон", "sr_lat": "šampon", "ru": "шампунь" },
+          {
+            "sr_cyr": "балзам за косу",
+            "sr_lat": "balzam za kosu",
+            "ru": "бальзам для волос"
+          },
+          {
+            "sr_cyr": "маска за косу",
+            "sr_lat": "maska za kosu",
+            "ru": "маска для волос"
+          },
+          {
+            "sr_cyr": "четкица за зубе",
+            "sr_lat": "četkica za zube",
+            "ru": "зубная щётка"
+          },
+          {
+            "sr_cyr": "паста за зубе",
+            "sr_lat": "pasta za zube",
+            "ru": "зубная паста"
+          },
+          {
+            "sr_cyr": "конац за зубе",
+            "sr_lat": "konac za zube",
+            "ru": "зубная нить"
+          },
+          {
+            "sr_cyr": "четка за косу",
+            "sr_lat": "četka za kosu",
+            "ru": "щётка для волос"
+          },
+          { "sr_cyr": "чешаљ", "sr_lat": "češalj", "ru": "расчёска" },
+          {
+            "sr_cyr": "штапићи за уши",
+            "sr_lat": "štapići za uši",
+            "ru": "ватные палочки"
+          },
+          {
+            "sr_cyr": "турпија",
+            "sr_lat": "turpija",
+            "ru": "пилочка для ногтей"
+          },
+          {
+            "sr_cyr": "грицкалица",
+            "sr_lat": "grickalica",
+            "ru": "кусачки для ногтей"
+          },
+          {
+            "sr_cyr": "маказице за нокте",
+            "sr_lat": "makazice za nokte",
+            "ru": "ножницы для ногтей"
+          },
+          {
+            "sr_cyr": "лак за нокте",
+            "sr_lat": "lak za nokte",
+            "ru": "лак для ногтей"
+          },
+          { "sr_cyr": "пинцета", "sr_lat": "pinceta", "ru": "пинцет" },
+          {
+            "sr_cyr": "крема за лице",
+            "sr_lat": "krema za lice",
+            "ru": "крем для лица"
+          },
+          {
+            "sr_cyr": "крема за руке",
+            "sr_lat": "krema za ruke",
+            "ru": "крем для рук"
+          },
+          { "sr_cyr": "серум", "sr_lat": "serum", "ru": "сыворотка" },
+          {
+            "sr_cyr": "маска за лице",
+            "sr_lat": "maska za lice",
+            "ru": "маска для лица"
+          },
+          {
+            "sr_cyr": "дезодоранс",
+            "sr_lat": "dezodorans",
+            "ru": "дезодорант"
+          },
+          { "sr_cyr": "парфем", "sr_lat": "parfem", "ru": "парфюм" },
+          { "sr_cyr": "шминка", "sr_lat": "šminka", "ru": "макияж" },
+          {
+            "sr_cyr": "течни пудер",
+            "sr_lat": "tečni puder",
+            "ru": "тональный крем"
+          },
+          { "sr_cyr": "руменило", "sr_lat": "rumenilo", "ru": "румяна" },
+          { "sr_cyr": "бронзер", "sr_lat": "bronzer", "ru": "бронзер" },
+          {
+            "sr_cyr": "сенке за очи",
+            "sr_lat": "senke za oči",
+            "ru": "тени для век"
+          },
+          { "sr_cyr": "маскара", "sr_lat": "maskara", "ru": "тушь для ресниц" },
+          {
+            "sr_cyr": "ајлајнер",
+            "sr_lat": "ajlajner",
+            "ru": "подводка для глаз"
+          },
+          { "sr_cyr": "крејон", "sr_lat": "krejon", "ru": "карандаш" },
+          {
+            "sr_cyr": "оловка за усне",
+            "sr_lat": "olovka za usne",
+            "ru": "карандаш для губ"
+          },
+          {
+            "sr_cyr": "руж/кармин",
+            "sr_lat": "ruž/karmin",
+            "ru": "губная помада"
+          },
+          {
+            "sr_cyr": "сјај за усне",
+            "sr_lat": "sjaj za usne",
+            "ru": "блеск для губ"
+          },
+          {
+            "sr_cyr": "балзам за усне",
+            "sr_lat": "balzam za usne",
+            "ru": "бальзам для губ"
+          },
+          {
+            "sr_cyr": "средство за уклањање шминке",
+            "sr_lat": "sredstvo za uklanjanje šminke",
+            "ru": "средство для снятия макияжа"
+          },
+          { "sr_cyr": "тупфери", "sr_lat": "tupferi", "ru": "ватные диски" },
+          {
+            "sr_cyr": "влажне марамице",
+            "sr_lat": "vlažne maramice",
+            "ru": "влажные салфетки"
+          },
+          { "sr_cyr": "марамице", "sr_lat": "maramice", "ru": "салфетки" }
+        ]
+      },
+      {
+        "subtopic_cyr": "Одећа и обућа",
+        "subtopic_lat": "Odeća i obuća",
+        "entries": [
+          { "sr_cyr": "фармерице", "sr_lat": "farmerice", "ru": "джинсы" },
+          { "sr_cyr": "панталоне", "sr_lat": "pantalone", "ru": "брюки" },
+          { "sr_cyr": "хеланке", "sr_lat": "helanke", "ru": "легинсы" },
+          {
+            "sr_cyr": "тренерка",
+            "sr_lat": "trenerka",
+            "ru": "спортивный костюм; спортивные штаны"
+          },
+          {
+            "sr_cyr": "дуксерица",
+            "sr_lat": "dukserica",
+            "ru": "толстовка, кофта"
+          },
+          { "sr_cyr": "ролка", "sr_lat": "rolka", "ru": "водолазка" },
+          { "sr_cyr": "џемпер", "sr_lat": "džemper", "ru": "свитер" },
+          { "sr_cyr": "јакна", "sr_lat": "jakna", "ru": "куртка" },
+          {
+            "sr_cyr": "прслук",
+            "sr_lat": "prsluk",
+            "ru": "жилетка, безрукавка"
+          },
+          { "sr_cyr": "капут", "sr_lat": "kaput", "ru": "пальто" },
+          { "sr_cyr": "мантил", "sr_lat": "mantil", "ru": "плащ" },
+          { "sr_cyr": "сако", "sr_lat": "sako", "ru": "пиджак" },
+          { "sr_cyr": "одело", "sr_lat": "odelo", "ru": "костюм" },
+          { "sr_cyr": "хаљина", "sr_lat": "haljina", "ru": "платье" },
+          { "sr_cyr": "сукња", "sr_lat": "suknja", "ru": "юбка" },
+          { "sr_cyr": "кошуља", "sr_lat": "košulja", "ru": "рубашка" },
+          { "sr_cyr": "мајица", "sr_lat": "majica", "ru": "футболка" },
+          { "sr_cyr": "блуза", "sr_lat": "bluza", "ru": "блузка" },
+          { "sr_cyr": "кравата", "sr_lat": "kravata", "ru": "галстук" },
+          { "sr_cyr": "каиш", "sr_lat": "kaiš", "ru": "ремень" },
+          { "sr_cyr": "чарапе", "sr_lat": "čarape", "ru": "носки" },
+          {
+            "sr_cyr": "унихоп чарапе/унихопке/хулахопке/најлон чарапе",
+            "sr_lat": "unihop čarape/unihopke/hulahopke/najlon čarape",
+            "ru": "колготки"
+          },
+          { "sr_cyr": "поткошуља", "sr_lat": "potkošulja", "ru": "майка" },
+          {
+            "sr_cyr": "термо доњи веш",
+            "sr_lat": "termo donji veš",
+            "ru": "термобелье"
+          },
+          { "sr_cyr": "доњи веш", "sr_lat": "donji veš", "ru": "нижнее белье" },
+          { "sr_cyr": "грудњак", "sr_lat": "grudnjak", "ru": "бюстгальтер" },
+          { "sr_cyr": "гаће/гаћице", "sr_lat": "gaće/gaćice", "ru": "трусы" },
+          { "sr_cyr": "патике", "sr_lat": "patike", "ru": "кроссовки" },
+          { "sr_cyr": "ципеле", "sr_lat": "cipele", "ru": "туфли; ботинки" },
+          { "sr_cyr": "чизме", "sr_lat": "čizme", "ru": "сапоги" },
+          { "sr_cyr": "сандале", "sr_lat": "sandale", "ru": "сандалии" },
+          { "sr_cyr": "папуче", "sr_lat": "papuče", "ru": "тапочки" }
+        ]
+      },
+      {
+        "subtopic_cyr": "Аксесоари",
+        "subtopic_lat": "Aksesoari",
+        "entries": [
+          { "sr_cyr": "рукавице", "sr_lat": "rukavice", "ru": "перчатки" },
+          { "sr_cyr": "капа", "sr_lat": "kapa", "ru": "шапка" },
+          { "sr_cyr": "качкет", "sr_lat": "kačket", "ru": "кепка" },
+          { "sr_cyr": "шешир", "sr_lat": "šešir", "ru": "шляпа" },
+          { "sr_cyr": "шал", "sr_lat": "šal", "ru": "шарф" },
+          { "sr_cyr": "сат", "sr_lat": "sat", "ru": "часы" },
+          { "sr_cyr": "прстен", "sr_lat": "prsten", "ru": "кольцо" },
+          { "sr_cyr": "минђуше", "sr_lat": "minđuše", "ru": "серьги" },
+          {
+            "sr_cyr": "огрлица",
+            "sr_lat": "ogrlica",
+            "ru": "ожерелье / колье"
+          },
+          { "sr_cyr": "наруквица", "sr_lat": "narukvica", "ru": "браслет" },
+          { "sr_cyr": "шнала", "sr_lat": "šnala", "ru": "заколка" },
+          {
+            "sr_cyr": "гумица за косу",
+            "sr_lat": "gumica za kosu",
+            "ru": "резинка для волос"
+          },
+          { "sr_cyr": "наочаре", "sr_lat": "naočare", "ru": "очки" },
+          { "sr_cyr": "рајф", "sr_lat": "rajf", "ru": "ободок" }
+        ]
+      },
+      {
+        "subtopic_cyr": "Делови тела",
+        "subtopic_lat": "Delovi tela",
+        "entries": [
+          { "sr_cyr": "глава", "sr_lat": "glava", "ru": "голова" },
+          { "sr_cyr": "коса", "sr_lat": "kosa", "ru": "волосы" },
+          { "sr_cyr": "чело", "sr_lat": "čelo", "ru": "лоб" },
+          { "sr_cyr": "обрве", "sr_lat": "obrve", "ru": "брови" },
+          { "sr_cyr": "око", "sr_lat": "oko", "ru": "глаз" },
+          { "sr_cyr": "очи", "sr_lat": "oči", "ru": "глаза" },
+          { "sr_cyr": "трепавице", "sr_lat": "trepavice", "ru": "ресницы" },
+          { "sr_cyr": "ухо/уво", "sr_lat": "uho/uvo", "ru": "ухо" },
+          { "sr_cyr": "уши", "sr_lat": "uši", "ru": "уши" },
+          { "sr_cyr": "нос", "sr_lat": "nos", "ru": "нос" },
+          { "sr_cyr": "образ", "sr_lat": "obraz", "ru": "щека" },
+          { "sr_cyr": "уста", "sr_lat": "usta", "ru": "рот" },
+          { "sr_cyr": "усне", "sr_lat": "usne", "ru": "губы" },
+          { "sr_cyr": "зуб", "sr_lat": "zub", "ru": "зуб" },
+          { "sr_cyr": "зуби", "sr_lat": "zubi", "ru": "зубы" },
+          { "sr_cyr": "језик", "sr_lat": "jezik", "ru": "язык" },
+          { "sr_cyr": "брада", "sr_lat": "brada", "ru": "подбородок" },
+          { "sr_cyr": "врат", "sr_lat": "vrat", "ru": "шея" },
+          { "sr_cyr": "раме", "sr_lat": "rame", "ru": "плечо" },
+          { "sr_cyr": "леђа", "sr_lat": "leđa", "ru": "спина" },
+          { "sr_cyr": "груди", "sr_lat": "grudi", "ru": "грудь" },
+          { "sr_cyr": "стомак", "sr_lat": "stomak", "ru": "живот" },
+          { "sr_cyr": "струк", "sr_lat": "struk", "ru": "талия" },
+          { "sr_cyr": "рука", "sr_lat": "ruka", "ru": "рука" },
+          { "sr_cyr": "лакат", "sr_lat": "lakat", "ru": "локоть" },
+          { "sr_cyr": "зглоб", "sr_lat": "zglob", "ru": "запястье" },
+          { "sr_cyr": "шака", "sr_lat": "šaka", "ru": "кисть" },
+          { "sr_cyr": "длан", "sr_lat": "dlan", "ru": "ладонь" },
+          { "sr_cyr": "прст", "sr_lat": "prst", "ru": "палец" },
+          { "sr_cyr": "прсти", "sr_lat": "prsti", "ru": "пальцы" },
+          { "sr_cyr": "нокат", "sr_lat": "nokat", "ru": "ноготь" },
+          { "sr_cyr": "нога", "sr_lat": "noga", "ru": "нога" },
+          { "sr_cyr": "бутина", "sr_lat": "butina", "ru": "бедро" },
+          { "sr_cyr": "колено", "sr_lat": "koleno", "ru": "колено" },
+          { "sr_cyr": "потколеница", "sr_lat": "potkolenica", "ru": "голень" },
+          { "sr_cyr": "чланак", "sr_lat": "članak", "ru": "щиколотка" },
+          { "sr_cyr": "стопало", "sr_lat": "stopalo", "ru": "стопа" },
+          { "sr_cyr": "пета", "sr_lat": "peta", "ru": "пятка" },
+          {
+            "sr_cyr": "прсти на ногама",
+            "sr_lat": "prsti na nogama",
+            "ru": "пальцы ног"
+          },
+          { "sr_cyr": "кожа", "sr_lat": "koža", "ru": "кожа" },
+          { "sr_cyr": "мишић", "sr_lat": "mišić", "ru": "мышца" },
+          { "sr_cyr": "кост", "sr_lat": "kost", "ru": "кость" }
+        ]
+      }
+    ]
+  },
+  "phrases": []
+}

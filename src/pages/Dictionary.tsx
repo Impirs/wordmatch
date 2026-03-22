@@ -1,15 +1,15 @@
-import { useState, useMemo, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Header } from '../components';
-import { getAllUniqueWords } from '../words';
-import { getAssetPath } from '../utils';
+import { useState, useMemo, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import { Header } from "../components";
+import { getAllUniqueWords } from "../words";
+import { getAssetPath } from "../utils";
 
-type Direction = 'serbian-russian' | 'russian-serbian';
+type Direction = "serbian-russian" | "russian-serbian";
 
 export function Dictionary() {
   const navigate = useNavigate();
-  const [searchQuery, setSearchQuery] = useState('');
-  const [direction, setDirection] = useState<Direction>('serbian-russian');
+  const [searchQuery, setSearchQuery] = useState("");
+  const [direction, setDirection] = useState<Direction>("serbian-russian");
   const listRef = useRef<HTMLDivElement>(null);
 
   const allWords = useMemo(() => getAllUniqueWords(), []);
@@ -17,9 +17,9 @@ export function Dictionary() {
   // Получаем слова в зависимости от направления
   const words = useMemo(() => {
     return allWords.map(([serbian, russian]) =>
-      direction === 'serbian-russian'
+      direction === "serbian-russian"
         ? { word: serbian, translation: russian }
-        : { word: russian, translation: serbian }
+        : { word: russian, translation: serbian },
     );
   }, [allWords, direction]);
 
@@ -29,7 +29,7 @@ export function Dictionary() {
     return words.filter(
       ({ word, translation }) =>
         word.toLowerCase().includes(query) ||
-        translation.toLowerCase().includes(query)
+        translation.toLowerCase().includes(query),
     );
   }, [words, searchQuery]);
 
@@ -37,7 +37,7 @@ export function Dictionary() {
   const groupedWords = useMemo(() => {
     const groups: Record<string, typeof filteredWords> = {};
 
-    filteredWords.forEach(item => {
+    filteredWords.forEach((item) => {
       const firstLetter = item.word.charAt(0).toUpperCase();
       if (!groups[firstLetter]) {
         groups[firstLetter] = [];
@@ -46,7 +46,7 @@ export function Dictionary() {
     });
 
     // Сортировка внутри групп
-    Object.keys(groups).forEach(letter => {
+    Object.keys(groups).forEach((letter) => {
       groups[letter].sort((a, b) => a.word.localeCompare(b.word));
     });
 
@@ -63,13 +63,13 @@ export function Dictionary() {
     if (element && listRef.current) {
       const container = listRef.current;
       const elementTop = element.offsetTop - container.offsetTop;
-      container.scrollTo({ top: elementTop, behavior: 'smooth' });
+      container.scrollTo({ top: elementTop, behavior: "smooth" });
     }
   };
 
   const toggleDirection = () => {
-    setDirection(prev =>
-      prev === 'serbian-russian' ? 'russian-serbian' : 'serbian-russian'
+    setDirection((prev) =>
+      prev === "serbian-russian" ? "russian-serbian" : "serbian-russian",
     );
   };
 
@@ -81,11 +81,15 @@ export function Dictionary() {
       <div className="flex px-4 py-4 justify-between items-center flex-row w-full">
         <button
           // eslint-disable-next-line @typescript-eslint/no-misused-promises
-          onClick={() => navigate('/')}
+          onClick={() => navigate("/")}
           className="text-accent bg-secondary hover:bg-hover rounded-lg
                     transition-colors flex items-center justify-center"
         >
-          <img src={getAssetPath('/icons/undo.svg')} alt="go_back" className="h-12 w-12" />
+          <img
+            src={getAssetPath("/icons/undo.svg")}
+            alt="go_back"
+            className="h-12 w-12"
+          />
         </button>
         <h1 className="text-3xl font-bold text-center flex-1">Словарь</h1>
         <div className="h-12 w-12"></div>
@@ -105,7 +109,7 @@ export function Dictionary() {
           className="px-4 md:px-5 py-2 md:py-3 bg-primary rounded-lg md:rounded-xl hover:bg-hover transition-colors text-sm md:text-base whitespace-nowrap"
           title="Переключить направление перевода"
         >
-          {direction === 'serbian-russian' ? 'SR → RU' : 'RU → SR'}
+          {direction === "serbian-russian" ? "SR → RU" : "RU → SR"}
         </button>
       </div>
 
@@ -116,11 +120,11 @@ export function Dictionary() {
           className="w-10 md:w-14 flex-shrink-0 py-2 text-xs md:text-sm overflow-hidden"
           style={{
             columnCount: 2,
-            columnFill: 'auto',
-            height: '100%'
+            columnFill: "auto",
+            height: "100%",
           }}
         >
-          {alphabet.map(letter => (
+          {alphabet.map((letter) => (
             <button
               key={letter}
               onClick={() => scrollToLetter(letter)}
@@ -138,7 +142,7 @@ export function Dictionary() {
               Слова не найдены
             </p>
           ) : (
-            alphabet.map(letter => (
+            alphabet.map((letter) => (
               <div key={letter} id={`letter-${letter}`}>
                 <h2 className="text-lg md:text-xl font-bold text-accent sticky top-0 bg-background py-2">
                   {letter}
