@@ -15,8 +15,8 @@
           { "sr_cyr": "порција", "sr_lat": "porcija", "ru": "порция" },
           { "sr_cyr": "рецепт", "sr_lat": "recept", "ru": "рецепт" },
           {
-            "sr_cyr": "састојак (множина: састојци)",
-            "sr_lat": "sastojak (množina: sastojci)",
+            "sr_cyr": "састојак",
+            "sr_lat": "sastojak",
             "ru": "ингредиент"
           },
           { "sr_cyr": "укус", "sr_lat": "ukus", "ru": "вкус" },
@@ -41,8 +41,8 @@
           { "sr_cyr": "крушка", "sr_lat": "kruška", "ru": "груша" },
           { "sr_cyr": "банана", "sr_lat": "banana", "ru": "банан" },
           {
-            "sr_cyr": "наранџа/поморанџа",
-            "sr_lat": "narandža/pomorandža",
+            "sr_cyr": "поморанџа",
+            "sr_lat": "pomorandža",
             "ru": "апельсин"
           },
           { "sr_cyr": "мандарина", "sr_lat": "mandarina", "ru": "мандарин" },
@@ -155,8 +155,8 @@
           },
           { "sr_cyr": "лигње", "sr_lat": "lignje", "ru": "кальмары" },
           {
-            "sr_cyr": "шкампи (гамбори/козице)",
-            "sr_lat": "škampi (gambori/kozice)",
+            "sr_cyr": "шкампи",
+            "sr_lat": "škampi",
             "ru": "креветки"
           },
           {
@@ -297,7 +297,7 @@
           { "sr_cyr": "сладолед", "sr_lat": "sladoled", "ru": "мороженое" },
           { "sr_cyr": "пудинг", "sr_lat": "puding", "ru": "пудинг" },
           { "sr_cyr": "палачинке", "sr_lat": "palačinke", "ru": "блинчики" },
-          { "sr_cyr": "вафли/галете", "sr_lat": "vafli/galete", "ru": "вафли" },
+          { "sr_cyr": "вафли (галете)", "sr_lat": "vafli (galete)", "ru": "вафли" },
           { "sr_cyr": "крофна", "sr_lat": "krofna", "ru": "пончик" },
           { "sr_cyr": "баклава", "sr_lat": "baklava", "ru": "пахлава" },
           { "sr_cyr": "џем", "sr_lat": "džem", "ru": "джем" },
@@ -310,8 +310,8 @@
         "entries": [
           { "sr_cyr": "вода", "sr_lat": "voda", "ru": "вода" },
           {
-            "sr_cyr": "минерална вода/кисела вода",
-            "sr_lat": "mineralna voda/kisela voda",
+            "sr_cyr": "минерална (кисела) вода",
+            "sr_lat": "mineralna (kisela) voda",
             "ru": "минеральная вода"
           },
           { "sr_cyr": "сок", "sr_lat": "sok", "ru": "сок" },
@@ -383,8 +383,8 @@
           { "sr_cyr": "рачун", "sr_lat": "račun", "ru": "счёт" },
           { "sr_cyr": "платити", "sr_lat": "platiti", "ru": "заплатить" },
           {
-            "sr_cyr": "готовина/кеш",
-            "sr_lat": "gotovina/keš",
+            "sr_cyr": "готовина (кеш)",
+            "sr_lat": "gotovina (keš)",
             "ru": "наличные"
           },
           { "sr_cyr": "картица", "sr_lat": "kartica", "ru": "карта" },

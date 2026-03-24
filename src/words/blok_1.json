@@ -53,9 +53,17 @@
         "subtopic_lat": "Dnevna soba",
         "entries": [
           {
-            "sr_cyr": "угаона гарнитура/кауч/софа",
-            "sr_lat": "ugaona garnitura/kauč/sofa",
-            "ru": "угловой диван / диван / софа"
+            "sr_cyr": "угаона гарнитура",
+            "sr_lat": "ugaona garnitura",
+            "ru": "угловой диван"
+          },{
+            "sr_cyr": "кауч",
+            "sr_lat": "kauč",
+            "ru": "диван"
+          },{
+            "sr_cyr": "софа",
+            "sr_lat": "sofa",
+            "ru": "софа"
           },
           { "sr_cyr": "фотеља", "sr_lat": "fotelja", "ru": "кресло" },
           { "sr_cyr": "сточић", "sr_lat": "stočić", "ru": "столик" },
@@ -85,17 +93,22 @@
           },
           { "sr_cyr": "радијатор", "sr_lat": "radijator", "ru": "радиатор" },
           {
-            "sr_cyr": "клима (клима уређај)",
-            "sr_lat": "klima (klima uređaj)",
+            "sr_cyr": "клима",
+            "sr_lat": "klima",
             "ru": "кондиционер"
           },
           { "sr_cyr": "сат", "sr_lat": "sat", "ru": "часы" },
           { "sr_cyr": "слика", "sr_lat": "slika", "ru": "картина" },
           { "sr_cyr": "постер", "sr_lat": "poster", "ru": "постер" },
           {
-            "sr_cyr": "фотографија/слика",
-            "sr_lat": "fotografija/slika",
-            "ru": "фотография / изображение"
+            "sr_cyr": "фотографија",
+            "sr_lat": "fotografija",
+            "ru": "фотография"
+          },
+          {
+            "sr_cyr": "слика",
+            "sr_lat": "slika",
+            "ru": "изображение"
           },
           {
             "sr_cyr": "декоративни предмети",
@@ -405,12 +418,12 @@
           {
             "sr_cyr": "тренерка",
             "sr_lat": "trenerka",
-            "ru": "спортивный костюм; спортивные штаны"
+            "ru": "спортивный костюм"
           },
           {
             "sr_cyr": "дуксерица",
             "sr_lat": "dukserica",
-            "ru": "толстовка, кофта"
+            "ru": "толстовка"
           },
           { "sr_cyr": "ролка", "sr_lat": "rolka", "ru": "водолазка" },
           { "sr_cyr": "џемпер", "sr_lat": "džemper", "ru": "свитер" },
@@ -433,8 +446,8 @@
           { "sr_cyr": "каиш", "sr_lat": "kaiš", "ru": "ремень" },
           { "sr_cyr": "чарапе", "sr_lat": "čarape", "ru": "носки" },
           {
-            "sr_cyr": "унихоп чарапе/унихопке/хулахопке/најлон чарапе",
-            "sr_lat": "unihop čarape/unihopke/hulahopke/najlon čarape",
+            "sr_cyr": "чарaпе",
+            "sr_lat": "čarape",
             "ru": "колготки"
           },
           { "sr_cyr": "поткошуља", "sr_lat": "potkošulja", "ru": "майка" },
@@ -445,7 +458,7 @@
           },
           { "sr_cyr": "доњи веш", "sr_lat": "donji veš", "ru": "нижнее белье" },
           { "sr_cyr": "грудњак", "sr_lat": "grudnjak", "ru": "бюстгальтер" },
-          { "sr_cyr": "гаће/гаћице", "sr_lat": "gaće/gaćice", "ru": "трусы" },
+          { "sr_cyr": "гаће", "sr_lat": "gaće", "ru": "трусы" },
           { "sr_cyr": "патике", "sr_lat": "patike", "ru": "кроссовки" },
           { "sr_cyr": "ципеле", "sr_lat": "cipele", "ru": "туфли; ботинки" },
           { "sr_cyr": "чизме", "sr_lat": "čizme", "ru": "сапоги" },
@@ -468,7 +481,7 @@
           {
             "sr_cyr": "огрлица",
             "sr_lat": "ogrlica",
-            "ru": "ожерелье / колье"
+            "ru": "колье"
           },
           { "sr_cyr": "наруквица", "sr_lat": "narukvica", "ru": "браслет" },
           { "sr_cyr": "шнала", "sr_lat": "šnala", "ru": "заколка" },

@@ -112,19 +112,20 @@ export function setCardsStatusByBoardIds(
   newRussianSlots: (CardData | null)[];
 } {
   const targetIds = new Set(boardIds);
+  const matched = status === "matched" ? true : false;
 
   const newSerbianSlots = serbianSlots.map((card) => {
     if (!card || !targetIds.has(card.board_id ?? -1)) {
       return card;
     }
-    return { ...card, status };
+    return { ...card, status, fading: matched };
   });
 
   const newRussianSlots = russianSlots.map((card) => {
     if (!card || !targetIds.has(card.board_id ?? -1)) {
       return card;
     }
-    return { ...card, status };
+    return { ...card, status, fading: matched };
   });
 
   return { newSerbianSlots, newRussianSlots };
@@ -239,6 +240,7 @@ export function replaceCardInSlots(
       board_id: card.board_id,
       column: "serbian" as const,
       status: "normal" as const,
+      fading: false,
     };
   });
 
@@ -252,6 +254,7 @@ export function replaceCardInSlots(
       board_id: card.board_id,
       column: "russian" as const,
       status: "normal" as const,
+      fading: false,
     };
   });
 

@@ -14,11 +14,12 @@ const STORAGE_KEY = "wordmatch_enabled_sets";
  * }
  */
 export interface CardData {
-    pair_id: number;
+  pair_id: number;
   board_id: number | null;
   words: { serbian: string; russian: string };
   column: "serbian" | "russian" | null;
   status: "normal" | "selected" | "matched" | "mismatched";
+  fading: boolean;
 }
 
 // Элемент очереди: пара карточек, которые добавляются перекрёстно
@@ -72,6 +73,7 @@ export function createCards(words: [string, string][]): CardData[] {
     words: { serbian, russian },
     column: null,
     status: "normal",
+    fading: false,
   }));
 }
 
@@ -86,6 +88,7 @@ export function createQueue(words: [string, string][]): QueuePair[] {
       words: { serbian, russian },
       column: "serbian",
       status: "normal",
+      fading: false,
     },
     card2: {
       pair_id: index,
@@ -93,6 +96,7 @@ export function createQueue(words: [string, string][]): QueuePair[] {
       words: { serbian, russian },
       column: "russian",
       status: "normal",
+      fading: false,
     },
   }));
 }

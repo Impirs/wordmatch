@@ -26,9 +26,9 @@ export function WordCard({
       onClick={onClick}
       className={`
         h-18 md:h-22 px-4 md:px-6 rounded-xl md:rounded-2xl font-medium text-xl md:text-2xl
-        flex items-center justify-center text-center transition-all select-none
-        ${stateClass} ${isFading ? "transition-opacity duration-300 opacity-0" : "opacity-100"}
-      `}
+        flex items-center justify-center text-center select-none
+        ${stateClass} ${isFading ? "transition-opacity duration-500 opacity-0" : "opacity-100"}
+    `}
     >
       {word}
     </button>
