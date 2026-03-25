@@ -53,17 +53,21 @@ export function Info() {
 
           <p>
             Надеюсь, что WordMatch поможет и тебе! Учить слова через игру
-            намного эффективнее, чем просто читать словарь.
+            намного эффективнее, чем просто читать их в словарике.
           </p>
 
           <p>
+            Функционал сайта будет расширяться: и я планирую добавить больше слов,
+            новые режимы обучения и другие полезные фишки.
+          </p>
+          {/* <p>
             Буду рад, если ты оценишь приложение и расскажешь, какие улучшения
             хотел бы видеть. Твой отзыв очень важен для развития проекта!
-          </p>
+          </p> */}
         </div>
 
         <a
-          href="#" // TODO: Добавить ссылку на форму отзыва
+          href="https://docs.google.com/forms/d/e/1FAIpQLSftLXddRHK0N9oZ10bAOnOBcKxzWiL0Rl22k4xB4qTI2gvJdg/viewform?usp=publish-editor" // TODO: Добавить ссылку на форму отзыва
           className="mt-8 px-6 py-3 bg-accent text-white rounded-lg font-medium hover:bg-accent/80 transition-colors shadow-lg flex items-center gap-2"
         >
           <img
