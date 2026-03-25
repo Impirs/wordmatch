@@ -1,21 +1,3 @@
-export { basicWords, basicSetInfo } from "./basic";
-export { adjectiveWords, adjectivesSetInfo } from "./adjectives";
-export { verbWords, verbsSetInfo } from "./verbs";
-export { clothingWords, clothingSetInfo } from "./clothing";
-export { itemsWords, itemsSetInfo } from "./items";
-export { itemsAdvancedWords, itemsAdvancedSetInfo } from "./itemsAdvanced";
-export { relationshipsWords, relationshipsSetInfo } from "./relationships";
-export { foodWords, foodSetInfo } from "./food";
-export { directionsWords, directionsSetInfo } from "./directions";
-export {
-  verbsImperfectiveWords,
-  verbsImperfectiveSetInfo,
-} from "./verbsImperfective";
-export {
-  verbsPerfectiveWords,
-  verbsPerfectiveSetInfo,
-} from "./verbsPerfective";
-
 import blok1Data from "./blok_1.json";
 import blok2Data from "./blok_2.json";
 import blok3Data from "./blok_3.json";
@@ -265,17 +247,6 @@ export const blok3WordSets = createJsonWordSets(
 );
 
 export const allWordSets: WordSet[] = [
-  // { ...basicSetInfo, words: basicWords },
-  // { ...adjectivesSetInfo, words: adjectiveWords },
-  // { ...verbsSetInfo, words: verbWords },
-  // { ...clothingSetInfo, words: clothingWords },
-  // { ...itemsSetInfo, words: itemsWords },
-  // { ...itemsAdvancedSetInfo, words: itemsAdvancedWords },
-  // { ...relationshipsSetInfo, words: relationshipsWords },
-  // { ...foodSetInfo, words: foodWords },
-  // { ...directionsSetInfo, words: directionsWords },
-  // { ...verbsImperfectiveSetInfo, words: verbsImperfectiveWords },
-  // { ...verbsPerfectiveSetInfo, words: verbsPerfectiveWords },
   ...blok1WordSets,
   ...blok2WordSets,
   ...blok3WordSets,
