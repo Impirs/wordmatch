@@ -1,7 +1,15 @@
 // Реэкспорт всего из gameLogic
 export type { CardData, QueuePair } from "./gameHelpers";
 export {
+  initGameSettings,
+  getGameSettings,
+  setGameSettings,
+  getEnabledSetsByBlock,
+  setEnabledSetsByBlock,
   getEnabledSets,
+} from "./storage";
+export {
+
   prepareGameWords,
   createCards,
   createQueue,

@@ -2,23 +2,40 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Header } from "../components";
 import { allWordSets } from "../words";
-import { getAssetPath } from "../utils";
+import { getAssetPath, getEnabledSetsByBlock, setEnabledSetsByBlock } from "../utils";
 
-const STORAGE_KEY = "wordmatch_enabled_sets";
+const blockSections = [
+  {
+    id: "blok-1",
+    title: "Блок 1",
+    sets: allWordSets.filter((set) => set.id.startsWith("blok-1-")),
+  },
+  {
+    id: "blok-2",
+    title: "Блок 2",
+    sets: allWordSets.filter((set) => set.id.startsWith("blok-2-")),
+  },
+  {
+    id: "blok-3",
+    title: "Блок 3",
+    sets: allWordSets.filter((set) => set.id.startsWith("blok-3-")),
+  },
+].filter((section) => section.sets.length > 0);
 
 export function Settings() {
   const navigate = useNavigate();
   const [enabledSets, setEnabledSets] = useState<string[]>(() => {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved) {
-      return JSON.parse(saved) as string[];
-    }
-    // По умолчанию включен только базовый набор
-    return ["basic"];
+    const grouped = getEnabledSetsByBlock();
+    return [...grouped.Blok1, ...grouped.Blok2, ...grouped.Blok3];
   });
 
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(enabledSets));
+    const grouped = {
+      Blok1: enabledSets.filter((id) => id.startsWith("blok-1-")),
+      Blok2: enabledSets.filter((id) => id.startsWith("blok-2-")),
+      Blok3: enabledSets.filter((id) => id.startsWith("blok-3-")),
+    };
+    setEnabledSetsByBlock(grouped);
   }, [enabledSets]);
 
   const toggleSet = (setId: string) => {
@@ -52,62 +69,61 @@ export function Settings() {
         <div className="h-12 w-12"></div>
       </div>
 
-      <div className="max-w-full mx-6">
-        {/* <h2 className="text-lg md:text-xl font-semibold mb-4 md:mb-6 text-text-secondary">Наборы слов</h2> */}
-
-        <div className="space-y-3 md:space-y-4">
-          {allWordSets.map((set) => (
-            <div
-              key={set.id}
-              onClick={() => toggleSet(set.id)}
-              className={`p-4 md:p-5 rounded-lg md:rounded-xl cursor-pointer transition-all ${
-                enabledSets.includes(set.id)
-                  ? "bg-accent/20 border-2 border-accent"
-                  : "bg-primary border-2 border-transparent hover:border-accent/50"
-              }`}
-            >
-              <div className="flex items-center justify-between">
-                <div>
-                  <h3 className="font-medium md:text-lg">{set.name}</h3>
-                  <p className="text-sm md:text-base text-text-secondary">
-                    {set.description}
-                  </p>
-                  <p className="text-xs md:text-sm text-text-secondary mt-1">
-                    {set.words.length} карточек
-                  </p>
-                </div>
-                <div
-                  className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${
-                    enabledSets.includes(set.id)
-                      ? "bg-accent border-accent"
-                      : "border-text-secondary"
-                  }`}
-                >
-                  {enabledSets.includes(set.id) && (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 text-white"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  )}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
+      <div className="max-w-full mx-6 ">
         {enabledSets.length === 0 && (
           <p className="mt-4 text-error text-sm">
             Выберите хотя бы один набор слов для игры
           </p>
         )}
+        <div className="space-y-8">
+          {blockSections.map((section) => (
+            <section key={section.id} className="space-y-4">
+              <div className="flex items-center gap-3">
+                <h2 className="text-xl md:text-2xl font-semibold text-text">
+                  {section.title}
+                </h2>
+                <div className="h-px flex-1 bg-text-secondary/20" />
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {section.sets.map((set) => (
+                  <div
+                    key={set.id}
+                    onClick={() => toggleSet(set.id)}
+                    className={`p-4 md:p-5 rounded-lg md:rounded-xl cursor-pointer transition-all ${
+                      enabledSets.includes(set.id)
+                        ? "bg-accent/20 border-2 border-accent"
+                        : "bg-primary border-2 border-transparent hover:border-accent/50"
+                    }`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h3 className="font-medium md:text-lg">{set.name}</h3>
+                        <p className="text-sm md:text-base text-text-secondary">
+                          {set.description}
+                        </p>
+                        <p className="text-xs md:text-sm text-text-secondary mt-1">
+                          {set.words.length} карточек
+                        </p>
+                      </div>
+                      <div
+                        className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${
+                          enabledSets.includes(set.id)
+                            ? "bg-accent border-accent"
+                            : "border-text-secondary"
+                        }`}
+                      >
+                        {enabledSets.includes(set.id) && (
+                          <img src={getAssetPath("/icons/done.svg")} alt="done" className="h-6 w-6" />
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
       </div>
     </div>
   );
