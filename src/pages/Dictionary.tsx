@@ -117,7 +117,7 @@ export function Dictionary() {
       <div className="flex flex-1 overflow-hidden max-w-3xl mx-auto w-full">
         {/* Алфавитная навигация - закреплена */}
         <div
-          className="w-10 md:w-14 flex-shrink-0 py-2 text-xs md:text-sm overflow-hidden"
+          className="w-10 md:w-14 shrink-0 py-2 text-xs md:text-sm overflow-hidden"
           style={{
             columnCount: 2,
             columnFill: "auto",

@@ -48,7 +48,7 @@ export function Settings() {
   };
 
   return (
-    <div className="min-h-screen bg-background text-text">
+    <div className="h-screen bg-background text-text overflow-hidden flex flex-col">
       <Header />
 
       <div className="flex px-4 py-4 justify-between items-center flex-row w-full">
@@ -69,13 +69,13 @@ export function Settings() {
         <div className="h-12 w-12"></div>
       </div>
 
-      <div className="max-w-full mx-6 ">
-        {enabledSets.length === 0 && (
-          <p className="mt-4 text-error text-sm">
-            Выберите хотя бы один набор слов для игры
-          </p>
-        )}
-        <div className="space-y-8">
+      {enabledSets.length === 0 && (
+        <p className="my-2 text-error text-sm mx-auto w-full max-w-md text-center">
+          Выберите хотя бы один набор слов для игры
+        </p>
+      )}
+
+      <div className="max-w-full mx-6 space-y-8 overflow-auto">
           {blockSections.map((section) => (
             <section key={section.id} className="space-y-4">
               <div className="flex items-center gap-3">
@@ -123,7 +123,6 @@ export function Settings() {
               </div>
             </section>
           ))}
-        </div>
       </div>
     </div>
   );
