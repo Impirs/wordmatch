@@ -18,3 +18,16 @@ export function shuffleArray<T>(array: T[]): T[] {
   }
   return shuffled;
 }
+
+/**
+ * Нормализация текста для сравнения:
+ * - Удаление пробелов в начале и конце
+ * - Приведение к нижнему региструå
+ */
+export function normalizeText(value: string): string {
+  return value
+    .trim()
+    .toLocaleLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}

@@ -1,15 +1,19 @@
+import { memo } from "react";
+
 interface WordCardProps {
+  boardId: number;
   word: string;
   Status: "normal" | "selected" | "matched" | "mismatched";
   isFading: boolean;
-  onClick: () => void;
+  onCardClick: (boardId: number) => void;
 }
 
-export function WordCard({
+export const WordCard = memo(function WordCard({
+  boardId,
   word,
   Status,
   isFading,
-  onClick,
+  onCardClick,
 }: WordCardProps) {
   let stateClass = "bg-secondary border-2 border-primary";
 
@@ -23,7 +27,7 @@ export function WordCard({
 
   return (
     <button
-      onClick={onClick}
+      onClick={() => onCardClick(boardId)}
       className={`
         h-18 md:h-22 px-4 md:px-6 rounded-xl md:rounded-2xl font-medium text-xl md:text-2xl
         flex items-center justify-center text-center select-none
@@ -33,4 +37,4 @@ export function WordCard({
       {word}
     </button>
   );
-}
+});

@@ -5,7 +5,7 @@ export function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-background text-text flex flex-col items-center justify-center">
+    <div className="h-screen bg-background text-text flex flex-col items-center justify-center">
       <img
         src={getAssetPath("/logo.svg")}
         alt="WordMatch"
@@ -30,7 +30,7 @@ export function Home() {
           onClick={() => {
             void navigate("/dictionary");
           }}
-          className="w-full py-4 md:py-5 bg-primary text-text rounded-lg md:rounded-xl font-medium md:text-lg hover:bg-hover transition-colors"
+          className="w-full py-4 md:py-5 bg-secondary text-text rounded-lg md:rounded-xl font-medium md:text-lg hover:bg-hover transition-colors"
         >
           Словарь
         </button>
@@ -39,7 +39,7 @@ export function Home() {
           onClick={() => {
             void navigate("/settings");
           }}
-          className="w-full py-4 md:py-5 bg-primary text-text rounded-lg md:rounded-xl font-medium md:text-lg hover:bg-hover transition-colors"
+          className="w-full py-4 md:py-5 bg-secondary text-text rounded-lg md:rounded-xl font-medium md:text-lg hover:bg-hover transition-colors"
         >
           Настройки
         </button>
@@ -48,7 +48,7 @@ export function Home() {
           onClick={() => {
             void navigate("/info");
           }}
-          className="w-full py-4 md:py-5 bg-primary text-text rounded-lg md:rounded-xl font-medium md:text-lg hover:bg-hover transition-colors"
+          className="w-full py-4 md:py-5 bg-secondary text-text rounded-lg md:rounded-xl font-medium md:text-lg hover:bg-hover transition-colors"
         >
           О проекте
         </button>

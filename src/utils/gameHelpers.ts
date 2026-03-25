@@ -1,7 +1,6 @@
-import { getUniqueWords, allWordSets } from "../words";
+import { getUniqueWords } from "../words";
 import { shuffleArray } from "./functions";
-
-const STORAGE_KEY = "wordmatch_enabled_sets";
+import { getEnabledSets } from "./storage";
 
 /**
  * Тип данных для карточки в игре:
@@ -22,21 +21,12 @@ export interface CardData {
   fading: boolean;
 }
 
-// Элемент очереди: пара карточек, которые добавляются перекрёстно
+/**
+ * Элемент очереди: пара карточек, которые добавляются перекрёстно
+ */
 export interface QueuePair {
   card1: CardData;
   card2: CardData;
-}
-
-/**
- * Получить список включённых наборов из localStorage
- */
-export function getEnabledSets(): string[] {
-  const saved = localStorage.getItem(STORAGE_KEY);
-  if (saved) {
-    return JSON.parse(saved) as string[];
-  }
-  return allWordSets.map((set) => set.id);
 }
 
 /**

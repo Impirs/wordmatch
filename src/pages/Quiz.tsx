@@ -1,43 +1,111 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { Header, WordCard } from "../components";
+import { Header, WordCard, Switcher } from "../components";
 import type { CardData, QueuePair } from "../utils";
 import {
   prepareGameWords,
   createQueue,
+  initGameSettings,
+  getGameSettings,
+  setGameSettings,
   initialiseGame,
   replaceCardInSlots,
-  // findCardByBoardId,
+  findCardByBoardId,
   isCrossColumnPick,
   isWordMatch,
-  setCardsStatusByBoardIds,
   areAllSlotsCleared,
   formatTime,
   getAssetPath,
   setCardStatusByBoardId,
+  setCardsStatusByBoardIds,
 } from "../utils";
 
 type GameState = "setup" | "playing" | "victory" | "defeat";
 
+type BoardState = {
+  selectedBoardId: number | null;
+  completedCards: number;
+  combo: number;
+  maxCombo: number;
+  cardQueue: QueuePair[];
+  serbianSlots: (CardData | null)[];
+  russianSlots: (CardData | null)[];
+};
+
+const EMPTY_BOARD_STATE: BoardState = {
+  selectedBoardId: null,
+  completedCards: 0,
+  combo: 0,
+  maxCombo: 0,
+  cardQueue: [],
+  serbianSlots: [],
+  russianSlots: [],
+};
+
 export function Quiz() {
   const navigate = useNavigate();
+  const [storedSettings] = useState(() => {
+    initGameSettings();
+    return getGameSettings();
+  });
 
   // Настройки игры
-  const [timerEnabled, setTimerEnabled] = useState(true);
-  const [timeLimit, setTimeLimit] = useState(120); // 2 минуты
-  const [cardCount, setCardCount] = useState(60);
+  const [timerEnabled, setTimerEnabled] = useState(storedSettings.timerEnabled);
+  const [timeLimit, setTimeLimit] = useState(storedSettings.timerLimit);
+  const [cardCount, setCardCount] = useState(storedSettings.wordsLimit);
+  const [autoLimitWords, setAutoLimitWords] = useState(
+    storedSettings.autoLimitWords,
+  );
+  const [mistakeRepeat, setMistakeRepeat] = useState(
+    storedSettings.mistakeRepeat,
+  );
 
   // Состояние игры
   const [gameState, setGameState] = useState<GameState>("setup");
   const [timeRemaining, setTimeRemaining] = useState(0);
   const [elapsedTime, setElapsedTime] = useState(0);
-  const [maxCombo, setMaxCombo] = useState(0);
-  const [completedCards, setCompletedCards] = useState(0);
+  const [boardState, setBoardState] = useState<BoardState>(EMPTY_BOARD_STATE);
+  const boardStateRef = useRef<BoardState>(EMPTY_BOARD_STATE);
+  const timeoutIdsRef = useRef<number[]>([]);
 
-  const [cardQueue, setCardQueue] = useState<QueuePair[]>([]);
-  const [selectedCard, setSelectedCard] = useState<CardData | null>(null);
-  const [serbianSlots, setSerbianSlots] = useState<(CardData | null)[]>([]);
-  const [russianSlots, setRussianSlots] = useState<(CardData | null)[]>([]);
+  const {
+    maxCombo,
+    completedCards,
+    serbianSlots,
+    russianSlots,
+  } = boardState;
+
+  useEffect(() => {
+    setGameSettings({
+      timerEnabled,
+      timerLimit: timeLimit,
+      wordsLimit: cardCount,
+      autoLimitWords,
+      mistakeRepeat,
+    });
+  }, [timerEnabled, timeLimit, cardCount, autoLimitWords, mistakeRepeat]);
+
+  const clearPendingTimeouts = useCallback(() => {
+    timeoutIdsRef.current.forEach((timeoutId) => window.clearTimeout(timeoutId));
+    timeoutIdsRef.current = [];
+  }, []);
+
+  const scheduleBoardUpdate = useCallback(
+    (callback: () => void, delay: number) => {
+      const timeoutId = window.setTimeout(() => {
+        timeoutIdsRef.current = timeoutIdsRef.current.filter(
+          (storedId) => storedId !== timeoutId,
+        );
+        callback();
+      }, delay);
+
+      timeoutIdsRef.current.push(timeoutId);
+    },
+    [],
+  );
+
+  useEffect(() => clearPendingTimeouts, [clearPendingTimeouts]);
+
 
   // Таймер
   useEffect(() => {
@@ -76,159 +144,242 @@ export function Quiz() {
       cardQueue: queue,
     } = initialiseGame(gameQueue);
 
-    setSerbianSlots(initialSerbian);
-    setRussianSlots(initialRussian);
-    setCardQueue(queue);
-    setSelectedCard(null);
+    clearPendingTimeouts();
+    const nextBoardState: BoardState = {
+      selectedBoardId: null,
+      completedCards: 0,
+      combo: 0,
+      maxCombo: 0,
+      serbianSlots: initialSerbian,
+      russianSlots: initialRussian,
+      cardQueue: queue,
+    };
+    boardStateRef.current = nextBoardState;
+    setBoardState(nextBoardState);
 
     setTimeRemaining(timeLimit);
     setElapsedTime(0);
-    setMaxCombo(0);
-    setCompletedCards(0);
     setGameState("playing");
-  }, [cardCount, timeLimit]);
+  }, [cardCount, clearPendingTimeouts, timeLimit]);
 
   // Заменить угаданные карточки на новые из очереди
   const replaceCard = useCallback(
     (card1BoardId: number, card2BoardId: number) => {
-      const result = replaceCardInSlots(
-        card1BoardId,
-        card2BoardId,
-        cardQueue,
-        serbianSlots,
-        russianSlots,
-      );
+      let shouldSetVictory = false;
 
-      setSerbianSlots(result.newSerbianSlots);
-      setRussianSlots(result.newRussianSlots);
+      setBoardState((prev) => {
+        const result = replaceCardInSlots(
+          card1BoardId,
+          card2BoardId,
+          prev.cardQueue,
+          prev.serbianSlots,
+          prev.russianSlots,
+        );
 
-      setCardQueue(result.newCardQueue);
+        shouldSetVictory =
+          result.newCardQueue.length === 0 &&
+          areAllSlotsCleared(result.newSerbianSlots, result.newRussianSlots);
 
-      if (
-        result.newCardQueue.length === 0 &&
-        areAllSlotsCleared(result.newSerbianSlots, result.newRussianSlots)
-      ) {
+        const nextState = {
+          ...prev,
+          serbianSlots: result.newSerbianSlots,
+          russianSlots: result.newRussianSlots,
+          cardQueue: result.newCardQueue,
+        };
+
+        boardStateRef.current = nextState;
+
+        return nextState;
+      });
+
+      if (shouldSetVictory) {
         setGameState("victory");
       }
     },
-    [cardQueue, serbianSlots, russianSlots],
+    [],
   );
 
   const handleCardClick = useCallback(
-    (card: CardData) => {
-      if ( card.board_id === null || card.status === "matched") {
+    (boardId: number) => {
+      if (gameState !== "playing") {
         return;
       }
 
-      if (!selectedCard) {
-        // Если это первый выбор, просто сохраняем его
-        const result = setCardStatusByBoardId(
-          card.board_id,
-          "selected",
-          serbianSlots,
-          russianSlots,
-        );
-        setSerbianSlots(result.newSerbianSlots);
-        setRussianSlots(result.newRussianSlots);
-        setSelectedCard(card);
+      const prev = boardStateRef.current;
+      const currentCard = findCardByBoardId(
+        boardId,
+        prev.serbianSlots,
+        prev.russianSlots,
+      );
+
+      if (
+        !currentCard ||
+        currentCard.board_id === null ||
+        currentCard.status === "matched" ||
+        currentCard.status === "mismatched"
+      ) {
+        return;
       }
-      else if (card.board_id === selectedCard.board_id) {
-        // Если кликнули по той же карточке, снимаем выбор
+
+      let nextState: BoardState = prev;
+      let boardIdsToReplace: [number, number] | null = null;
+      let boardIdsToReset: [number, number] | null = null;
+
+      if (prev.selectedBoardId === null) {
         const result = setCardStatusByBoardId(
-          card.board_id,
-          "normal",
-          serbianSlots,
-          russianSlots,
-        );
-        setSerbianSlots(result.newSerbianSlots);
-        setRussianSlots(result.newRussianSlots);
-        setSelectedCard(null);
-      }
-      else if (card.column === selectedCard.column) {
-        // Если выбрали карточку из того же столбца, переключаем выбор на неё
-        const prev: CardData = selectedCard;
-        const resetPrevResult = setCardStatusByBoardId(
-          prev.board_id,
-          "normal",
-          serbianSlots,
-          russianSlots,
-        );
-        const setCurrentResult = setCardStatusByBoardId(
-          card.board_id,
+          boardId,
           "selected",
-          resetPrevResult.newSerbianSlots,
-          resetPrevResult.newRussianSlots,
+          prev.serbianSlots,
+          prev.russianSlots,
         );
-        setSerbianSlots(setCurrentResult.newSerbianSlots);
-        setRussianSlots(setCurrentResult.newRussianSlots);
-        setSelectedCard(card);
+
+        nextState = {
+          ...prev,
+          selectedBoardId: boardId,
+          serbianSlots: result.newSerbianSlots,
+          russianSlots: result.newRussianSlots,
+        };
+      } else if (boardId === prev.selectedBoardId) {
+        const result = setCardStatusByBoardId(
+          boardId,
+          "normal",
+          prev.serbianSlots,
+          prev.russianSlots,
+        );
+
+        nextState = {
+          ...prev,
+          selectedBoardId: null,
+          serbianSlots: result.newSerbianSlots,
+          russianSlots: result.newRussianSlots,
+        };
       } else {
-        if (isCrossColumnPick(card, selectedCard)) {
-          if (isWordMatch(card, selectedCard)) {
-            // Правильная пара
-            const boardIds = [card.board_id, selectedCard.board_id].filter(
-              (id): id is number => id !== null,
-            );
+        const selectedCard = findCardByBoardId(
+          prev.selectedBoardId,
+          prev.serbianSlots,
+          prev.russianSlots,
+        );
+
+        if (!selectedCard || selectedCard.board_id === null) {
+          const result = setCardStatusByBoardId(
+            boardId,
+            "selected",
+            prev.serbianSlots,
+            prev.russianSlots,
+          );
+
+          nextState = {
+            ...prev,
+            selectedBoardId: boardId,
+            serbianSlots: result.newSerbianSlots,
+            russianSlots: result.newRussianSlots,
+          };
+        } else if (currentCard.column === selectedCard.column) {
+          const resetPrevResult = setCardStatusByBoardId(
+            selectedCard.board_id,
+            "normal",
+            prev.serbianSlots,
+            prev.russianSlots,
+          );
+          const setCurrentResult = setCardStatusByBoardId(
+            boardId,
+            "selected",
+            resetPrevResult.newSerbianSlots,
+            resetPrevResult.newRussianSlots,
+          );
+
+          nextState = {
+            ...prev,
+            selectedBoardId: boardId,
+            serbianSlots: setCurrentResult.newSerbianSlots,
+            russianSlots: setCurrentResult.newRussianSlots,
+          };
+        } else if (isCrossColumnPick(currentCard, selectedCard)) {
+          const boardIds: [number, number] = [boardId, prev.selectedBoardId];
+
+          if (isWordMatch(currentCard, selectedCard)) {
             const matchedResult = setCardsStatusByBoardIds(
               boardIds,
               "matched",
-              serbianSlots,
-              russianSlots,
+              prev.serbianSlots,
+              prev.russianSlots,
             );
-            setSerbianSlots(matchedResult.newSerbianSlots);
-            setRussianSlots(matchedResult.newRussianSlots);
-            setCompletedCards((prev) => prev + 1);
-            setMaxCombo((prev) => prev + 1);
-            setSelectedCard(null);
+            const nextCombo = prev.combo + 1;
 
-            setTimeout(() => {
-              // Заменяем угаданные карточки новыми из очереди
-              replaceCard(card.board_id!, selectedCard.board_id!);
-            }, 500);
-
+            nextState = {
+              ...prev,
+              selectedBoardId: null,
+              completedCards: prev.completedCards + 1,
+              combo: nextCombo,
+              maxCombo: Math.max(prev.maxCombo, nextCombo),
+              serbianSlots: matchedResult.newSerbianSlots,
+              russianSlots: matchedResult.newRussianSlots,
+            };
+            boardIdsToReplace = boardIds;
           } else {
-            // Неправильная пара
-            const boardIds = [card.board_id, selectedCard.board_id].filter(
-              (id): id is number => id !== null,
-            );
             const mismatchResult = setCardsStatusByBoardIds(
               boardIds,
               "mismatched",
-              serbianSlots,
-              russianSlots,
+              prev.serbianSlots,
+              prev.russianSlots,
             );
-            setSerbianSlots(mismatchResult.newSerbianSlots);
-            setRussianSlots(mismatchResult.newRussianSlots);
-            setMaxCombo(0);
-            setSelectedCard(null);
 
-            // Сбрасываем статус обратно через 300ms
-            setTimeout(() => {
-              const resetResult = setCardsStatusByBoardIds(
-                boardIds,
-                "normal",
-                serbianSlots,
-                russianSlots,
-              );
-              setSerbianSlots(resetResult.newSerbianSlots);
-              setRussianSlots(resetResult.newRussianSlots);
-            }, 300);
+            nextState = {
+              ...prev,
+              selectedBoardId: null,
+              combo: 0,
+              serbianSlots: mismatchResult.newSerbianSlots,
+              russianSlots: mismatchResult.newRussianSlots,
+            };
+            boardIdsToReset = boardIds;
           }
         }
       }
+
+      if (nextState !== prev) {
+        boardStateRef.current = nextState;
+        setBoardState(nextState);
+      }
+
+      if (boardIdsToReplace) {
+        scheduleBoardUpdate(() => {
+          replaceCard(boardIdsToReplace[0], boardIdsToReplace[1]);
+        }, 500);
+        return;
+      }
+
+      if (!boardIdsToReset) {
+        return;
+      }
+
+      scheduleBoardUpdate(() => {
+        setBoardState((prev) => {
+          const resetResult = setCardsStatusByBoardIds(
+            boardIdsToReset,
+            "normal",
+            prev.serbianSlots,
+            prev.russianSlots,
+          );
+
+          const nextState = {
+            ...prev,
+            serbianSlots: resetResult.newSerbianSlots,
+            russianSlots: resetResult.newRussianSlots,
+          };
+
+          boardStateRef.current = nextState;
+
+          return nextState;
+        });
+      }, 300);
     },
-    [
-      selectedCard,
-      serbianSlots,
-      russianSlots,
-      replaceCard,
-    ],
+    [gameState, replaceCard, scheduleBoardUpdate],
   );
 
   // Экран настроек
   if (gameState === "setup") {
     return (
-      <div className="min-h-screen bg-background text-text">
+      <div className="h-screen bg-background text-text">
         <Header />
 
         <div className="flex px-4 py-8 justify-between items-center flex-row w-full">
@@ -248,24 +399,16 @@ export function Quiz() {
           <div className="h-8 w-8"></div>
         </div>
 
-        <div className="max-w-md md:max-w-xl mx-auto space-y-4 md:space-y-5 px-4 md:px-6 mt-8">
+        <div className="max-w-md md:max-w-xl mx-auto space-y-4 md:space-y-5 px-4 md:px-6">
           {/* Настройка таймера */}
           <div className="bg-secondary p-5 md:p-6 rounded-2xl">
             <div className="flex items-center justify-between">
               <span className="font-semibold text-lg md:text-xl">Таймер</span>
-              <button
-                onClick={() => setTimerEnabled(!timerEnabled)}
-                className="w-14 md:w-16 h-8 md:h-9 rounded-full transition-colors relative bg-primary"
-              >
-                <div
-                  className={`absolute top-1 w-6 h-6 md:w-7 md:h-7 bg-white rounded-full transition-transform shadow-md ${
-                    timerEnabled ? "left-7 md:left-8" : "left-1"
-                  }`}
-                />
-              </button>
+              <Switcher enabled={timerEnabled} onToggle={() => setTimerEnabled((prev) => !prev)} />
             </div>
 
-            <div className="flex items-center justify-between bg-secondary rounded-xl py-3 md:py-4 mt-3 md:mt-4">
+            <div className={`flex items-center justify-between bg-secondary rounded-xl transition-all duration-300
+                            ${timerEnabled ? "h-fit py-3 md:py-4 mt-3 md:mt-4 " : "h-0 opacity-0 overflow-hidden"}`}>
               <button
                 onClick={() => setTimeLimit((prev) => Math.max(5, prev - 5))}
                 className={`w-12 h-12 md:w-14 md:h-14 bg-white/15 rounded-xl hover:bg-accent
@@ -282,7 +425,8 @@ export function Quiz() {
               <button
                 onClick={() => setTimeLimit((prev) => prev + 5)}
                 className={`w-12 h-12 md:w-14 md:h-14 bg-white/15 rounded-xl hover:bg-accent
-                          transition-colors text-2xl md:text-3xl font-bold ${timerEnabled ? "" : "opacity-50 cursor-not-allowed"}`}
+                          transition-colors text-2xl md:text-3xl font-bold
+                          ${timerEnabled ? "" : "opacity-50 cursor-not-allowed"}`}
                 disabled={!timerEnabled}
               >
                 +
@@ -315,6 +459,38 @@ export function Quiz() {
               >
                 +
               </button>
+            </div>
+          </div>
+
+
+          <button className="bg-secondary p-5 md:p-6 rounded-2xl flex items-center justify-between w-full"
+            // eslint-disable-next-line @typescript-eslint/no-misused-promises
+                  onClick={() => navigate("/settings")}>
+            <span className="font-semibold text-lg md:text-xl">
+              Наборы слов
+            </span>
+            <img src={getAssetPath("/icons/settings.svg")} alt="settings"
+                  className="h-10 w-10 md:h-12 md:w-12 mr-2"/>
+          </button>
+
+          {/* Заглушки настроек (логика будет добавлена позже) */}
+          <div className="bg-secondary p-5 md:p-6 rounded-2xl space-y-4 hidden">
+            <div className="flex items-center justify-between">
+              <div>
+                <span className="font-semibold text-lg md:text-xl">
+                  Авто-лимит слов
+                </span>
+              </div>
+              <Switcher enabled={autoLimitWords} onToggle={() => setAutoLimitWords((prev) => !prev)} />
+            </div>
+
+            <div className="flex items-center justify-between">
+              <div>
+                <span className="font-semibold text-lg md:text-xl">
+                  Повторять ошибки
+                </span>
+              </div>
+              <Switcher enabled={mistakeRepeat} onToggle={() => setMistakeRepeat((prev) => !prev)} />
             </div>
           </div>
 
@@ -387,10 +563,11 @@ export function Quiz() {
                 card ? (
                   <WordCard
                     key={`serbian-${card.board_id}-${idx}`}
+                    boardId={card.board_id!}
                     word={card.words.serbian}
                     Status={card.status}
                     isFading={card.fading}
-                    onClick={() => handleCardClick(card)}
+                    onCardClick={handleCardClick}
                   />
                 ) : (
                   <div key={`empty-serbian-${idx}`} className="h-14 md:h-20" />
@@ -404,10 +581,11 @@ export function Quiz() {
                 card ? (
                   <WordCard
                     key={`russian-${card.board_id}-${idx}`}
+                    boardId={card.board_id!}
                     word={card.words.russian}
                     Status={card.status}
                     isFading={card.fading}
-                    onClick={() => handleCardClick(card)}
+                    onCardClick={handleCardClick}
                   />
                 ) : (
                   <div key={`empty-russian-${idx}`} className="h-14 md:h-20" />
@@ -490,7 +668,7 @@ export function Quiz() {
           <div className="flex justify-between items-center">
             <span className="text-text-secondary md:text-lg">Макс. комбо</span>
             <span className="font-bold text-xl md:text-2xl text-cyan">
-              {maxCombo}x
+              {maxCombo}
             </span>
           </div>
         </div>
