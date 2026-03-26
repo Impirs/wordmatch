@@ -2,7 +2,11 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Header } from "../components";
 import { allWordSets } from "../words";
-import { getAssetPath, getEnabledSetsByBlock, setEnabledSetsByBlock } from "../utils";
+import {
+  getAssetPath,
+  getEnabledSetsByBlock,
+  setEnabledSetsByBlock,
+} from "../utils";
 
 const blockSections = [
   {
@@ -76,53 +80,57 @@ export function Settings() {
       )}
 
       <div className="max-w-full mx-6 space-y-8 overflow-auto">
-          {blockSections.map((section) => (
-            <section key={section.id} className="space-y-4">
-              <div className="flex items-center gap-3">
-                <h2 className="text-xl md:text-2xl font-semibold text-text">
-                  {section.title}
-                </h2>
-                <div className="h-px flex-1 bg-text-secondary/20" />
-              </div>
+        {blockSections.map((section) => (
+          <section key={section.id} className="space-y-4">
+            <div className="flex items-center gap-3">
+              <h2 className="text-xl md:text-2xl font-semibold text-text">
+                {section.title}
+              </h2>
+              <div className="h-px flex-1 bg-text-secondary/20" />
+            </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {section.sets.map((set) => (
-                  <div
-                    key={set.id}
-                    onClick={() => toggleSet(set.id)}
-                    className={`p-4 md:p-5 rounded-lg md:rounded-xl cursor-pointer transition-all ${
-                      enabledSets.includes(set.id)
-                        ? "bg-accent/20 border-2 border-accent"
-                        : "bg-primary border-2 border-transparent hover:border-accent/50"
-                    }`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h3 className="font-medium md:text-lg">{set.name}</h3>
-                        <p className="text-sm md:text-base text-text-secondary">
-                          {set.description}
-                        </p>
-                        <p className="text-xs md:text-sm text-text-secondary mt-1">
-                          {set.words.length} карточек
-                        </p>
-                      </div>
-                      <div
-                        className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${
-                          enabledSets.includes(set.id)
-                            ? "bg-accent border-accent"
-                            : "border-text-secondary"
-                        }`}
-                      >
-                        {enabledSets.includes(set.id) && (
-                          <img src={getAssetPath("/icons/done.svg")} alt="done" className="h-6 w-6" />
-                        )}
-                      </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {section.sets.map((set) => (
+                <div
+                  key={set.id}
+                  onClick={() => toggleSet(set.id)}
+                  className={`p-4 md:p-5 rounded-lg md:rounded-xl cursor-pointer transition-all ${
+                    enabledSets.includes(set.id)
+                      ? "bg-accent/20 border-2 border-accent"
+                      : "bg-primary border-2 border-transparent hover:border-accent/50"
+                  }`}
+                >
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="font-medium md:text-lg">{set.name}</h3>
+                      <p className="text-sm md:text-base text-text-secondary">
+                        {set.description}
+                      </p>
+                      <p className="text-xs md:text-sm text-text-secondary mt-1">
+                        {set.words.length} карточек
+                      </p>
+                    </div>
+                    <div
+                      className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${
+                        enabledSets.includes(set.id)
+                          ? "bg-accent border-accent"
+                          : "border-text-secondary"
+                      }`}
+                    >
+                      {enabledSets.includes(set.id) && (
+                        <img
+                          src={getAssetPath("/icons/done.svg")}
+                          alt="done"
+                          className="h-6 w-6"
+                        />
+                      )}
                     </div>
                   </div>
-                ))}
-              </div>
-            </section>
-          ))}
+                </div>
+              ))}
+            </div>
+          </section>
+        ))}
       </div>
     </div>
   );

@@ -15,5 +15,5 @@ export function Switcher({ enabled, onToggle }: SwitcherProps) {
         }`}
       />
     </button>
-  )
+  );
 }

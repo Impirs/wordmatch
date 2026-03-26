@@ -72,7 +72,7 @@ export function setCardStatusByBoardId(
   status: CardData["status"],
   serbianSlots: (CardData | null)[],
   russianSlots: (CardData | null)[],
-) : {
+): {
   newSerbianSlots: (CardData | null)[];
   newRussianSlots: (CardData | null)[];
 } {
@@ -138,7 +138,10 @@ export function areAllSlotsCleared(
   serbianSlots: (CardData | null)[],
   russianSlots: (CardData | null)[],
 ): boolean {
-  return serbianSlots.every((card) => card === null) && russianSlots.every((card) => card === null);
+  return (
+    serbianSlots.every((card) => card === null) &&
+    russianSlots.every((card) => card === null)
+  );
 }
 
 /**

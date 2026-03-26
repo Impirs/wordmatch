@@ -297,7 +297,11 @@
           { "sr_cyr": "сладолед", "sr_lat": "sladoled", "ru": "мороженое" },
           { "sr_cyr": "пудинг", "sr_lat": "puding", "ru": "пудинг" },
           { "sr_cyr": "палачинке", "sr_lat": "palačinke", "ru": "блинчики" },
-          { "sr_cyr": "вафли (галете)", "sr_lat": "vafli (galete)", "ru": "вафли" },
+          {
+            "sr_cyr": "вафли (галете)",
+            "sr_lat": "vafli (galete)",
+            "ru": "вафли"
+          },
           { "sr_cyr": "крофна", "sr_lat": "krofna", "ru": "пончик" },
           { "sr_cyr": "баклава", "sr_lat": "baklava", "ru": "пахлава" },
           { "sr_cyr": "џем", "sr_lat": "džem", "ru": "джем" },

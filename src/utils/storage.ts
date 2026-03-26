@@ -24,7 +24,6 @@ export interface GameSettings {
   mistakeRepeat: boolean;
 }
 
-
 export interface EnabledSetsByBlock {
   Blok1: string[];
   Blok2: string[];
@@ -62,9 +61,7 @@ function getDefaultEnabledSetsByBlock(): EnabledSetsByBlock {
     Blok3: [],
   };
 
-  const blok1Sets = allWordSets.filter((set) =>
-    set.id.startsWith("blok-1-"),
-  );
+  const blok1Sets = allWordSets.filter((set) => set.id.startsWith("blok-1-"));
 
   const opsteSet = blok1Sets.find((set) => {
     const names = [set.topicNameLat, set.topicNameCyr, set.name].filter(
@@ -118,13 +115,19 @@ function normalizeEnabledSetsValue(
     const record = value as Partial<Record<BlockStorageKey, unknown>>;
     return {
       Blok1: Array.isArray(record.Blok1)
-        ? record.Blok1.filter((item): item is string => typeof item === "string")
+        ? record.Blok1.filter(
+            (item): item is string => typeof item === "string",
+          )
         : [],
       Blok2: Array.isArray(record.Blok2)
-        ? record.Blok2.filter((item): item is string => typeof item === "string")
+        ? record.Blok2.filter(
+            (item): item is string => typeof item === "string",
+          )
         : [],
       Blok3: Array.isArray(record.Blok3)
-        ? record.Blok3.filter((item): item is string => typeof item === "string")
+        ? record.Blok3.filter(
+            (item): item is string => typeof item === "string",
+          )
         : [],
     };
   }
@@ -153,7 +156,10 @@ function isValidGameSettings(value: unknown): value is GameSettings {
 export function initGameSettings(): void {
   const savedSettings = localStorage.getItem(STORAGE_SETTINGS_KEY);
   if (!savedSettings) {
-    localStorage.setItem(STORAGE_SETTINGS_KEY, JSON.stringify(defaultGameSettings));
+    localStorage.setItem(
+      STORAGE_SETTINGS_KEY,
+      JSON.stringify(defaultGameSettings),
+    );
   } else {
     try {
       const parsed = JSON.parse(savedSettings) as unknown;
@@ -164,7 +170,10 @@ export function initGameSettings(): void {
         );
       }
     } catch {
-      localStorage.setItem(STORAGE_SETTINGS_KEY, JSON.stringify(defaultGameSettings));
+      localStorage.setItem(
+        STORAGE_SETTINGS_KEY,
+        JSON.stringify(defaultGameSettings),
+      );
     }
   }
 

@@ -68,12 +68,7 @@ export function Quiz() {
   const boardStateRef = useRef<BoardState>(EMPTY_BOARD_STATE);
   const timeoutIdsRef = useRef<number[]>([]);
 
-  const {
-    maxCombo,
-    completedCards,
-    serbianSlots,
-    russianSlots,
-  } = boardState;
+  const { maxCombo, completedCards, serbianSlots, russianSlots } = boardState;
 
   useEffect(() => {
     setGameSettings({
@@ -86,7 +81,9 @@ export function Quiz() {
   }, [timerEnabled, timeLimit, cardCount, autoLimitWords, mistakeRepeat]);
 
   const clearPendingTimeouts = useCallback(() => {
-    timeoutIdsRef.current.forEach((timeoutId) => window.clearTimeout(timeoutId));
+    timeoutIdsRef.current.forEach((timeoutId) =>
+      window.clearTimeout(timeoutId),
+    );
     timeoutIdsRef.current = [];
   }, []);
 
@@ -106,7 +103,6 @@ export function Quiz() {
 
   useEffect(() => clearPendingTimeouts, [clearPendingTimeouts]);
 
-
   // Таймер
   useEffect(() => {
     if (gameState !== "playing") return;
@@ -117,6 +113,7 @@ export function Quiz() {
       if (timerEnabled) {
         setTimeRemaining((prev) => {
           if (prev <= 1) {
+            // console.log("Time's up! Setting game state to defeat.");
             setGameState("defeat");
             return 0;
           }
@@ -180,6 +177,11 @@ export function Quiz() {
           result.newCardQueue.length === 0 &&
           areAllSlotsCleared(result.newSerbianSlots, result.newRussianSlots);
 
+        if (shouldSetVictory) {
+          // console.log("All cards matched! Setting game state to victory.");
+          setGameState("victory");
+        }
+
         const nextState = {
           ...prev,
           serbianSlots: result.newSerbianSlots,
@@ -191,10 +193,6 @@ export function Quiz() {
 
         return nextState;
       });
-
-      if (shouldSetVictory) {
-        setGameState("victory");
-      }
     },
     [],
   );
@@ -404,11 +402,16 @@ export function Quiz() {
           <div className="bg-secondary p-5 md:p-6 rounded-2xl">
             <div className="flex items-center justify-between">
               <span className="font-semibold text-lg md:text-xl">Таймер</span>
-              <Switcher enabled={timerEnabled} onToggle={() => setTimerEnabled((prev) => !prev)} />
+              <Switcher
+                enabled={timerEnabled}
+                onToggle={() => setTimerEnabled((prev) => !prev)}
+              />
             </div>
 
-            <div className={`flex items-center justify-between bg-secondary rounded-xl transition-all duration-300
-                            ${timerEnabled ? "h-fit py-3 md:py-4 mt-3 md:mt-4 " : "h-0 opacity-0 overflow-hidden"}`}>
+            <div
+              className={`flex items-center justify-between bg-secondary rounded-xl transition-all duration-300
+                            ${timerEnabled ? "h-fit py-3 md:py-4 mt-3 md:mt-4 " : "h-0 opacity-0 overflow-hidden"}`}
+            >
               <button
                 onClick={() => setTimeLimit((prev) => Math.max(5, prev - 5))}
                 className={`w-12 h-12 md:w-14 md:h-14 bg-white/15 rounded-xl hover:bg-accent
@@ -462,15 +465,19 @@ export function Quiz() {
             </div>
           </div>
 
-
-          <button className="bg-secondary p-5 md:p-6 rounded-2xl flex items-center justify-between w-full"
+          <button
+            className="bg-secondary p-5 md:p-6 rounded-2xl flex items-center justify-between w-full"
             // eslint-disable-next-line @typescript-eslint/no-misused-promises
-                  onClick={() => navigate("/settings")}>
+            onClick={() => navigate("/settings")}
+          >
             <span className="font-semibold text-lg md:text-xl">
               Наборы слов
             </span>
-            <img src={getAssetPath("/icons/settings.svg")} alt="settings"
-                  className="h-10 w-10 md:h-12 md:w-12 mr-2"/>
+            <img
+              src={getAssetPath("/icons/settings.svg")}
+              alt="settings"
+              className="h-10 w-10 md:h-12 md:w-12 mr-2"
+            />
           </button>
 
           {/* Заглушки настроек (логика будет добавлена позже) */}
@@ -481,7 +488,10 @@ export function Quiz() {
                   Авто-лимит слов
                 </span>
               </div>
-              <Switcher enabled={autoLimitWords} onToggle={() => setAutoLimitWords((prev) => !prev)} />
+              <Switcher
+                enabled={autoLimitWords}
+                onToggle={() => setAutoLimitWords((prev) => !prev)}
+              />
             </div>
 
             <div className="flex items-center justify-between">
@@ -490,7 +500,10 @@ export function Quiz() {
                   Повторять ошибки
                 </span>
               </div>
-              <Switcher enabled={mistakeRepeat} onToggle={() => setMistakeRepeat((prev) => !prev)} />
+              <Switcher
+                enabled={mistakeRepeat}
+                onToggle={() => setMistakeRepeat((prev) => !prev)}
+              />
             </div>
           </div>
 
@@ -599,101 +612,105 @@ export function Quiz() {
   }
 
   // Экран победы/поражения
-  return (
-    <div className="min-h-screen bg-background text-text p-6 md:p-8 flex flex-col items-center justify-center">
-      <div className="text-center max-w-md md:max-w-lg w-full">
-        <div className="mb-8 md:mb-10">
-          {gameState === "victory" ? (
-            <div className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-6 md:mb-8 rounded-full bg-done/20 flex items-center justify-center">
-              <svg
-                width="48"
-                height="48"
-                className="md:w-16 md:h-16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#76FF03"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </div>
-          ) : (
-            <div className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-6 md:mb-8 rounded-full bg-error/20 flex items-center justify-center">
-              <svg
-                width="48"
-                height="48"
-                className="md:w-16 md:h-16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#FF5252"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="8" x2="12" y2="12"></line>
-                <line x1="12" y1="16" x2="12.01" y2="16"></line>
-              </svg>
-            </div>
-          )}
-          <h1
-            className={`text-4xl md:text-5xl font-bold ${gameState === "victory" ? "text-done" : "text-error"}`}
-          >
-            {gameState === "victory" ? "Отлично!" : "Время вышло!"}
-          </h1>
-          {gameState === "victory" && (
-            <p className="text-text-secondary mt-2 md:text-lg">
-              Все пары найдены!
-            </p>
-          )}
-        </div>
+  if (gameState === "victory" || gameState === "defeat") {
+    return (
+      <div className="min-h-screen bg-background text-text p-6 md:p-8 flex flex-col items-center justify-center">
+        <div className="text-center max-w-md md:max-w-lg w-full">
+          <div className="mb-8 md:mb-10">
+            {gameState === "victory" ? (
+              <div className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-6 md:mb-8 rounded-full bg-done/20 flex items-center justify-center">
+                <svg
+                  width="48"
+                  height="48"
+                  className="md:w-16 md:h-16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#76FF03"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+            ) : (
+              <div className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-6 md:mb-8 rounded-full bg-error/20 flex items-center justify-center">
+                <svg
+                  width="48"
+                  height="48"
+                  className="md:w-16 md:h-16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#FF5252"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+              </div>
+            )}
+            <h1
+              className={`text-4xl md:text-5xl font-bold ${gameState === "victory" ? "text-done" : "text-error"}`}
+            >
+              {gameState === "victory" ? "Отлично!" : "Время вышло!"}
+            </h1>
+            {gameState === "victory" && (
+              <p className="text-text-secondary mt-2 md:text-lg">
+                Все пары найдены!
+              </p>
+            )}
+          </div>
 
-        <div className="bg-primary p-6 md:p-8 rounded-2xl mb-6 md:mb-8 space-y-4 md:space-y-5">
-          <div className="flex justify-between items-center">
-            <span className="text-text-secondary md:text-lg">Время</span>
-            <span className="font-bold text-xl md:text-2xl">
-              {formatTime(elapsedTime)}
-            </span>
+          <div className="bg-primary p-6 md:p-8 rounded-2xl mb-6 md:mb-8 space-y-4 md:space-y-5">
+            <div className="flex justify-between items-center">
+              <span className="text-text-secondary md:text-lg">Время</span>
+              <span className="font-bold text-xl md:text-2xl">
+                {formatTime(elapsedTime)}
+              </span>
+            </div>
+            <div className="h-px bg-card-border" />
+            <div className="flex justify-between items-center">
+              <span className="text-text-secondary md:text-lg">Пройдено</span>
+              <span className="font-bold text-xl md:text-2xl">
+                {completedCards}/{cardCount}
+              </span>
+            </div>
+            <div className="h-px bg-card-border" />
+            <div className="flex justify-between items-center">
+              <span className="text-text-secondary md:text-lg">
+                Макс. комбо
+              </span>
+              <span className="font-bold text-xl md:text-2xl text-cyan">
+                {maxCombo}
+              </span>
+            </div>
           </div>
-          <div className="h-px bg-card-border" />
-          <div className="flex justify-between items-center">
-            <span className="text-text-secondary md:text-lg">Пройдено</span>
-            <span className="font-bold text-xl md:text-2xl">
-              {completedCards}/{cardCount}
-            </span>
-          </div>
-          <div className="h-px bg-card-border" />
-          <div className="flex justify-between items-center">
-            <span className="text-text-secondary md:text-lg">Макс. комбо</span>
-            <span className="font-bold text-xl md:text-2xl text-cyan">
-              {maxCombo}
-            </span>
-          </div>
-        </div>
 
-        <div className="flex flex-col gap-3 md:gap-4">
-          <button
-            onClick={startGame}
-            className="w-full py-4 md:py-5 bg-cyan text-background rounded-2xl font-bold text-lg md:text-xl hover:bg-cyan/90 transition-colors shadow-lg"
-          >
-            Играть ещё
-          </button>
-          <button
-            onClick={() => setGameState("setup")}
-            className="w-full py-4 md:py-5 bg-primary text-text rounded-2xl font-bold text-lg md:text-xl hover:bg-hover transition-colors border-2 border-card-border"
-          >
-            Настройки
-          </button>
-          <button
-            onClick={() => void navigate("/")}
-            className="w-full py-3 md:py-4 text-text-secondary font-medium md:text-lg hover:text-text transition-colors"
-          >
-            На главную
-          </button>
+          <div className="flex flex-col gap-3 md:gap-4">
+            <button
+              onClick={startGame}
+              className="w-full py-4 md:py-5 bg-cyan text-background rounded-2xl font-bold text-lg md:text-xl hover:bg-cyan/90 transition-colors shadow-lg"
+            >
+              Играть ещё
+            </button>
+            <button
+              onClick={() => setGameState("setup")}
+              className="w-full py-4 md:py-5 bg-primary text-text rounded-2xl font-bold text-lg md:text-xl hover:bg-hover transition-colors border-2 border-card-border"
+            >
+              Настройки
+            </button>
+            <button
+              onClick={() => void navigate("/")}
+              className="w-full py-3 md:py-4 text-text-secondary font-medium md:text-lg hover:text-text transition-colors"
+            >
+              На главную
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }

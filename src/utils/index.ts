@@ -8,12 +8,7 @@ export {
   setEnabledSetsByBlock,
   getEnabledSets,
 } from "./storage";
-export {
-
-  prepareGameWords,
-  createCards,
-  createQueue,
-} from "./gameHelpers";
+export { prepareGameWords, createCards, createQueue } from "./gameHelpers";
 export { shuffleArray, formatTime } from "./functions";
 export {
   initialiseGame,
