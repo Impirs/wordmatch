@@ -103,6 +103,20 @@ export function Quiz() {
 
   useEffect(() => clearPendingTimeouts, [clearPendingTimeouts]);
 
+  function CheckVictory(cardQueue: QueuePair[],
+                        serbianSlots: (CardData | null)[],
+                        russianSlots: (CardData | null)[]
+  ): boolean {
+    const shouldSetVictory =
+        cardQueue.length === 0 &&
+        areAllSlotsCleared(serbianSlots, russianSlots);
+    if (shouldSetVictory) {
+      // console.log("All cards matched! Setting game state to victory.");
+      return true;
+    }
+    return false
+  }
+
   // Таймер
   useEffect(() => {
     if (gameState !== "playing") return;
@@ -162,7 +176,6 @@ export function Quiz() {
   // Заменить угаданные карточки на новые из очереди
   const replaceCard = useCallback(
     (card1BoardId: number, card2BoardId: number) => {
-      let shouldSetVictory = false;
 
       setBoardState((prev) => {
         const result = replaceCardInSlots(
@@ -173,12 +186,10 @@ export function Quiz() {
           prev.russianSlots,
         );
 
-        shouldSetVictory =
-          result.newCardQueue.length === 0 &&
-          areAllSlotsCleared(result.newSerbianSlots, result.newRussianSlots);
-
-        if (shouldSetVictory) {
-          // console.log("All cards matched! Setting game state to victory.");
+        if (CheckVictory(result.newCardQueue,
+                         result.newSerbianSlots,
+                         result.newRussianSlots)
+        ) {
           setGameState("victory");
         }
 

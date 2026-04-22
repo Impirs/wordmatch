@@ -24,13 +24,18 @@ const blockSections = [
     title: "Блок 3",
     sets: allWordSets.filter((set) => set.id.startsWith("blok-3-")),
   },
+  {
+    id: "blok-4",
+    title: "Блок 4",
+    sets: allWordSets.filter((set) => set.id.startsWith("blok-4-")),
+  }
 ].filter((section) => section.sets.length > 0);
 
 export function Settings() {
   const navigate = useNavigate();
   const [enabledSets, setEnabledSets] = useState<string[]>(() => {
     const grouped = getEnabledSetsByBlock();
-    return [...grouped.Blok1, ...grouped.Blok2, ...grouped.Blok3];
+    return [...grouped.Blok1, ...grouped.Blok2, ...grouped.Blok3, ...grouped.Blok4];
   });
 
   useEffect(() => {
@@ -38,6 +43,7 @@ export function Settings() {
       Blok1: enabledSets.filter((id) => id.startsWith("blok-1-")),
       Blok2: enabledSets.filter((id) => id.startsWith("blok-2-")),
       Blok3: enabledSets.filter((id) => id.startsWith("blok-3-")),
+      Blok4: enabledSets.filter((id) => id.startsWith("blok-4-")),
     };
     setEnabledSetsByBlock(grouped);
   }, [enabledSets]);

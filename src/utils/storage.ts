@@ -4,7 +4,7 @@ import { normalizeText } from "./functions";
 const STORAGE_SETS_KEY = "wordmatch_enabled_sets";
 const STORAGE_SETTINGS_KEY = "wordmatch_settings";
 
-type BlockStorageKey = "Blok1" | "Blok2" | "Blok3";
+type BlockStorageKey = "Blok1" | "Blok2" | "Blok3" | "Blok4";
 
 /**
  * Тип данных для настроек пользователя, которые будут храниться в localstorage:
@@ -28,6 +28,7 @@ export interface EnabledSetsByBlock {
   Blok1: string[];
   Blok2: string[];
   Blok3: string[];
+  Blok4: string[];
 }
 
 const defaultGameSettings: GameSettings = {
@@ -51,6 +52,10 @@ function getBlockStorageKeyBySetId(setId: string): BlockStorageKey | null {
     return "Blok3";
   }
 
+  if (setId.startsWith("blok-4-")) {
+    return "Blok4";
+  }
+
   return null;
 }
 
@@ -59,6 +64,7 @@ function getDefaultEnabledSetsByBlock(): EnabledSetsByBlock {
     Blok1: ["blok-1-part_1-1"],
     Blok2: [],
     Blok3: [],
+    Blok4: [],
   };
 
   const blok1Sets = allWordSets.filter((set) => set.id.startsWith("blok-1-"));
@@ -95,6 +101,7 @@ function normalizeEnabledSetsValue(
       Blok1: [],
       Blok2: [],
       Blok3: [],
+      Blok4: [],
     };
 
     for (const item of value) {
@@ -126,6 +133,11 @@ function normalizeEnabledSetsValue(
         : [],
       Blok3: Array.isArray(record.Blok3)
         ? record.Blok3.filter(
+            (item): item is string => typeof item === "string",
+          )
+        : [],
+      Blok4: Array.isArray(record.Blok4)
+        ? record.Blok4.filter(
             (item): item is string => typeof item === "string",
           )
         : [],
@@ -249,5 +261,5 @@ export function setEnabledSetsByBlock(value: EnabledSetsByBlock): void {
  */
 export function getEnabledSets(): string[] {
   const grouped = getEnabledSetsByBlock();
-  return [...grouped.Blok1, ...grouped.Blok2, ...grouped.Blok3];
+  return [...grouped.Blok1, ...grouped.Blok2, ...grouped.Blok3, ...grouped.Blok4];
 }

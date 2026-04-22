@@ -1,6 +1,7 @@
 import blok1Data from "./blok_1.json";
 import blok2Data from "./blok_2.json";
 import blok3Data from "./blok_3.json";
+import blok4Data from "./blok_4.json";
 // import { basicWords, basicSetInfo } from './basic';
 // import { adjectiveWords, adjectivesSetInfo } from './adjectives';
 // import { verbWords, verbsSetInfo } from './verbs';
@@ -61,6 +62,7 @@ const BLOCK_NAMES: Record<string, ScriptNames> = {
   "blok-1": { lat: "Blok 1", cyr: "Блок 1" },
   "blok-2": { lat: "Blok 2", cyr: "Блок 2" },
   "blok-3": { lat: "Blok 3", cyr: "Блок 3" },
+  "blok-4": { lat: "Blok 4", cyr: "Блок 4" },
 };
 
 function isJsonEntry(value: unknown): value is JsonEntry {
@@ -245,11 +247,16 @@ export const blok3WordSets = createJsonWordSets(
   "blok-3",
   blok3Data as JsonBlock,
 );
+export const blok4WordSets = createJsonWordSets(
+  "blok-4",
+  blok4Data as JsonBlock,
+);
 
 export const allWordSets: WordSet[] = [
   ...blok1WordSets,
   ...blok2WordSets,
   ...blok3WordSets,
+  ...blok4WordSets,
 ];
 
 export function getUniqueWords(setIds: string[]): [string, string][] {
